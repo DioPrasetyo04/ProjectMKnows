@@ -1,3 +1,4 @@
+import Navbar from "./Components/Navbar";
 import "./globals.css";
 
 export default function RootLayout({
@@ -10,7 +11,10 @@ export default function RootLayout({
       <head>
         <title>M-Knows</title>
       </head>
-      <body>{children}</body>
+      <body className="flex flex-col min-h-screen">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

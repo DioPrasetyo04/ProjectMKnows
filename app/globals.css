@@ -47,6 +47,14 @@
   .font-limegreen {
     color: #b9f443;
   }
+
+  .font-light-blue {
+    color: #3b8ec3;
+  }
+
+  .font-dark-green {
+    color: #3f8642;
+  }
 }
 
 @layer utilities {

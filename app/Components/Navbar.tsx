@@ -11,7 +11,7 @@ const Navbar = () => {
     setOpen(!open);
   };
   return (
-    <div className="relative flex items-center justify-between p-4 dark-blue w-full h-[122px]">
+    <div className="flex items-center justify-between p-4 dark-blue w-full h-[122px] fixed">
       <div className="relative flex grow-0 shrink-0 w-[200.57px] h-[62px]">
         <img
           src="/logos/M-Knows.png"
@@ -19,7 +19,7 @@ const Navbar = () => {
           className="absolute w-full h-full object-cover object-center left-[51px]"
         />
       </div>
-      <div className="flex justify-center items-center gap-x-[77px] top-11 bottom-[46px]">
+      <div className="flex justify-center items-center gap-x-[77px] top-11 bottom-[46px] mr-[117px]">
         {data.navLinksStatics.map((link: any) => {
           const isActive = pathname === link.href;
           return (
@@ -33,12 +33,17 @@ const Navbar = () => {
             </div>
           );
         })}
-        <h1
+        <div
+          className={`text-white font-montserrat font-medium text-[26px] leading-[34px] hover:underline cursor-pointer transition-colors`}
+        >
+          Our Services
+        </div>
+        <div
           className={`text-white font-montserrat font-medium text-[26px] leading-[34px] hover:underline cursor-pointer transition-colors`}
           onClick={onHandleOpen}
         >
           More
-        </h1>
+        </div>
         {open && <div className=""></div>}
       </div>
     </div>
