@@ -14,14 +14,14 @@ export default function VirtualRealityPage() {
       <div className="flex flex-col lg:flex-row gap-8 items-start">
         
         {/* Kolom Gambar */}
-        <div className="lg:w-1/2">
-            <div className="relative w-full max-h-[600px] rounded-lg shadow-lg overflow-hidden">
+        <div className="lg:w-3/5">
+            <div className="relative w-full max-h-[850px] rounded-lg shadow-lg overflow-hidden">
             <Image
             src="/virtual-reality.png" 
             alt="Virtual Reality Learning"
-            width={600}  // Sebaiknya ganti ke lebar asli gambar lae
-            height={750} // Sebaiknya ganti ke tinggi asli gambar lae (saya tebak 750, sama seperti Content Creator)
-            className="object-cover w-full h-full" // Gambar akan mengisi div pembungkus
+            width={300}  
+            height={450} 
+            className="object-cover w-full h-full" 
             />
             </div>
         </div>
@@ -31,17 +31,17 @@ export default function VirtualRealityPage() {
           <h1 className="text-4xl font-bold text-blue-600 mb-6">
             Virtual Reality
           </h1>
-          <p className="text-gray-700 mb-4 leading-relaxed">
+          <p className="text-gray-700 mb-4 leading-relaxed text-2xl">
             Temukan Masa Depan Pembelajaran dengan Virtual Learning! Virtual Learning merupakan jenis pembelajaran yang berkembang pesat yang menawarkan berbagai keuntungan bagi pelajar dari segala usia dan latar belakang. Dengan virtual learning, anda dapat belajar kapan saja dan dimana saja dengan berbagai perangkat.
           </p>
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-gray-700 mb-6 leading-relaxed text-2xl">
             Virtual Learning menawarkan berbagai jenis pembelajaran termasuk kursus online, Pelatihan, dan program pengembangan diri yang sesuai dengan minat dan kebutuhan anda. Keuntungan Virtual Learning!
           </p>
 
-          <h2 className="text-xl font-bold text-green-600 mb-4">
+          <h2 className="text-3xl font-bold text-green-600 mb-4">
             Key Features:
           </h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <ul className="list-disc list-inside space-y-2 text-gray-700 text-2xl">
             {keyFeatures.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
