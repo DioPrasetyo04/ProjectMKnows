@@ -67,12 +67,12 @@ export default function AboutUsPage() {
               {/* Kolom Teks (Hapus kelas card dari sini) */}
               <div className="md:w-1/2"> 
                 <h2 className="text-4xl font-bold mb-4">Jenis konsultasi yang sering diambil klien meliputi:</h2>
-                <ul className="list-decimal list-inside space-y-2 text-gray-700 text-2xl">
+                <ul className="list-decimal list-outside ml-6 space-y-2 text-gray-700 text-2xl">
                   {konsultasiList.map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
                 
                 <h2 className="text-4xl font-bold mt-8 mb-4">Assessment for Technical Competency</h2>
-                <ul className="list-decimal list-inside space-y-2 text-gray-700 text-2xl">
+                <ul className="list-decimal list-outside ml-6 space-y-2 text-gray-700 text-2xl">
                   {assessmentList.map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
               </div>

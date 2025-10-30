@@ -17,14 +17,14 @@ export default function HistoryPage() {
           Sejarah M-Knows Consulting
         </h1>
 
-        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-4xl mx-auto mb-8">
-          <div className="flex flex-col md:flex-row items-start gap-6">
+        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8">
+          <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-shrink-0">
               <Image
                 src="/history1.png" 
                 alt="Ikon Pendirian"
-                width={48}
-                height={48}
+                width={180}
+                height={180}
               />
             </div>
             <div>
@@ -35,33 +35,34 @@ export default function HistoryPage() {
           </div>
         </div>
 
-        {/* Card 2: Bagian 2: Perkembangan */}
-        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-4xl mx-auto mb-8">
-          <div className="flex flex-col md:flex-row items-start gap-6">
-            <div className="flex-shrink-0">
-              <Image
-                src="/history2.png" // Asumsi ini ikon Handshake
-                alt="Ikon Perkembangan"
-                width={48}
-                height={48}
-              />
-            </div>
-            <div>
-              <p className="text-gray-700 leading-relaxed text-2xl">
-                Sejak berdiri, M-Knows Consulting telah sukses bekerjasama dengan beragam perusahaan nasional dan multinasional, dengan kualitas kerja yang memuaskan, dibuktikan dengan tingginya repeat order dan customer yang loyal.
-              </p>
-            </div>
-          </div>
-        </div>
+<div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8">
+  <div className="flex flex-col md:flex-row-reverse items-center gap-6">
+    <div className="flex-shrink-0">
+      <Image
+        src="/history2.png"
+        alt="Ikon Perkembangan"
+        width={180}
+        height={180}
+      />
+    </div>
+    
+    <div>
+      <p className="text-gray-700 leading-relaxed text-2xl">
+        Sejak berdiri, M-Knows Consulting telah sukses bekerjasama dengan beragam perusahaan nasional dan multinasional, dengan kualitas kerja yang memuaskan, dibuktikan dengan tingginya repeat order dan customer yang loyal.
+      </p>
+    </div>
+
+      </div>
+    </div>
         
-        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-4xl mx-auto mb-8"> 
-          <div className="flex flex-col md:flex-row items-start gap-6">
+        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8"> 
+          <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-shrink-0">
               <Image
                 src="/history3.png"
                 alt="Ikon Layanan Awal"
-                width={48}
-                height={48}
+                width={180}
+                height={180}
               />
             </div>
             <div>

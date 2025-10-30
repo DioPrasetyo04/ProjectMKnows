@@ -43,7 +43,7 @@ export default function ContentCreatorPage() {
           <h2 className="text-2xl font-bold text-green-600 mb-6">
             Key Features:
           </h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 text-xl">
+          <ul className="list-decimal list-outside ml-6 space-y-2 text-gray-700 text-xl">
             {keyFeatures.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
