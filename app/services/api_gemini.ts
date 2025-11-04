@@ -1,12 +1,13 @@
+// services/api_gemini.ts
+
 import axios from "axios";
 
-const bases = ["v1beta", "v1"];
-const selectedBase = bases[Math.floor(Math.random() * bases.length)];
+const bases = "v1beta";
 
 export const fetchAPIGemini = axios.create({
-  baseURL: `https://generativelanguage.googleapis.com/${selectedBase}`,
+  // BASEURL: Mengarahkan ke proxy lokal, termasuk versi
+  baseURL: `/api/gemini/${bases}`,
   headers: {
     "Content-Type": "application/json",
-    // "x-goog-api-key": process.env.NEXT_PUBLIC_API_KEY_GEMINI as string,
   },
 });

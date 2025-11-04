@@ -43,16 +43,10 @@ const ChatForm = ({ isOpen, onClose }: any) => {
   //  KIRIM PESAN KE GEMINI
   // ======================
   const sendMessageToGemini = async (msg: string) => {
-    const model = [
-      "gemini-1.5-pro",
-      "gemini-1.5-flash"
-    ];
-    const randomIndex = Math.floor(Math.random() * model.length);
-    const selectedModel = model[randomIndex];
-
     try {
       const chatGemini = await fetchAPIGemini.post(
-        `/${selectedModel}:generateContent?key=${process.env.NEXT_PUBLIC_API_KEY_GEMINI}`,
+        // Path sudah benar, dimulai setelah v1/ atau v1beta/
+        `/models/gemini-2.5-flash:generateContent?key=${process.env.NEXT_PUBLIC_API_KEY_GEMINI}`,
         {
           contents: [{ parts: [{ text: msg }] }],
         }
