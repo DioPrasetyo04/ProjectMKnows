@@ -1,8 +1,7 @@
-import Navbar from "./Components/Navbar";
-
 export default function Home() {
   return (
-    <div>
+    <div className="pt-[150px]">
+      <h1>Hello World</h1>
     </div>
   );
 }
