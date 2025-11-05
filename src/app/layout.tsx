@@ -1,27 +1,21 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google'; // Ganti font jika perlu
-import './globals.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'M-Knows Consulting',
-  description: 'M-Knows Consulting Website',
-};
+import ChatButton from "../Components/ChatButton";
+import Navbar from "../Components/Navbar";
+import "./globals.css";
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <title>M-Knows</title>
+      </head>
+      <body className="min-h-screen">
         <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {children}
+        <ChatButton />
       </body>
     </html>
   );

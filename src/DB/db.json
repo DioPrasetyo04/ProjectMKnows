@@ -1,0 +1,65 @@
+{
+  "navLinksStatics": [
+    {
+      "id": 1,
+      "href": "/",
+      "label": "Home"
+    },
+    {
+      "id": 2,
+      "href": "/new-training",
+      "label": "New Training"
+    }
+  ],
+  "OurServices": [
+    {
+      "id": 1,
+      "href": "/trainings",
+      "label": "Training"
+    },
+    {
+      "id": 2,
+      "href": "/consultings",
+      "Label": "Consulting"
+    },
+    {
+      "id": 3,
+      "href": "/digitalisations",
+      "label": "Digitalisasi"
+    }
+  ],
+  "Mores": [
+    {
+      "href": "/about-us",
+      "label": "About Us"
+    },
+    {
+      "href": "/histories",
+      "label": "History"
+    },
+    {
+      "href": "/vision-missions",
+      "label": "Vision & Mission"
+    },
+    {
+      "href": "/our-facilitators",
+      "label": "Our Facilitators"
+    },
+    {
+      "href": "/carrers",
+      "label": "Carrers"
+    },
+    {
+      "href": "/consulting-services",
+      "label": "Consulting Services"
+    },
+    {
+      "href": "/our-clients",
+      "label": "Our Clients"
+    },
+    {
+      "href": "/contact-us",
+      "label": "Contact Us"
+    }
+  ]
+}

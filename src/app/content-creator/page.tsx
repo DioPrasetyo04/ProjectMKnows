@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ContentCreatorPage() {
   const keyFeatures = [
@@ -8,36 +8,42 @@ export default function ContentCreatorPage() {
     "Fotografi produk, acara, Editing dan retouching foto",
     "Podcast Production",
     "Pengembangan Konten Interaktif dan media sosial",
-    "Konsultasi Strategi Konten"
+    "Konsultasi Strategi Konten",
   ];
 
   return (
-    <div className="container mx-auto my-12 p-6 text-xl">
+    <div className="mx-auto pt-[150px] p-6 text-xl">
       <div className="flex flex-col lg:flex-row gap-8 items-start">
-        
         {/* Kolom Gambar */}
         <div className="lg:w-2/5">
-            <div className="relative w-full max-h-[600px] rounded-lg shadow-lg overflow-hidden">
-                <Image
-                src="/content-creator.png" 
-                alt="Content Creator"
-                width={600}  
-                height={750} 
-                className="object-cover w-full h-full" 
-                />
-            </div>
+          <div className="w-full max-h-[600px] rounded-lg shadow-lg">
+            <img
+              src="/images/content/content-creator.png"
+              alt="Content Creator"
+              width={600}
+              height={750}
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
         </div>
-
 
         <div className="lg:w-5/5">
           <h1 className="text-2xl font-bold text-blue-600 mb-6">
             Content Creator
           </h1>
           <p className="text-gray-700 mb-4 leading-relaxed text-xl">
-            Tingkatkan Bisnis anda dengan Content Creation yang Berkualitas Tinggi! Content Creation merupakan alat penting untung bisnis yang sukses. Konten yang berkualitas tinggi dapat membantu anda untuk menarik dan mempertahankan audiens dan meningkatkan brand awareness pelanggan.
+            Tingkatkan Bisnis anda dengan Content Creation yang Berkualitas
+            Tinggi! Content Creation merupakan alat penting untung bisnis yang
+            sukses. Konten yang berkualitas tinggi dapat membantu anda untuk
+            menarik dan mempertahankan audiens dan meningkatkan brand awareness
+            pelanggan.
           </p>
           <p className="text-gray-700 mb-6 leading-relaxed text-xl">
-            Kami merupakan tim content creator berpengalaman yang dapat membantu anda untuk membuat konten yang menarik, informatif, dan sesuai dengan target audiens. Kami menawarkan berbagai layanan content creation seperti penulisan artikel dan blog post, pembuatan video, desain infografis, copywriting, editing, dan proofreading.
+            Kami merupakan tim content creator berpengalaman yang dapat membantu
+            anda untuk membuat konten yang menarik, informatif, dan sesuai
+            dengan target audiens. Kami menawarkan berbagai layanan content
+            creation seperti penulisan artikel dan blog post, pembuatan video,
+            desain infografis, copywriting, editing, dan proofreading.
           </p>
 
           <h2 className="text-2xl font-bold text-green-600 mb-6">
