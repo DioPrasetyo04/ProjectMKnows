@@ -116,7 +116,7 @@ const ChatForm = ({ isOpen, onClose }: any) => {
   // ======================
   const handleSendMessage = async (e: any) => {
     e.preventDefault();
-    if (!message.trim()) return;
+    if (!message.trim()) return false;
 
     setChat((prev) => [
       ...prev,
