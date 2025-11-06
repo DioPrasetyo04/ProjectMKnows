@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const bases = "v1beta";
+const bases = process.env.NEXT_PUBLIC_BASES_API_GEMINI;
 
 export const fetchAPIGemini = axios.create({
   // BASEURL: Mengarahkan ke proxy lokal, termasuk versi

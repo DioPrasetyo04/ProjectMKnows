@@ -1,15 +1,12 @@
 import { useState } from "react";
 import { fetchAPIGemini } from "../services/api_gemini";
 import { formatDateLabel, formatTime } from "../Utils/merge";
-
-export type ChatFormProps = {
-  sender: string;
-  text: string;
-  timestamp: Date;
-};
+import { FaWhatsapp } from "react-icons/fa";
+import { FaRobot } from "react-icons/fa";
+import { ChatFormProps } from "@/Types/ChatProps";
 
 const ChatForm = ({ isOpen, onClose }: any) => {
-  const [step, setStep] = useState<"form" | "option" | "chatbot">("form");
+  const [step, setStep] = useState<"open" | "option" | "chatbot">("open");
   const [chat, setChat] = useState<ChatFormProps[]>([]);
   const [message, setMessage] = useState("");
 
@@ -44,9 +41,10 @@ const ChatForm = ({ isOpen, onClose }: any) => {
   // ======================
   const sendMessageToGemini = async (msg: string) => {
     try {
+      const model = process.env.NEXT_PUBLIC_MODELS_API_GEMINI;
       const chatGemini = await fetchAPIGemini.post(
         // Path sudah benar, dimulai setelah v1/ atau v1beta/
-        `/models/gemini-2.5-flash:generateContent?key=${process.env.NEXT_PUBLIC_API_KEY_GEMINI}`,
+        `/models/${model}:generateContent?key=${process.env.NEXT_PUBLIC_API_KEY_GEMINI}`,
         {
           contents: [{ parts: [{ text: msg }] }],
         }
@@ -73,9 +71,7 @@ const ChatForm = ({ isOpen, onClose }: any) => {
     }
   };
 
-  // ======================
-  //  KETIKA PILIH CHATBOT
-  // ======================
+  // chatbot
   const handleChatbotStart = async () => {
     setStep("chatbot");
 
@@ -99,21 +95,17 @@ const ChatForm = ({ isOpen, onClose }: any) => {
         },
       ]);
       await sendMessageToGemini(formData.message);
-    }, 1000);
+    }, 500);
   };
 
-  // ======================
-  //  KETIKA PILIH WHATSAPP
-  // ======================
+  // whatsAPP
   const handleWhatsApp = () => {
-    const pesan = `Halo, berikut data saya:\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo HP: ${formData.hp}\nPesan: ${formData.message}`;
+    const pesan = `Halo M-Knows Consulting Team, Berikut data saya:\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo HP: ${formData.hp}\n\nSaya Mau Bertanya Tentang:\n\nPesan: ${formData.message}`;
     const url = `https://wa.me/6281381876265?text=${encodeURIComponent(pesan)}`;
     window.open(url, "_blank");
   };
 
-  // ======================
-  //  KIRIM PESAN BARU DI CHATBOT
-  // ======================
+  // message to gemini
   const handleSendMessage = async (e: any) => {
     e.preventDefault();
     if (!message.trim()) return false;
@@ -143,9 +135,11 @@ const ChatForm = ({ isOpen, onClose }: any) => {
                 <h1 className="text-white font-bold text-[14px]">
                   Let’s Chat!
                 </h1>
-                <span className="text-[#A9DFBF] text-[10px] font-semibold">
-                  We’ll reply as soon as we can
-                </span>
+                <ul className="list-disc pl-3">
+                  <li className="text-[#BFF932] text-[10px] font-semibold">
+                    We’ll Reply as soon as we can
+                  </li>
+                </ul>
               </div>
             </div>
             <button onClick={onClose} className="text-white text-lg font-bold">
@@ -153,78 +147,119 @@ const ChatForm = ({ isOpen, onClose }: any) => {
             </button>
           </div>
 
-          {/* BODY */}
-          <div className="flex-1 p-3 overflow-y-auto text-white">
+          <div className="flex-1 overflow-y-auto text-white px-2 py-3">
             {/* STEP 1: FORM */}
-            {step === "form" && (
-              <form
-                onSubmit={onHandleSubmit}
-                className="flex flex-col gap-3 text-sm"
-              >
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={onHandleValueChange}
-                  className="p-2 rounded bg-[#084C54] text-white placeholder-gray-300"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={onHandleValueChange}
-                  className="p-2 rounded bg-[#084C54] text-white placeholder-gray-300"
-                />
-                <input
-                  type="text"
-                  name="hp"
-                  placeholder="Your Phone Number"
-                  value={formData.hp}
-                  onChange={onHandleValueChange}
-                  className="p-2 rounded bg-[#084C54] text-white placeholder-gray-300"
-                />
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={onHandleValueChange}
-                  className="p-2 rounded bg-[#084C54] text-white placeholder-gray-300 min-h-[80px]"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="bg-[#A9DFBF] text-[#02353C] font-bold py-2 rounded"
+            {step === "open" && (
+              <div className="flex flex-col items-center text-start gap-y-2 w-[219px] h-full">
+                <form
+                  onSubmit={onHandleSubmit}
+                  className="flex flex-col gap-3 text-sm card border border-inside border-[#BFF932] bg-[#18393B] rounded-[9px] p-3"
                 >
-                  Continue
-                </button>
-              </form>
+                  <p className="w-[197px] font-montserrat font-semibold text-[11px]">
+                    Hey there, please leave your details so we can contact you
+                    even if you are no longer on the site.
+                  </p>
+                  <label
+                    className="font-montserrat font-semibold text-[11px] text-start"
+                    htmlFor="name"
+                  >
+                    Name:
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={onHandleValueChange}
+                    className="rounded-[5px] bg-[#084C54] text-white placeholder-gray-300 border border-[#BFF932] W-[197px] h-[21px] p-3"
+                    required
+                  />
+                  <label
+                    className="font-montserrat font-semibold text-[11px] text-start"
+                    htmlFor="email"
+                  >
+                    Email:
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={onHandleValueChange}
+                    className="rounded-[5px] bg-[#084C54] text-white placeholder-gray-300 border border-[#BFF932] W-[197px] h-[21px] p-3"
+                  />
+                  <label
+                    className="font-montserrat font-semibold text-[11px] text-start"
+                    htmlFor="phone"
+                  >
+                    Phone:
+                  </label>
+                  <input
+                    type="text"
+                    name="hp"
+                    placeholder="Your Phone Number"
+                    value={formData.hp}
+                    onChange={onHandleValueChange}
+                    className="rounded-[5px] bg-[#084C54] text-white placeholder-gray-300 border border-[#BFF932] W-[197px] h-[21px] p-3"
+                  />
+                  <label
+                    className="font-montserrat font-semibold text-[11px] text-start"
+                    htmlFor="name"
+                  >
+                    Message:
+                  </label>
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={onHandleValueChange}
+                    className="rounded-[5px] bg-[#084C54] border border-[#BFF932] text-white placeholder-gray-300 W-[197px] h-[48px] p-3"
+                  ></textarea>
+                  <div className="flex justify-start items-start left-0">
+                    <button
+                      type="submit"
+                      className="bg-[#BFF932] text-[#02353C] font-bold py-1 px-5 rounded-full"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
             )}
 
             {/* STEP 2: OPTION */}
             {step === "option" && (
-              <div className="flex flex-col gap-4 items-center justify-center h-full">
-                <p className="text-center text-sm">Pilih metode percakapan:</p>
-                <button
-                  onClick={handleWhatsApp}
-                  className="bg-green-500 hover:bg-green-600 text-white w-full py-2 rounded font-semibold"
-                >
-                  Chat via WhatsApp
-                </button>
-                <button
-                  onClick={handleChatbotStart}
-                  className="bg-[#A9DFBF] text-[#02353C] w-full py-2 rounded font-bold"
-                >
-                  Chat with AI
-                </button>
+              <div className="flex flex-col gap-4 items-center justify-center h-full p-3">
+                <p className="text-center text-xl w-full font-bold">
+                  Pilih metode percakapan
+                </p>
+                <div className="flex justify-center items-center gap-x-2 bg-green-500 hover:bg-green-600 w-full py-2 rounded">
+                  <FaWhatsapp className="text-[25px]" />
+                  <button
+                    onClick={handleWhatsApp}
+                    className="text-white font-semibold"
+                  >
+                    Chat via WhatsApp
+                  </button>
+                </div>
+                <div className="flex justify-center items-center gap-x-2 bg-white w-full py-2 rounded">
+                  <FaRobot className="text-[25px] text-black  " />
+                  <button
+                    onClick={handleChatbotStart}
+                    className="bg-white text-[#02353C] rounded font-semibold"
+                  >
+                    Chat with AI
+                  </button>
+                </div>
               </div>
             )}
 
             {/* STEP 3: CHATBOT */}
             {step === "chatbot" && (
-              <div className="flex flex-col justify-between h-full">
+              <div className="flex flex-col justify-between h-full w-full">
                 {/* CHAT LIST */}
-                <div className="flex-1 overflow-y-auto space-y-2">
+                <div className="flex-1 overflow-y-auto space-y-2 p-5">
                   {(() => {
                     let lastDate = "";
                     return chat.map((c, index) => {
@@ -235,14 +270,14 @@ const ChatForm = ({ isOpen, onClose }: any) => {
                       return (
                         <div key={index}>
                           {showDateLabel && (
-                            <div className="text-center text-gray-400 text-xs my-2">
+                            <div className="text-center text-gray-400 border-gray-600 rounded-full p-2 text-xs my-2">
                               {currentDateLabel}
                             </div>
                           )}
                           <div
                             className={`max-w-[80%] p-2 rounded-lg my-1 ${
                               c.sender === "You"
-                                ? "bg-[#DCF8C6] self-end ml-auto text-right text-black"
+                                ? "bg-green-500 self-end ml-auto text-right text-black"
                                 : "bg-white text-left text-black"
                             }`}
                           >
@@ -258,7 +293,10 @@ const ChatForm = ({ isOpen, onClose }: any) => {
                 </div>
 
                 {/* INPUT PESAN */}
-                <form onSubmit={handleSendMessage} className="mt-3 flex">
+                <form
+                  onSubmit={handleSendMessage}
+                  className="flex bg-[#05272A] mt-2 mb-3 bottom-0 left-0 right-0 w-full"
+                >
                   <input
                     type="text"
                     name="msg"
