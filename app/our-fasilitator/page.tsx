@@ -14,7 +14,7 @@ export default function OurFacilitator() {
       Pemasaran & Penjualan. Selain itu, ia juga menguasai NLP dan Hypnotherapist bersertifikat.ah ahli strategi penjualan dan 
       pengembangan sumber daya manusia dari M-Knows Consulting. Dia mengambil studi sarjana dan pascasarjana di Universitas Indonesia.`,
       linkedin: "https://www.linkedin.com/in/bunaiya",
-      youtube: "https://www.youtube.com/@bunaiya"
+      youtube: "https://www.youtube.com"
     },
     {
       name: "Hasniati Halim",
@@ -25,7 +25,7 @@ export default function OurFacilitator() {
       Corporate Coach. Hasni mempunyai beragam latar belakang pengalaman baik di bidang perhotelan selama 16 tahun dengan jabatan 
       terakhir sebagai Sales & Marketing Director pada hospitality dan saat ini masih aktif sebagai dosen di Swiss German University.`,
       linkedin: "https://www.linkedin.com/in/bunaiya",
-      youtube: "https://www.youtube.com/@bunaiya"
+      youtube: "https://www.youtube.com"
     },
     {
         name: "Rolando Gunawan",
@@ -37,7 +37,7 @@ export default function OurFacilitator() {
         menyukseskan program dari mulai kelas kecil hingga kelas  besar yang setiap tahunnya memiliki lebih dari 70 kelas. Terdapat 
         berbagai jenis perusahaan yang telah ditangani dari  tingkat nasional hingga internasional dari berbagai industri.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "M.Alam",
@@ -49,7 +49,7 @@ export default function OurFacilitator() {
         dari pengalaman beliau memimpin dan mengembangkan perusahaan serta karyawan di sektor jasa dan barang, saat ini beliau menjalankan 
         sebuah perusahaan yang bergerak dalam bidang konsultasi dan pelatihan untuk area Jawa timur dan sekitarnya.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "Tri Sulistyaningsih",
@@ -60,7 +60,7 @@ export default function OurFacilitator() {
         KPI, Penilaian Kinerja, PDCA, Sistem  Manajemen Pembelajaran, dan Kepemimpinan  Transformasional dengan kliennya. Tri memiliki latar belakang  
         pendidikan dari Universitas Pembangunan Nasional Veteran Jakarta.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "Dwi Priyanto",
@@ -71,7 +71,7 @@ export default function OurFacilitator() {
         Fraud Investigation, General Affair & Operation Management, Customer Service, Front Liner Dan Marketing Strategic. Beliau telah menangani beberapa 
         perusahaan, baik lokal maupun multinasional, selama lebih dari 30 tahun karir profesionalnya Dan Marketing Strategic.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "Erlina Novita, SE, Akt",
@@ -82,7 +82,7 @@ export default function OurFacilitator() {
         Sumbagsel & Babel, Wakil Pimpinan Cabang Mabes TNI Cilangkap, Pimpinan Cabang Jakarta Condet, dan terakhir Cabang Jakarta Bendungan Hilir.  Selain itu 
         juga penah menjadi Senior Leader di asuransi ternama dan kerap memenangkan kontes ke Asia dan Eropa.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "Dedy Kusuma",
@@ -94,7 +94,7 @@ export default function OurFacilitator() {
         ditanganinya antara lain Kementerian Agama,  Jasaraharja, Kementerian Perdagangan, BPOM, Lexus,  Astra Honda Motor, TMMIN, Astra International, Astra Credit  
         Company, dll.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "Dewi Puji Astuti",
@@ -104,7 +104,7 @@ export default function OurFacilitator() {
         Keuangan, Bank Jateng,  Jasaraharja, Yamaha Indonesia, Astra Motor, dst. Dia terlibat  dalam berbagai jenis project seperti Competency Based HR  Management, KPI 
         Alignment & Measurement, Performance  Appraisal, PDCA, Learning Management System, and  Transformational Leadership.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "Ricky Dahlan, SE, Akt, MM",
@@ -116,7 +116,7 @@ export default function OurFacilitator() {
         Sebagai Trainer, Ricky memulainya dari tahun 2007 dan saat ini memegang sertifikat kompetensi atau kualifikasi dari BNSP Sebagai Master Trainer, Kepala Lembaga 
         Pelatihan, dan Manajer Human Capital.`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
       {
         name: "Santy Dewi",
@@ -126,7 +126,7 @@ export default function OurFacilitator() {
         menyeluruh, khususnya di bidang Sales, Credit Analisis, Collection dan Customer Service.  Selain materi teknis-operasional, Santy juga membawakan materi soft skills 
         M-Knows dibidang Communication dan Leadership untuk jajaran manajemen menengah kebawah`,
         linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com/@bunaiya"
+        youtube: "https://www.youtube.com"
       },
      
   ];
