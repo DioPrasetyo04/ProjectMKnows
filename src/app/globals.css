@@ -1,0 +1,21 @@
+/* arahkan Tailwind ke config ts (opsional tapi aman) */
+@config "../tailwind.config.ts";
+
+/* Entry Tailwind v4 */
+@import "tailwindcss";
+
+/* ---- Base ---- */
+@layer base {
+  html, body { @apply min-h-dvh bg-white text-slate-800; }
+}
+
+/* ---- Components ---- */
+@layer components {
+  .container-app { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+  .btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium shadow-lg transition; }
+  .btn-primary { @apply bg-brand-green text-white hover:opacity-90; }
+  .btn-ghost { @apply bg-white text-brand-green ring-1 ring-brand-green hover:bg-brand-green hover:text-white; }
+
+  .card { @apply bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200; }
+}
