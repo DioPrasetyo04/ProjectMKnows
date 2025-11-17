@@ -1,0 +1,82 @@
+/* Arahkan Tailwind ke config ts (opsional tapi aman) */
+@config "../tailwind.config.ts";
+
+/* Entry Tailwind v4 */
+@import "tailwindcss";
+
+/* =========================
+   BASE
+   ========================= */
+@layer base {
+  html, body {
+    /* cegah scrollbar horizontal saat pakai full-bleed */
+    @apply min-h-dvh bg-white text-slate-800 antialiased overflow-x-hidden;
+  }
+}
+
+/* =========================
+   COMPONENTS
+   ========================= */
+@layer components {
+  .container-app { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+  .btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium shadow-lg transition; }
+  .btn-primary { @apply bg-brand-green text-white hover:opacity-90; }
+  .btn-ghost { @apply bg-white text-brand-green ring-1 ring-brand-green hover:bg-brand-green hover:text-white; }
+
+  .card { @apply bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200; }
+
+  /* full-bleed section (melebar 100vw tanpa ruang putih kiri-kanan) */
+  .full-bleed {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+  }
+  .full-bleed > .container-app { max-width: none; padding-left: 0; padding-right: 0; }
+}
+
+/* =========================
+   UTILITIES TAMBAHAN
+   ========================= */
+@layer utilities {
+  /* --- ukuran teks bubble besar (kalau butuh) --- */
+  .bubble-text-fill {
+    font-size: clamp(1.35rem, 2.2vw + 1rem, 2.45rem);
+    line-height: 1.45;
+    letter-spacing: 0.005em;
+  }
+  .bubble-text-fill-2 {
+    font-size: clamp(1.5rem, 2.6vw + 1rem, 2.8rem);
+    line-height: 1.4;
+  }
+
+  /* --- ukuran teks bubble COMPACT (lebih kecil) --- */
+  .bubble-text-sm {
+    font-size: clamp(1rem, 1.2vw + .8rem, 1.35rem);
+    line-height: 1.55;
+  }
+
+  /* padding bubble */
+  .bubble-tight { padding: 1.25rem !important; }
+  @media (min-width: 640px){ .bubble-tight { padding: 1.5rem !important; } }
+  @media (min-width: 768px){ .bubble-tight { padding: 1.75rem !important; } }
+  @media (min-width: 1024px){ .bubble-tight { padding: 2rem !important; } }
+
+  /* padding compact */
+  .bubble-pad-sm { padding: .9rem !important; }
+  @media (min-width:640px){ .bubble-pad-sm { padding: 1.1rem !important; } }
+  @media (min-width:1024px){ .bubble-pad-sm { padding: 1.25rem !important; } }
+
+  /* batasi panjang baris teks (lebih enak dibaca) */
+  .measure { max-width: 60ch; }
+
+  /* samakan tinggi kolom (versi kecil) */
+  .row-h-sm { min-height: 14rem; }
+  @media (min-width: 1024px){ .row-h-sm { min-height: 18rem; } }
+
+  .text-balance { text-wrap: balance; }
+  .overflow-visible { overflow: visible; }
+}
