@@ -20,44 +20,52 @@
     {
       "id": 2,
       "href": "/consultings",
-      "Label": "Consulting"
+      "label": "Consulting"
     },
     {
       "id": 3,
       "href": "/digitalisations",
-      "label": "Digitalisasi"
+      "label": "Digitalisation"
     }
   ],
   "Mores": [
     {
+      "id": 1,
       "href": "/about-us",
       "label": "About Us"
     },
     {
+      "id": 2,
       "href": "/histories",
       "label": "History"
     },
     {
+      "id": 3,
       "href": "/vision-missions",
       "label": "Vision & Mission"
     },
     {
+      "id": 4,
       "href": "/our-facilitators",
       "label": "Our Facilitators"
     },
     {
-      "href": "/carrers",
-      "label": "Carrers"
+      "id": 5,
+      "href": "/careers",
+      "label": "Careers"
     },
     {
+      "id": 6,
       "href": "/consulting-services",
       "label": "Consulting Services"
     },
     {
+      "id": 7,
       "href": "/our-clients",
       "label": "Our Clients"
     },
     {
+      "id": 8,
       "href": "/contact-us",
       "label": "Contact Us"
     }
