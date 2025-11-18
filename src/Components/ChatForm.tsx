@@ -100,8 +100,8 @@ const ChatForm = ({ isOpen, onClose }: any) => {
 
   // whatsAPP
   const handleWhatsApp = () => {
-    const pesan = `Halo M-Knows Consulting Team, Berikut data saya:\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo HP: ${formData.hp}\n\nSaya Mau Bertanya Tentang:\n\nPesan: ${formData.message}`;
-    const url = `https://wa.me/6281381876265?text=${encodeURIComponent(pesan)}`;
+    const pesan = `Halo M-Knows 😇🙏 Consulting Team, Berikut data saya:\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo HP: ${formData.hp}\n\n😇Saya Mau Bertanya Tentang🙏:\n\nPesan: ${formData.message}`;
+    const url = `https://wa.me/6281210468281?text=${encodeURIComponent(pesan)}`;
     window.open(url, "_blank");
   };
 
