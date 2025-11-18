@@ -11,6 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>M-Knows</title>
+        <link rel="icon" href="/logos/logo-Mknows.png" type="image/png" />
       </head>
       <body className="min-h-screen">
         <Navbar />

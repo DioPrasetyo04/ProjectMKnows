@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { fetchAPIGemini } from "../services/api_gemini";
+import { fetchAPIGemini } from "../Services/api_service";
 import { formatDateLabel, formatTime } from "../Utils/merge";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaRobot } from "react-icons/fa";
@@ -243,13 +243,15 @@ const ChatForm = ({ isOpen, onClose }: any) => {
                     Chat via WhatsApp
                   </button>
                 </div>
-                <div className="flex justify-center items-center gap-x-2 bg-white w-full py-2 rounded">
+
+                <div className="flex justify-center items-center gap-x-2 bg-white w-full py-2 rounded px-3">
                   <FaRobot className="text-[25px] text-black  " />
                   <button
                     onClick={handleChatbotStart}
-                    className="bg-white text-[#02353C] rounded font-semibold"
+                    className="bg-white text-[#02353C] opacity-80 rounded font-semibold w-full"
+                    disabled
                   >
-                    Chat with AI
+                    chat AI (coming soon)
                   </button>
                 </div>
               </div>

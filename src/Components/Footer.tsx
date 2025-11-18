@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white pt-12 pb-8">
+    <footer className="bg-gray-800 text-white pt-12 pb-8 bottom-0 w-full z-99">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo di tengah (sesuai desain) */}
         <div className="md:col-span-4 flex justify-center mb-8">
