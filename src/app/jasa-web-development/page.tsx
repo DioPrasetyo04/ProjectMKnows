@@ -1,23 +1,22 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
 export default function WebDevelopmentPage() {
   const features = [
-    'Pembuatan Website (Statis, dinamis, Landing Pages, E-commerce)',
-    'Desain UI/UX (wireframing dan prototyping)',
-    'Pengembangan Front-End',
-    'Pengembangan Back-End (server dan database)',
-    'Optimasi Kinerja Kecepatan dan SEO',
-    'Pengujian dan QA',
-    'Pemeliharaan dan Dukungan Pembaruan Konten, Pemantauan Keamanan dan Perbaikan Bug',
-    'Integrasi API dan Layanan Pihak Ketiga (pembayaran online, layanan email, dan lainnya)',
-    'Konsultasi dan Pelatihan',
+    "Pembuatan Website (Statis, dinamis, Landing Pages, E-commerce)",
+    "Desain UI/UX (wireframing dan prototyping)",
+    "Pengembangan Front-End",
+    "Pengembangan Back-End (server dan database)",
+    "Optimasi Kinerja Kecepatan dan SEO",
+    "Pengujian dan QA",
+    "Pemeliharaan dan Dukungan Pembaruan Konten, Pemantauan Keamanan dan Perbaikan Bug",
+    "Integrasi API dan Layanan Pihak Ketiga (pembayaran online, layanan email, dan lainnya)",
+    "Konsultasi dan Pelatihan",
   ];
 
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
         {/* Kolom Gambar */}
         <div className="relative w-full h-80 md:h-[700px] rounded-lg overflow-hidden shadow-lg">
           <Image
@@ -35,16 +34,23 @@ export default function WebDevelopmentPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-[#3B8EC3] mb-6">
             Jasa Web Development
           </h1>
-          
+
           <div className="text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
             <p>
-              Buka dan Wujudkan ide web anda melalui pintu menuju dunia digital yang tak terbatas dengan solusi web development dengan tim ahli dan teknologi terdepan kami!
+              Buka dan Wujudkan ide web anda melalui pintu menuju dunia digital
+              yang tak terbatas dengan solusi web development dengan tim ahli
+              dan teknologi terdepan kami!
             </p>
             <p>
-              Di era digital ini, memiliki website yang profesional adalah suatu keharusan bagi setiap bisnis. Website dapat membantu Anda untuk meningkatkan brand awareness, menjangkau lebih banyak pelanggan, dan meningkatkan penjualan.
+              Di era digital ini, memiliki website yang profesional adalah suatu
+              keharusan bagi setiap bisnis. Website dapat membantu Anda untuk
+              meningkatkan brand awareness, menjangkau lebih banyak pelanggan,
+              dan meningkatkan penjualan.
             </p>
             <p>
-              Web Development merupakan pembuatan dan pemeliharaan situs web yang melibatkan kegiatan seperti desain tampilan, pengembangan fungsionalitas, dan penyesuaian agar situs web berjalan baik.
+              Web Development merupakan pembuatan dan pemeliharaan situs web
+              yang melibatkan kegiatan seperti desain tampilan, pengembangan
+              fungsionalitas, dan penyesuaian agar situs web berjalan baik.
             </p>
           </div>
 
@@ -52,16 +58,12 @@ export default function WebDevelopmentPage() {
           <h3 className="text-2xl font-semibold text-[#3F8642] mt-10 mb-4">
             Key Features:
           </h3>
-          
-      
+
           <ul className="space-y-3 list-disc list-inside text-gray-700 pl-2">
             {features.map((feature, index) => (
-              <li key={index}>
-                {feature}
-              </li>
+              <li key={index}>{feature}</li>
             ))}
           </ul>
-          
         </div>
       </div>
     </div>
