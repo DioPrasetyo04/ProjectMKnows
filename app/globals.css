@@ -42,6 +42,21 @@
   .light-blue {
     background-color: #4697ce;
   }
+  .lime-green-2 {
+    background-color: #bff932;
+  }
+
+  .bg-chat {
+    background-color: #18393b;
+  }
+
+  .border-chat {
+    border-color: #bff932;
+  }
+
+  .text-chat {
+    color: #ffffff;
+  }
 
   .font-montserrat {
     font-family: "Montserrat", sans-serif;
@@ -57,6 +72,18 @@
 
   .font-limegreen {
     color: #b9f443;
+  }
+
+  .font-limegreen2 {
+    color: #bff932;
+  }
+
+  .font-light-blue {
+    color: #3b8ec3;
+  }
+
+  .font-dark-green {
+    color: #3f8642;
   }
 }
 

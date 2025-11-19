@@ -1,3 +1,4 @@
+import ChatButton from "./Components/ChatButton";
 import Navbar from "./Components/Navbar";
 import "./globals.css";
 
@@ -15,9 +16,10 @@ export default function RootLayout({
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           />
       </head>
-      <body>
-       
+      <body className="min-h-screen">
+        <Navbar />
         {children}
+        <ChatButton />
       </body>
     </html>
   );
