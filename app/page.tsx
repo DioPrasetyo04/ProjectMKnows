@@ -1,10 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
-import StatisticCard from "./components/StatisticCard";
-import ChatButton from "./components/ChatButton";
-import OurServices from "./components/OurServices";
-import Footer from "./components/Footer";
+import StatisticCard from "./Components/StatisticCard";
+import ChatButton from "./Components/ChatButton";
+import OurServices from "./Components/OurServices";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   // --- Gambar untuk carousel ---

@@ -172,7 +172,7 @@ export default function NewTraining() {
                 <div className="w-full flex justify-center">
                   <button
                     onClick={() => openModal(item.pdf)}
-                    className="mt-4 bg-[#02353C] text-white px-6 py-2 rounded-full shadow-lg text-sm md:text-base hover:bg-[#03454d] transition"
+                    className="mt-4 bg-[#02353C] text-white px-6 py-2 rounded-full shadow-lg font-montserrat text-sm md:text-base hover:bg-[#03454d] transition"
                   >
                     Lihat Detail
                   </button>
