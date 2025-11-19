@@ -1,7 +1,15 @@
-"use client";
 import Navbar from "@/Components/Navbar";
 import "./globals.css";
-import ChatButton from "@/Components/ChatButton";
+import { Inter } from "next/font/google";
+import { Metadata } from "next";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Bootcamp Program — M-Knows Consulting",
+  description:
+    "Bootcamp unggulan untuk pengembangan keterampilan dengan mentor berpengalaman di berbagai industri.",
+};
 
 export default function RootLayout({
   children,
@@ -22,7 +30,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </head>
-      <body className="min-h-screen">
+      <body className={`min-h-screen ${inter.className}`}>
         <Navbar />
         {children}
       </body>

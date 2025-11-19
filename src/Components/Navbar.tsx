@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 z-[9999] flex items-center justify-between px-6 md:px-16 py-4 bg-[#02353C] w-full h-[120px] shadow-md ">
+    <div className="fixed top-0 left-0 z-[9999] flex items-center justify-between px-6 lg:px-16 py-4 bg-[#02353C] w-full h-[120px] shadow-md">
       {/* ===== LOGO ===== */}
       <div
         className="flex items-center gap-3 cursor-pointer"
@@ -49,8 +49,8 @@ const Navbar = () => {
         />
       </div>
 
-      {/* ===== HAMBURGER BUTTON (MOBILE) ===== */}
-      <div className="md:hidden">
+      {/* ===== HAMBURGER BUTTON (MOBILE & TABLET) ===== */}
+      <div className="lg:hidden">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="text-white focus:outline-none"
@@ -59,8 +59,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* ===== NAVIGATION (DESKTOP) ===== */}
-      <div className="hidden md:flex items-center gap-x-16 relative">
+      {/* ===== NAVIGATION (DESKTOP ONLY ≥1024px) ===== */}
+      <div className="hidden lg:flex items-center gap-x-16 relative">
         {data.navLinksStatics.map((link) => {
           const isActive = pathname === link.href;
           return (
@@ -97,6 +97,7 @@ const Navbar = () => {
                 <h3 className="text-2xl font-montserrat font-semibold mb-4">
                   Our Services
                 </h3>
+
                 {["Training", "Consulting", "Digitalisasi"].map((menu) => (
                   <div key={menu} className="mb-2">
                     <button
@@ -121,11 +122,7 @@ const Navbar = () => {
                           {menu === "Training" && (
                             <>
                               <p
-                                onClick={() =>
-                                  navigateTo(
-                                    "/training/public-in-house-training"
-                                  )
-                                }
+                                onClick={() => navigateTo("/training/public")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Public In House Training
@@ -158,12 +155,11 @@ const Navbar = () => {
                               </p>
                             </>
                           )}
+
                           {menu === "Consulting" && (
                             <>
                               <p
-                                onClick={() =>
-                                  navigateTo("/consulting/brand-consulting")
-                                }
+                                onClick={() => navigateTo("/consulting/brand")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Brand Consulting
@@ -194,6 +190,7 @@ const Navbar = () => {
                               </p>
                             </>
                           )}
+
                           {menu === "Digitalisasi" && (
                             <>
                               <p
@@ -271,10 +268,11 @@ const Navbar = () => {
                 <h3 className="text-2xl font-montserrat font-semibold mb-4 px-6 text-right">
                   More
                 </h3>
+
                 <div className="flex flex-col space-y-2 px-6">
-                  {data.Mores.map((item, index) => (
+                  {data.Mores.map((item) => (
                     <button
-                      key={index}
+                      key={item.href}
                       onClick={() => navigateTo(item.href)}
                       className="block w-full text-[16px] font-montserrat tracking-wide hover:text-[#B9F443] transition-all text-right"
                     >
@@ -288,14 +286,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ===== MOBILE MENU ===== */}
+      {/* ===== MOBILE/TABLET MENU (≤1023px) ===== */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
-            className="absolute top-[120px] left-0 w-full bg-[#1E2430] text-white flex flex-col items-center py-6 space-y-4 shadow-lg z-50 md:hidden"
+            className="absolute top-[120px] left-0 w-full bg-[#1E2430] text-white flex flex-col items-center py-6 space-y-4 shadow-lg z-50 lg:hidden"
           >
             {/* Static Nav */}
             {data.navLinksStatics.map((link) => (
@@ -310,7 +308,7 @@ const Navbar = () => {
               </button>
             ))}
 
-            {/* Our Services (Dropdown) */}
+            {/* Our Services */}
             <div className="flex flex-col items-center space-y-2">
               <button
                 onClick={toggleService}
@@ -339,11 +337,7 @@ const Navbar = () => {
                           {menu === "Training" && (
                             <>
                               <p
-                                onClick={() =>
-                                  navigateTo(
-                                    "/training/public-in-house-training"
-                                  )
-                                }
+                                onClick={() => navigateTo("/training/public")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Public In House Training
@@ -376,12 +370,11 @@ const Navbar = () => {
                               </p>
                             </>
                           )}
+
                           {menu === "Consulting" && (
                             <>
                               <p
-                                onClick={() =>
-                                  navigateTo("/consulting/brand-consulting")
-                                }
+                                onClick={() => navigateTo("/consulting/brand")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Brand Consulting
@@ -412,6 +405,7 @@ const Navbar = () => {
                               </p>
                             </>
                           )}
+
                           {menu === "Digitalisasi" && (
                             <>
                               <p
@@ -474,11 +468,12 @@ const Navbar = () => {
               >
                 More ▾
               </button>
+
               {openMore && (
                 <div className="flex flex-col items-center space-y-2 font-montserrat text-white text-[16px]">
-                  {data.Mores.map((item, index) => (
+                  {data.Mores.map((item) => (
                     <button
-                      key={index}
+                      key={item.href}
                       onClick={() => navigateTo(item.href)}
                       className="hover:text-[#B9F443]"
                     >
