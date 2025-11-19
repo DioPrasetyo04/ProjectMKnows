@@ -10,8 +10,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>M-Knows</title>
+        <title>M-KNOWS</title>
         <link rel="icon" href="/logos/logo-Mknows.png" type="image/png" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
       </head>
       <body className="min-h-screen">
         <Navbar />
