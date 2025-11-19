@@ -39,7 +39,7 @@ const page = () => {
               </div>
               <div className="md:w-3/5">
                 <h1 className="text-3xl font-bold mb-4">M-Knows Consulting</h1>
-                <p className="text-gray-600 mb-3 text-2xl">
+                <p className="text-gray-600 mb-8 text-2xl text-justify">
                   M-Knows Consulting adalah merk yang dipakai bersama oleh PT.
                   Menara Indonesia dan PT. Menara Pengetahuan Indonesia. PT.
                   Menara Indonesia adalah perusahaan yang menjalankan jasa
@@ -51,7 +51,7 @@ const page = () => {
                   yang bergerak dalam bidang jasa pendidikan dan pelatihan,
                   berkantor pusat di Jakarta dan memiliki cabang di Surabaya.
                 </p>
-                <p className="text-gray-600 text-2xl">
+                <p className="text-gray-600 text-2xl text-justify">
                   Sejak berdiri, M-Knows Consulting telah sukses bekerjasama
                   dengan beragam perusahaan nasional dan multinasional, dengan
                   kualitas kerja yang memuaskan, dibuktikan dengan tingginya
@@ -71,18 +71,18 @@ const page = () => {
           <div className="bg-white p-8 rounded-lg shadow-md">
             <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
               {/* Kolom Gambar */}
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-2/5 flex justify-center">
                 <Image
                   src="/images/about/about2.png"
                   alt="Clipboard List"
-                  width={650}
-                  height={750}
+                  width={750}
+                  height={650}
                 />
               </div>
 
               {/* Kolom Teks (Hapus kelas card dari sini) */}
-              <div className="md:w-1/2">
-                <h2 className="text-4xl font-bold mb-4">
+              <div className="md:w-3/5">
+                <h2 className="text-3xl font-bold mb-4">
                   Jenis konsultasi yang sering diambil klien meliputi:
                 </h2>
                 <ul className="list-decimal list-outside ml-6 space-y-2 text-gray-700 text-2xl">
@@ -91,7 +91,7 @@ const page = () => {
                   ))}
                 </ul>
 
-                <h2 className="text-4xl font-bold mt-8 mb-4">
+                <h2 className="text-3xl font-bold mt-8 mb-4">
                   Assessment for Technical Competency
                 </h2>
                 <ul className="list-decimal list-outside ml-6 space-y-2 text-gray-700 text-2xl">
@@ -122,7 +122,7 @@ const page = () => {
 
               {/* Kolom Teks (Hapus kelas card dari sini) */}
               <div className="md:w-3/5">
-                <p className="text-gray-600 mb-3 text-3xl">
+                <p className="text-gray-600 mb-8 text-3xl text-justify">
                   Program pelatihan unggulan yang banyak di ambil klien M-Knows
                   antara lain meliputi topik: Marketing, Sales Distribution,
                   Service, Leadership, Managerial, Supervisory, Credit
@@ -132,7 +132,7 @@ const page = () => {
                   Negotiation Skills, Achievement Motivation & Soft Skills
                   lainnya.
                 </p>
-                <p className="text-gray-600 text-3xl">
+                <p className="text-gray-600 text-3xl text-justify">
                   Kami pastikan model pelatihan kontemporer, lebih baik
                   dibandingkan pendekatan yang klasik dan konservatif. We Are
                   Strong In “Activity Based Learning”.
