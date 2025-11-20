@@ -7,7 +7,7 @@ const page = () => {
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full">
         {/* Background image */}
-        <div className="w-full h-[400px] md:h-[500px] lg:h-[650px] overflow-hidden">
+        <div className="w-full h-[500px] md:h-[500px] lg:h-[650px] overflow-hidden">
           <img
             src="/images/house-training/laptop.png"
             alt="Laptop"
@@ -22,28 +22,32 @@ const page = () => {
           -translate-y-1/2
           p-5
           max-w-[650px]
-          lg:max-w-[900px]
-          md:max-w-[800px]
+          lg:max-w-[1200px]
+          md:max-w-[900px]
           justify-center
           text-justify
+          mx-auto
+          inset-0
           lg:flex 
           lg:justify-center
           lg:mx-auto
           lg:inset-0
+          lg:text-center
           md:flex 
           md:justify-center
           md:mx-auto
           md:right-0
           md:left-0
+          md:text-center
         "
         >
-          <h1 className="text-[30px] md:text-[40px] lg:text-[48px] pt-[50px] leading-tight font-bold font-montserrat">
+          <h1 className="text-[30px] md:text-[50px] lg:text-[60px] pt-[50px] leading-tight font-bold font-montserrat">
             <span className="text-[#B9F443]">In-House Training</span>
             <span className="text-white"> & </span>
             <span className="text-[#3B8EC3]">Public Training</span>
           </h1>
 
-          <p className="text-white text-[18px] lg:text-[20px] leading-relaxed font-poppins">
+          <p className="text-white text-[20px] md:text-[25px] lg:text-[30px] leading-relaxed font-poppins">
             Kami adalah mitra terpercaya Anda untuk peningkatan kompetensi tim,
             menyediakan pelatihan kustom In-House dan program Publik dengan
             standar industri tertinggi.
@@ -51,11 +55,8 @@ const page = () => {
         </div>
       </section>
 
-      {/* ================= SPACING ================= */}
-      <div className="h-[40px] md:h-[120px]" />
-
       {/* ================= TRAINING GRID ================= */}
-      <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 lg:px-20 pb-10">
+      <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 md:px-12 lg:px-20 pb-10 pt-[80px] pb-[80px]">
         {/* PUBLIC TRAINING CARD */}
         <a href="/search-training" className="w-full">
           <img
@@ -73,12 +74,12 @@ const page = () => {
         </a>
 
         {/* TEXT COLUMN */}
-        <div className="flex flex-col justify-center gap-4">
-          <h1 className="font-montserrat font-bold text-[26px] md:text-[32px] lg:text-[40px] leading-tight">
+        <div className="flex flex-col justify-center gap-4 md:col-span-2 lg:col-span-1 ">
+          <h1 className="font-montserrat font-bold text-[26px] md:text-[32px] lg:text-[35px] leading-tight">
             Pelatihan Fleksibel, Hasil Terukur
           </h1>
 
-          <p className="font-poppins text-[16px] md:text-[18px] lg:text-[22px] leading-relaxed text-justify">
+          <p className="font-poppins text-[20px] md:text-[25px] lg:text-[22px] leading-relaxed text-justify">
             Pilih kelas publik terjadwal untuk belajar cepat & networking, atau
             sesi in-house yang disesuaikan kebutuhan tim. Materi aplikatif,
             fasilitator praktisi, standar industri terkini.

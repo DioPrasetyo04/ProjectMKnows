@@ -52,11 +52,11 @@ const InHouseTraining = ({
       </div>
       <div className="flex flex-col items-center justify-center mx-auto right-0 left-0 top-0 bottom-0 z-20 absolute pb-[20px]">
         <div className="flex justify-center mx-auto left-0 right-0 text-center">
-          <h1 className="w-[526px] text-[48px] font-montserrat font-bold text-[#FFFFFF]">
+          <h1 className="w-[526px] text-[35px] lg:text-[48px] font-montserrat font-bold text-[#FFFFFF]">
             In-House Training
           </h1>
         </div>
-        <h3 className="text-[#ffff] font-poppins text-[26px] w-[1117px] text-center">
+        <h3 className="text-[#ffff] font-poppins text-[26px] w-[850px] lg:w-[1117px] text-center">
           In House Training merupakan program pelatihan yang diselenggarakan
           oleh M-KNOWS CONSULTING bekerjasama dengan Perusahaan atau Instansi
           pemerintah untuk meningkatkan skill karyawan sehingga meningkatkan
@@ -75,8 +75,8 @@ const InHouseTraining = ({
           dilaksanakan di lokasi Anda maupun secara hybrid.
         </p>
       </div>
-      <div className="flex flex-row gap-x-[72px] justify-center items-center py-[50px]">
-        <div className="card w-[560px] h-full rounded-[10px] bg-[#ffff] px-5 py-2 shadow-[0px_4px_4px_0px_#557B67]">
+      <div className="flex flex-col lg:flex-row gap-x-[72px] gap-y-[60px] justify-center items-center py-[50px]">
+        <div className="card w-[460px] lg:w-[760px] md:w-[560px] h-full rounded-[10px] bg-[#ffff] px-5 py-2 shadow-[0px_4px_4px_0px_#557B67]">
           <p className="font-montserrat font-semibold text-[24px] pb-[22px] pt-[28px]">
             Pengalaman sejak 2003
           </p>
@@ -86,7 +86,7 @@ const InHouseTraining = ({
             diterapkan setelah pelatihan.
           </p>
         </div>
-        <div className="card w-[560px] h-full rounded-[10px] bg-[#ffff] px-5 py-2 shadow-[0px_4px_4px_0px_#557B67]">
+        <div className="card w-[460px] lg:w-[760px] md:w-[560px] h-full rounded-[10px] bg-[#ffff] px-5 py-2 shadow-[0px_4px_4px_0px_#557B67]">
           <p className="font-montserrat font-semibold text-[24px] pb-[22px] pt-[28px]">
             Durasi Fleksibel
           </p>
@@ -130,7 +130,6 @@ const InHouseTraining = ({
           </div>
         </button>
       </div>
-      <Footer />
     </section>
   );
 };

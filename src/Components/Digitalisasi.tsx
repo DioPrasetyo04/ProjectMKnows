@@ -23,8 +23,8 @@ const Digitalisasi = ({
         : features
       : [];
   return (
-    <section className="mx-auto pt-[150px] gap-x-[10px] gap-y-[20px] flex flex-col lg:flex-row justify-center items-center lg:items-start md:items-center">
-      <div className="lg:w-[473px] lg:h-[631px] w-[300px] h-[400px] flex items-center justify-center ">
+    <section className="mx-auto pt-[150px] pb-[90px] gap-x-[10px] gap-y-[20px] flex flex-col lg:flex-row justify-center items-center lg:items-start md:items-center p-5">
+      <div className="lg:w-[473px] w-[300px] flex items-center justify-center ">
         <img
           src={`${imageSrc}`}
           alt={imageAlt}
@@ -32,7 +32,7 @@ const Digitalisasi = ({
         />
       </div>
       <div className="flex flex-col py-2 px-2">
-        <h1 className="lg:text-[46px] text-[32px] sm:text-[32px] md:text-[36px] font-bold font-montserrat font-light-blue leading-[156.8%] lg:flex lg:items-start sm:mx-auto md:mx-auto">
+        <h1 className="lg:text-[46px] text-[25px] sm:text-[25px] md:text-[36px] font-bold font-montserrat font-light-blue leading-[156.8%] text-center lg:text-left">
           {title}
         </h1>
         <div className="flex flex-col gap-y-[20px]">

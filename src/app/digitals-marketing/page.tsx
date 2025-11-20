@@ -5,7 +5,7 @@ const page = () => {
     <Digitalisasi
       imageSrc="/images/digital-mar/digital-marketing.png"
       imageAlt="digital marketing images"
-      title="Pengembangan 2D & 3D"
+      title="Digital Marketing"
       description="Tingkatkan Bisnis anda dengan Digital Consulting! Dalam era digital ini, Digital Consulting dapat membantu anda untuk meningkatkan visibilitas online anda, menjangkau lebih banyak pelanggan, dan meningkatkan penjualan online anda. Konsultan digital kami yang berpengalaman bekerja sama dengan Anda untuk mengembangkan strategi digital yang efektif, mengoptimalkan situs web dan kehadiran online Anda, dan meningkatkan hasil pemasaran digital Anda"
       count_features={4}
       features={[
