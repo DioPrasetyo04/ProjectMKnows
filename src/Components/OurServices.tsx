@@ -27,7 +27,7 @@ export default function OurServices() {
   const [activeTab, setActiveTab] = useState("training");
 
   return (
-    <section className="py-5 bg-white text-center">
+    <section className="bg-white text-center">
       {/* ===== Judul ===== */}
       <h2 className="text-6xl font-montserrat font-bold mb-6 text-[#065346]">
         <span className="text-[#B9F443]">Our</span>{" "}

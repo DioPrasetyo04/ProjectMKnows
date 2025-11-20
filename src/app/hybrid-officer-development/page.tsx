@@ -108,7 +108,7 @@ export default function HybridOfficerPage() {
       {/* HERO SECTION (Sesuai kode Anda di chat terakhir) */}
       <div className="relative w-full h-[480px]">
         <img
-          src="/hybrid-officer-development/gambarhod1.png"
+          src="/images/hybrid-officer-development/gambarhod1.png"
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -133,7 +133,7 @@ export default function HybridOfficerPage() {
         <Section
           title="Hybrid Officer Development Crash Program For Financial Industry"
           bgType="green"
-          imageUrl="/hybrid-officer-development/gambarhod2.png"
+          imageUrl="/images/hybrid-officer-development/gambarhod2.png"
           imageAlt="Hybrid Officer"
           imageRight={false}
         >
@@ -147,7 +147,7 @@ export default function HybridOfficerPage() {
         <Section
           title="Deskripsi Program ODCP"
           bgType="white"
-          imageUrl="/hybrid-officer-development/gambarhod3.png"
+          imageUrl="/images/hybrid-officer-development/gambarhod3.png"
           imageAlt="Deskripsi Program"
           imageRight={true}
         >
@@ -174,7 +174,7 @@ export default function HybridOfficerPage() {
         <Section
           title="Lingkup Project Hybrid Officer Development Crash Program"
           bgType="white"
-          imageUrl="/hybrid-officer-development/gambarhod4.png"
+          imageUrl="/images/hybrid-officer-development/gambarhod4.png"
           imageAlt="Lingkup Project"
           imageRight={false}
         >
@@ -200,7 +200,7 @@ export default function HybridOfficerPage() {
         <Section
           title="Proces Recruitment & On Boarding"
           bgType="green"
-          imageUrl="/hybrid-officer-development/gambarhod5.png"
+          imageUrl="/images/hybrid-officer-development/gambarhod5.png"
           imageAlt="Recruitment"
           imageRight={true}
         >
@@ -224,7 +224,7 @@ export default function HybridOfficerPage() {
         <Section
           title="Kerangka Program (Project Framework)"
           bgType="white"
-          imageUrl="/hybrid-officer-development/gambarhod6.png"
+          imageUrl="/images/hybrid-officer-development/gambarhod6.png"
           imageAlt="Kerangka Program"
           imageRight={false}
         >
@@ -254,7 +254,7 @@ export default function HybridOfficerPage() {
         <Section
           title="Proses Pelatihan di Kampus Gratis"
           bgType="white"
-          imageUrl="/hybrid-officer-development/gambarhod7.png"
+          imageUrl="/images/hybrid-officer-development/gambarhod7.png"
           imageAlt="Pelatihan"
           imageRight={true}
         >
@@ -279,7 +279,7 @@ export default function HybridOfficerPage() {
         <Section
           title="Monitoring & Evaluasi"
           bgType="dark"
-          imageUrl="/hybrid-officer-development/gambarhod8.png"
+          imageUrl="/images/hybrid-officer-development/gambarhod8.png"
           imageAlt="Monitoring"
           imageRight={false}
         >

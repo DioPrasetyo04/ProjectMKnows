@@ -15,12 +15,12 @@ export default function WebDevelopmentPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="container mx-auto px-4 pt-[180px] pb-[120px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Kolom Gambar */}
         <div className="relative w-full h-80 md:h-[700px] rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/jasa-web-development/gambarjwb1.png" // Ganti dengan path gambar Anda
+            src="/images/jasa-web-development/gambarjwb1.png" // Ganti dengan path gambar Anda
             alt="Jasa Web Development M-Knows"
             layout="fill"
             objectFit="cover"
@@ -59,7 +59,7 @@ export default function WebDevelopmentPage() {
             Key Features:
           </h3>
 
-          <ul className="space-y-3 list-disc list-inside text-gray-700 pl-2">
+          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-2 text-justify">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}

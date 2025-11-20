@@ -207,8 +207,6 @@ export default function NewTraining() {
         </div>
       </div>
 
-      <Footer />
-
       {/* MODAL */}
       {openPdf && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">

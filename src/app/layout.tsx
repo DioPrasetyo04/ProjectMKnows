@@ -2,6 +2,8 @@ import Navbar from "@/Components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
+import Footer from "@/Components/Footer";
+import ChatButton from "@/Components/ChatButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,9 +32,11 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </head>
-      <body className={`min-h-screen ${inter.className}`}>
+      <body className={`min-h-screen ${inter.className} overflow-x-hidden`}>
         <Navbar />
         {children}
+        <ChatButton />
+        <Footer />
       </body>
     </html>
   );

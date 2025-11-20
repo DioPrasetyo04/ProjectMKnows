@@ -9,7 +9,7 @@ const LMSPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-black">
+    <div className="min-h-screen flex flex-col bg-white text-black pt-[120px]">
       {/* Jika Navbar dan Footer sudah ada di layout.tsx, Anda bisa menghapusnya di sini */}
 
       {/* Konten Utama - Layout Dua Kolom */}
@@ -23,12 +23,12 @@ const LMSPage = () => {
               <div
                 className="absolute inset-0 bg-cover bg-center opacity-80 rounded-lg shadow-2xl"
                 style={{
-                  backgroundImage: "url('images/lms/lms.jpg')", // Ganti dengan path gambar Anda
+                  backgroundImage: "url('/images/lms/lms.jpg')", // Ganti dengan path gambar Anda
                   filter: "grayscale(10%) brightness(0.8)",
                 }}
               ></div>
               <img
-                src="images/lms/lms.jpg" // Ganti dengan gambar tangan di laptop yang sesuai.
+                src="/images/lms/lms.jpg" // Ganti dengan gambar tangan di laptop yang sesuai.
                 alt="Pengembangan LMS Kustom"
                 className="w-full h-full object-cover rounded-lg hidden" // Disembunyikan, menggunakan div di atas untuk simulasi desain
               />

@@ -13,7 +13,7 @@ export default function VirtualRealityPage() {
     <div className="container mx-auto pt-[150px]  p-6">
       <div className="flex flex-col lg:flex-row gap-8 items-start">
         {/* Kolom Gambar */}
-        <div className="lg:w-3/5">
+        <div className="lg:w-3/5 flex justify-center items-center mx-auto">
           <div className="relative w-full max-h-[850px] rounded-lg shadow-lg overflow-hidden">
             <Image
               src="/images/virtual-reality/virtual-reality.png"

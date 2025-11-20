@@ -24,19 +24,19 @@ export default function BootcampCard({
         hover:ring-1 hover:ring-brand-teal/30 hover:shadow-lg
       "
     >
-      {/* FRAME TANPA PADDING: gambar memenuhi kanan–kiri */}
+      {/* FIXED: Container rapi, gambar tidak kepotong */}
       <div
         className="
-          relative w-full h-64 sm:h-80 md:h-112
-          overflow-hidden rounded-2xl bg-white border border-slate-200/70 mt-5
+          relative w-full aspect-[11/9]
+          overflow-hidden rounded-t-2xl bg-white border-b border-slate-200/60
         "
       >
         <Image
           src={image}
           alt={subtitle || title || "Bootcamp"}
           fill
-          /* Fokus ke area bawah agar teks kecil di poster terlihat */
-          className="object-cover object-bottom"
+          priority={true}
+          className="object-cover object-center" // <-- FIX: jangan object-bottom
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           quality={95}
         />
@@ -61,7 +61,10 @@ export default function BootcampCard({
         </p>
 
         <div className="pt-2 mt-auto">
-          <button onClick={onDetail} className="btn btn-primary w-full h-12 text-lg">
+          <button
+            onClick={onDetail}
+            className="btn btn-primary w-full h-12 text-lg"
+          >
             Lihat Detail
           </button>
         </div>

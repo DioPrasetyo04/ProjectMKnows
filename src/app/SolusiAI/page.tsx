@@ -11,12 +11,12 @@ export default function SolusiAIPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="container mx-auto px-4 pt-[180px] pb-[120px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Kolom Gambar */}
         <div className="relative w-full h-80 md:h-[700px] rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/solusi-ai/solusigambar.png"
+            src="/images/solusi-ai/solusigambar.png"
             alt="Solusi AI M-Knows"
             fill
             className="object-cover transition-transform duration-500 hover:scale-105"

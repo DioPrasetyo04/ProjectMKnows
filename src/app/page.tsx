@@ -29,7 +29,7 @@ export default function Home() {
   }, [images.length]);
 
   return (
-    <div className="font-poppins bg-[#CEEBFF] text-[#02353C] min-w-screen w-full overflow-hidden">
+    <div className="font-poppins text-[#02353C] min-w-screen w-full overflow-hidden">
       {/* Hero */}
       <section
         className="relative bg-cover bg-center h-[700px] flex items-center justify-center"
@@ -92,58 +92,57 @@ export default function Home() {
       </section>
 
       {/* Statistics */}
-      <section className="py-10 bg-white text-center">
-        <h2 className="text-6xl font-montserrat font-bold mb-6">
-          <span className="text-[#B9F443]">Our</span>{" "}
-          <span className="text-[#4697CE]">Statistics</span>
-        </h2>
-        <p className="text-[#02353C] mb-10 text-[27px] font-montserrat">
-          Pencapaian dan dedikasi kami dalam memberikan layanan terbaik
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-10">
-          <StatisticCard
-            value={20}
-            label="Years"
-            description="of Experience"
-            iconType="experience"
-          />
-          <StatisticCard
-            value={2400}
-            label="In-House"
-            description="Training"
-            iconType="inhouse"
-          />
-          <StatisticCard
-            value={800}
-            label="Public"
-            description="Training"
-            iconType="public"
-          />
-          <StatisticCard
-            value={750}
-            label="Happy"
-            description="Clients"
-            iconType="happy"
-          />
-        </div>
-      </section>
-
-      {/* Komitmen */}
-      <section className="py-10 bg-white text-center">
-        <div className="bg-[#02353C] mx-auto text-center w-[70%] md:w-[40%] rounded-2xl py-9 px-7">
-          <p className="text-white text-[26px] font-montserrat text-lg md:text-xl font-semibold leading-relaxed">
-            Kami berkomitmen memberikan layanan terbaik untuk mendukung
-            pertumbuhan organisasi Anda.
+      <div className="pb-[80px] flex flex-col md:flex-col sm:flex-col justify-center items-center gap-y-[40px]">
+        <section className="bg-white text-center">
+          <h2 className="text-6xl font-montserrat font-bold mb-6">
+            <span className="text-[#B9F443]">Our</span>{" "}
+            <span className="text-[#4697CE]">Statistics</span>
+          </h2>
+          <p className="text-[#02353C] mb-10 text-[27px] font-montserrat">
+            Pencapaian dan dedikasi kami dalam memberikan layanan terbaik
           </p>
-        </div>
-      </section>
 
-      {/* Our Services */}
-      <OurServices />
+          <div className="flex flex-wrap justify-center gap-10">
+            <StatisticCard
+              value={20}
+              label="Years"
+              description="of Experience"
+              iconType="experience"
+            />
+            <StatisticCard
+              value={2400}
+              label="In-House"
+              description="Training"
+              iconType="inhouse"
+            />
+            <StatisticCard
+              value={800}
+              label="Public"
+              description="Training"
+              iconType="public"
+            />
+            <StatisticCard
+              value={750}
+              label="Happy"
+              description="Clients"
+              iconType="happy"
+            />
+          </div>
+        </section>
 
-      {/* Footer */}
-      <Footer />
+        {/* Komitmen */}
+        <section className="bg-white text-center w-full lg:top-[20px]">
+          <div className="bg-[#02353C] mx-auto text-center w-[70%] md:w-[40%] rounded-2xl py-9 px-7">
+            <p className="text-white text-[26px] font-montserrat text-lg md:text-xl font-semibold leading-relaxed">
+              Kami berkomitmen memberikan layanan terbaik untuk mendukung
+              pertumbuhan organisasi Anda.
+            </p>
+          </div>
+        </section>
+
+        {/* Our Services */}
+        <OurServices />
+      </div>
     </div>
   );
 }
