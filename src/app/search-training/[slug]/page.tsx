@@ -144,8 +144,6 @@ export default async function Page({
           </PageDetailTimeTable>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }
