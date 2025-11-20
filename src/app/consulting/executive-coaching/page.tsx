@@ -9,10 +9,10 @@ const ExecutiveCoachingPage = () => {
   ];
 
   return (
-    <div className="bg-white text-white min-h-screen">
+    <div className="bg-white text-white min-h-screen pt-[120px]">
       {/* 1. Hero Section (Menggunakan Komponen Hero) */}
       <Hero
-        imageUrl="images/executive-coaching/exe.jpg" // Ganti dengan gambar yang sesuai
+        imageUrl="/images/executive-coaching/exe.jpg" // Ganti dengan gambar yang sesuai
         title="Executive Coaching & Business Mentoring"
         subtitle="Program ini bertujuan untuk membantu peserta dalam memperoleh pengetahuan dan keterampilan fungsional sehingga dapat mereka terapkan di tempat kerja khususnya bagi Anda yang memiliki Tim (punya anak buah)."
       />
@@ -71,7 +71,7 @@ const ExecutiveCoachingPage = () => {
               <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center">
                 {/* Ganti 'path/ke/gambar/anda.jpg' dengan path gambar yang sebenarnya */}
                 <img
-                  src="images/executive-coaching/coach.jpg"
+                  src="/images/executive-coaching/coach.jpg"
                   alt=""
                   className="rounded-xl w-full max-w-sm lg:max-w-full h-auto object-cover"
                   style={{ maxHeight: "350px" }} // Atur tinggi maksimum agar tidak terlalu besar

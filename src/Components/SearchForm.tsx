@@ -15,7 +15,7 @@ const SearchForm = ({ name }: SearchProps) => {
         id={id}
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
-        className="border rounded-full px-4 py-2 w-[616px] placeholder:font-montserrat placeholder:text-[26px] placeholder:font-regular placeholder:text-black"
+        className="border rounded-full px-4 py-2 w-[350px] md:w-[600px] lg:w-[616px] placeholder:font-montserrat placeholder:text-[26px] placeholder:font-regular placeholder:text-black"
       />
       <label htmlFor={id} className="absolute right-3">
         <FaSearch className="h-5 w-5 text-black pointer-events-none cursor-pointer" />

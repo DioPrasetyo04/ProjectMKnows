@@ -36,7 +36,7 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
     <>
       <div className="flex flex-col justify-center items-center px-3 py-3">
         <div className="flex flex-col justify-center items-center pt-2.5 pt-[180px]">
-          <h1 className="capitalize font-montserrat font-bold text-[48px]">
+          <h1 className="capitalize font-montserrat font-bold text-[25px] md:text-[48px] lg:text-[48px]">
             public training tahun 2026
           </h1>
           <SearchContext.Provider value={{ keyword, setKeyword }}>

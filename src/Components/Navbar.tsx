@@ -122,7 +122,11 @@ const Navbar = () => {
                           {menu === "Training" && (
                             <>
                               <p
-                                onClick={() => navigateTo("/training/public-in-house-training")}
+                                onClick={() =>
+                                  navigateTo(
+                                    "/training/public-in-house-training"
+                                  )
+                                }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Public In House Training
@@ -146,9 +150,7 @@ const Navbar = () => {
                                 Learning Management System
                               </p>
                               <p
-                                onClick={() =>
-                                  navigateTo("/lms-custom")
-                                }
+                                onClick={() => navigateTo("/lms-custom")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Pengembangan LMS Kustom
@@ -159,7 +161,9 @@ const Navbar = () => {
                           {menu === "Consulting" && (
                             <>
                               <p
-                                onClick={() => navigateTo("/consulting/brand-consulting")}
+                                onClick={() =>
+                                  navigateTo("/consulting/brand-consulting")
+                                }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Brand Consulting
@@ -200,7 +204,9 @@ const Navbar = () => {
                                 Solusi AI
                               </p>
                               <p
-                                onClick={() => navigateTo("/jasa-web-development")}
+                                onClick={() =>
+                                  navigateTo("/jasa-web-development")
+                                }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Web Development
@@ -218,7 +224,9 @@ const Navbar = () => {
                                 Game Development
                               </p>
                               <p
-                                onClick={() => navigateTo("/digitals-marketing")}
+                                onClick={() =>
+                                  navigateTo("/digitals-marketing")
+                                }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Digital Marketing

@@ -17,10 +17,12 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageUrl }) => {
 
       {/* Konten Teks */}
       <div className="relative z-10 p-6 max-w-4xl">
-        <h1 className="text-5xl font-extrabold text-white mb-4 leading-tight">
+        <h1 className="text-3xl lg:text-[5xl] font-extrabold text-white mb-4 leading-tight">
           {title}
         </h1>
-        <p className="text-2xl text-gray-200 font-medium">{subtitle}</p>
+        <p className="text-xl lg:text-2xl text-gray-200 font-medium">
+          {subtitle}
+        </p>
       </div>
     </div>
   );

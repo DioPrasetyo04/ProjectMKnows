@@ -5,6 +5,8 @@ export type TimeTableTraining = {
 export type PageTimeTableTraining = {
   children?: React.ReactNode;
   stylingParent?: CSSProperties;
+  stylingTitle?: CSSProperties;
+  stylingDesc?: CSSProperties;
   Title?: string;
   Desc?: string;
   data?: any[];

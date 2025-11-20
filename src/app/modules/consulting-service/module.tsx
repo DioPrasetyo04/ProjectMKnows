@@ -5,12 +5,12 @@ import BenefitseSection from "./benefit/section";
 import OpportunitySection from "./oppurtunity/section";
 
 export const ConsultingModules: FC = () => {
-    return (
-        <>
-            <HeroSection />
-            <BenefitseSection />
-            <OpportunitySection />
-            <OurClientsSection />
-        </>
-    );
+  return (
+    <div className="pt-[120px]">
+      <HeroSection />
+      <BenefitseSection />
+      <OpportunitySection />
+      <OurClientsSection />
+    </div>
+  );
 };

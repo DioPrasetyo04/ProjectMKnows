@@ -14,6 +14,8 @@ import { fetchData } from "@/Services/api_service";
 const PageDetailTimeTable = ({
   children,
   stylingParent,
+  stylingTitle,
+  stylingDesc,
   Title,
   Desc,
   link,
@@ -28,7 +30,7 @@ const PageDetailTimeTable = ({
       try {
         const res = await fetchData.get(link as any);
         const dataJSon = res.data;
-        // Validasi sebelum overwrite
+
         if (Array.isArray(dataJSon)) {
           setDataJson(dataJSon);
         }
@@ -40,11 +42,20 @@ const PageDetailTimeTable = ({
 
     getDataTimeTable();
   }, [link]);
+
   return (
     <>
       <div
         className={cn(
-          "flex flex-col gap-y-[20px] pt-[200px] pb-[150px] min-h-screen pl-[67px]",
+          `
+          flex flex-col 
+          gap-y-[20px] 
+          pt-[200px] 
+          pb-[150px] 
+          min-h-screen
+          px-4 sm:px-6 
+          lg:pl-[67px] lg:pr-0
+        `,
           stylingParent
         )}
       >
@@ -52,18 +63,24 @@ const PageDetailTimeTable = ({
 
         <div className="flex flex-col gap-y-[15px]">
           {Title && (
-            <h1 className="font-montserrat font-bold text-[48px] max-w-[1281px] text-[#ffff]">
+            <h1
+              className={`font-montserrat font-bold text-[35px] md:text-[40px] lg:text-[48px] max-w-[1281px] ${stylingTitle}`}
+            >
               {Title}
             </h1>
           )}
+
           {Desc && (
-            <p className="font-montserrat font-regular text-[24px] max-w-[1281px]">
+            <p
+              className={`font-montserrat font-regular text-[18px] md:text-[20px] lg:text-[24px] max-w-[900px] lg:max-w-[1000px] text-justify ${stylingDesc}`}
+            >
               {Desc}
             </p>
           )}
         </div>
 
-        <div className="flex flex-col gap-y-[35px] mt-10">
+        {/* Card List */}
+        <div className="flex flex-col gap-y-[35px] mt-10 w-full">
           {Array.isArray(dataJson)
             ? dataJson.map((item: any) => {
                 const keyName = Object.keys(item).find((x) => x !== "id");

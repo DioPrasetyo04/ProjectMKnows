@@ -3,12 +3,13 @@
 const Page = () => {
   return (
     // 1. Ini adalah INDUK UTAMA dengan gambar background
-    <div className="relative text-white font-[Montserrat] bg-top bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/visi_misi/halaman.png')" }}> 
-
+    <div
+      className="relative text-white font-[Montserrat] bg-top bg-no-repeat bg-cover"
+      style={{ backgroundImage: "url('/images/visi_misi/halaman.png')" }}
+    >
       {/* 2. Ini adalah OVERLAY HITAM 54% */}
       {/* Ini akan duduk di atas gambar, tapi di bawah konten */}
-      <div className="absolute inset-0 bg-black/[.54]" aria-hidden="true"></div> 
-
+      <div className="absolute inset-0 bg-black/[.54]" aria-hidden="true"></div>
       {/* 3. NAVBAR Anda biarkan di sini. */}
       {/* Karena sudah 'fixed' dan 'z-[1000]', dia akan selalu di atas. */}
       <header className="w-full h-[100px] px-[60px] py-3 flex items-center justify-between bg-[#083b44] text-white fixed top-0 left-0 right-0 z-[1000] shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
@@ -46,20 +47,17 @@ const Page = () => {
           </a>
         </nav>
       </header>
-      
       {/* 4. INI WRAPPER KONTEN ANDA */}
       {/* SEMUA sisa konten halaman (hero, main, footer) masuk ke sini */}
       <div className="relative">
-  <section className="hero text-center pt-[20px] pb-[20px] px-[20px] mt-[100px] text-white font-montserrat">
-    <h2 className="text-[64px] font-bold mt-[80px] max-md:text-[48px]">
-      Vision & Mission
-    </h2>
-    <p className="text-[48px] font-bold mt-[10px] max-md:text-[32px]">
-      What We Believe
-    </p>
-  </section>
-
-
+        <section className="hero text-center pt-[20px] pb-[20px] px-[20px] mt-[100px] text-white font-montserrat">
+          <h2 className="text-[64px] font-bold mt-[80px] max-md:text-[48px]">
+            Vision & Mission
+          </h2>
+          <p className="text-[48px] font-bold mt-[10px] max-md:text-[32px]">
+            What We Believe
+          </p>
+        </section>
 
         <main className="font-montserrat">
           {/* VISI & MISI */}
@@ -71,12 +69,13 @@ const Page = () => {
               </h3>
               <div className="space-y-[8px] font-poppins">
                 <p className="leading-relaxed text-[28px] max-md:text-[20px] text-justify">
-                  Menjadikan M-Knows Consulting sebagai one stop solution dalam kegiatan
-                  konsultasi manajemen sumber daya manusia, solusi digital dan
-                  penyelenggaraan pelatihan, yang menekankan pendekatan HIGH IMPACT
-                  (custom-aplikatif) – CUTTING EDGE (Kontemporer-Berbasis riset
-                  lapangan), dan FUN (Energik-Menyenangkan), guna peningkatan kemampuan
-                  sumber daya manusia di Indonesia.
+                  Menjadikan M-Knows Consulting sebagai one stop solution dalam
+                  kegiatan konsultasi manajemen sumber daya manusia, solusi
+                  digital dan penyelenggaraan pelatihan, yang menekankan
+                  pendekatan HIGH IMPACT (custom-aplikatif) – CUTTING EDGE
+                  (Kontemporer-Berbasis riset lapangan), dan FUN
+                  (Energik-Menyenangkan), guna peningkatan kemampuan sumber daya
+                  manusia di Indonesia.
                 </p>
               </div>
             </div>
@@ -88,17 +87,18 @@ const Page = () => {
               </h3>
               <ul className="list-disc ml-[25px] leading-relaxed text-[28px] max-md:text-[20px] space-y-[12px] font-poppins">
                 <li>
-                  Memberikan pelayanan terbaik dalam penyelenggaraan jasa layanan, sesuai
-                  dengan kompetensi M-Knows.
+                  Memberikan pelayanan terbaik dalam penyelenggaraan jasa
+                  layanan, sesuai dengan kompetensi M-Knows.
                 </li>
                 <li>
-                  Membangun secara berkelanjutan kemampuan dan kompetensi perusahaan
-                  dalam memberikan solusi baru, baik para konsultan maupun unit
-                  pendukungnya.
+                  Membangun secara berkelanjutan kemampuan dan kompetensi
+                  perusahaan dalam memberikan solusi baru, baik para konsultan
+                  maupun unit pendukungnya.
                 </li>
                 <li>
-                  Memberikan peningkatan kesejahteraan dan ruang bagi pengembangan
-                  kompetensi diri setiap individu yang bekerja di M-Knows Consulting.
+                  Memberikan peningkatan kesejahteraan dan ruang bagi
+                  pengembangan kompetensi diri setiap individu yang bekerja di
+                  M-Knows Consulting.
                 </li>
               </ul>
             </div>
@@ -144,44 +144,18 @@ const Page = () => {
                   <h4 className="text-[24px] font-bold mt-[20px] mb-[5px]">
                     {item.title}
                   </h4>
-                  <p className="text-[20px] leading-tight max-w-[300px]">{item.desc}</p>
+                  <p className="text-[20px] leading-tight max-w-[300px]">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </section>
         </main>
-
-        {/* ===== FOOTER ===== */}
-        <footer className="bg-[#083b44] text-white px-[100px] py-[40px] grid grid-cols-1 md:grid-cols-3 gap-8 text-[15px] leading-relaxed">
-          <div>
-            <h4 className="font-bold mb-3">PT. Menara Indonesia</h4>
-            <p>Jl. Raya Cirendeu, No.61 Ciputat,<br />Tangerang Selatan 15419</p>
-            <p className="mt-2">Telp: 021-388-900-52<br />0812-1042-8281</p>
-            <p>Email: learning@m-knowsconsulting.com</p>
-          </div>
-          <div>
-            <h4 className="font-bold mb-3">PT. Menara Pengetahuan Indonesia</h4>
-            <p>Jl. Raya Cirendeu, No.61 Ciputat,<br />Tangerang Selatan 15419</p>
-            <h4 className="font-bold mt-4 mb-2">Our Social Media:</h4>
-            <div className="flex gap-3">
-              <img src="/images/facebook.jpg" alt="Facebook" className="w-5 h-5" />
-              <img src="/images/ig.jpg" alt="Instagram" className="w-5 h-5" />
-              <img src="/images/yt.jpg" alt="YouTube" className="w-5 h-5" />
-              <img src="/images/linkedin.jpg" alt="LinkedIn" className="w-5 h-5" />
-            </div>
-          </div>
-          <div>
-            <h4 className="font-bold mb-3">Surabaya Branch Office</h4>
-            <p>Jl. Darmo Permai II Surabaya</p>
-            <p>Telp: 031-837-05277</p>
-            <p>Email: surabaya@m-knowsconsulting.com</p>
-          </div>
-        </footer>
-
-      </div> {/* <-- Ini adalah penutup untuk <div className="relative"> */}
-
+      </div>{" "}
+      {/* <-- Ini adalah penutup untuk <div className="relative"> */}
     </div> // <-- Ini adalah penutup untuk <div> utama
   );
-}
+};
 
 export default Page;
