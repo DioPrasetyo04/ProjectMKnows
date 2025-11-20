@@ -30,19 +30,19 @@
   ],
   "Mores": [
     {
-      "href": "/about-us",
+      "href": "/about",
       "label": "About Us"
     },
     {
-      "href": "/histories",
+      "href": "/history",
       "label": "History"
     },
     {
-      "href": "/vision-missions",
+      "href": "/visi-misi",
       "label": "Vision & Mission"
     },
     {
-      "href": "/our-facilitators",
+      "href": "/our-fasilitator",
       "label": "Our Facilitators"
     },
     {
@@ -50,15 +50,15 @@
       "label": "Carrers"
     },
     {
-      "href": "/consulting-services",
+      "href": "/consulting-service",
       "label": "Consulting Services"
     },
     {
-      "href": "/our-clients",
+      "href": "/clients-page",
       "label": "Our Clients"
     },
     {
-      "href": "/contact-us",
+      "href": "/contact",
       "label": "Contact Us"
     }
   ],

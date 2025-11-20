@@ -227,3 +227,105 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ==== FIX TAB RESPONSIVE ==== */
+.service-tabs {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.service-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.service-tabs button {
+  white-space: nowrap;
+}
+
+/* ==== CARD RESPONSIVE FIX ==== */
+
+/* Desktop 4 kolom (tidak diubah) */
+@media (min-width: 1200px) {
+  .service-card {
+    width: 260px !important;
+  }
+}
+
+/* Tablet landscape / iPad Air → 3 kolom */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service-card {
+    width: 30% !important;
+    max-width: 300px;
+  }
+}
+
+/* Tablet portrait → 2 kolom */
+@media (min-width: 600px) and (max-width: 767px) {
+  .service-card {
+    width: 45% !important;
+  }
+}
+
+/* Mobile → 1 kolom */
+@media (max-width: 599px) {
+  .service-card {
+    width: 100% !important;
+  }
+}
+
+/* ==== FIX GRID iPad agar tidak terpotong ==== */
+@media (min-width: 768px) and (max-width: 1180px) {
+  .ipad-grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    justify-items: center !important;
+    gap: 32px !important;
+  }
+}
+
+/* Card size khusus iPad */
+@media (min-width: 768px) and (max-width: 1180px) {
+  .service-card {
+    width: 90% !important;
+    max-width: 280px !important;
+  }
+}
+
+/* === FIX RESPONSIVE ALL DEVICES FOR TABS === */
+.tabs-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 10px;
+  min-width: max-content;
+}
+
+/* prevent tab cut */
+.tab-item {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Fix navbar overlap */
+.main-content {
+  padding-top: 90px;
+  /* sesuaikan tinggi navbar */
+}
+
+/* Extra responsive optimization */
+@media (max-width: 500px) {
+  .tabs-container {
+    gap: 6px;
+    padding: 0 6px;
+  }
+}
