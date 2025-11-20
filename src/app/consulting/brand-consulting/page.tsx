@@ -12,7 +12,7 @@ const BrandConsultingPage = () => {
           {/* Kolom Kiri: Visual/Gambar */}
           <div className="lg:w-1/2 relative">
             <img
-              src="images/brand-consulting/brand.jpg" // Ganti dengan gambar yang sesuai di folder public
+              src="/images/brand-consulting/brand.jpg" // Ganti dengan gambar yang sesuai di folder public
               alt="Brand Consulting"
               className="w-full h-auto object-cover rounded-lg shadow-xl"
             />
