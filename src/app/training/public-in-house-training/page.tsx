@@ -79,7 +79,7 @@ const page = () => {
             Pelatihan Fleksibel, Hasil Terukur
           </h1>
 
-          <p className="font-poppins text-[20px] md:text-[25px] lg:text-[22px] leading-relaxed text-justify">
+          <p className="font-poppins text-[20px] md:text-[25px] lg:text-[28px] leading-relaxed text-justify">
             Pilih kelas publik terjadwal untuk belajar cepat & networking, atau
             sesi in-house yang disesuaikan kebutuhan tim. Materi aplikatif,
             fasilitator praktisi, standar industri terkini.
@@ -96,11 +96,11 @@ const page = () => {
             className="w-full max-w-[320px] rounded-xl"
           />
 
-          <div className="text-white max-w-[650px] space-y-4">
+          <div className="text-white max-w-[750px] space-y-4">
             <h2 className="font-bold text-[26px] md:text-[32px] lg:text-[40px] leading-tight">
               Dilatih dengan Serius, Diukur Hasilnya
             </h2>
-            <p className="text-[16px] md:text-[18px] lg:text-[20px]">
+            <p className="text-[16px] md:text-[18px] lg:text-[28px]">
               Program Public & In-House berbasis kompetensi, dipandu praktisi,
               dengan evaluasi terstruktur.
             </p>
@@ -108,12 +108,12 @@ const page = () => {
         </div>
 
         {/* ROW 2 */}
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 pr-[40px]">
           <div className="text-white max-w-[650px] space-y-4">
             <h2 className="font-bold text-[26px] md:text-[32px] lg:text-[40px] leading-tight">
               Built for Indonesian Enterprises
             </h2>
-            <p className="text-[16px] md:text-[18px] lg:text-[20px]">
+            <p className="text-[16px] md:text-[18px] lg:text-[28px]">
               Materi relevan untuk pasar Indonesia dengan praktik terbaik
               internasional.
             </p>

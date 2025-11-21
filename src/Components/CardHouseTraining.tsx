@@ -19,10 +19,10 @@ const CardHouseTraining = ({
       <div className="bg-[#557B67] w-[57px] p-3 flex items-center justify-center rounded-[10px]">
         <IconComponent className="text-[30px] text-[#ffff]" />
       </div>
-      <p className="font-montserrat font-bold text-[24px] capitalize">
+      <p className="font-montserrat font-bold text-[28px] capitalize">
         {title}
       </p>
-      <p className="font-montserrat font-regular text-[20px] text-center w-[356px]">
+      <p className="font-montserrat font-regular text-[24px] text-center w-[356px]">
         {description}
       </p>
     </div>

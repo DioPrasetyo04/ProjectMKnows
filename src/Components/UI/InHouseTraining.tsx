@@ -69,7 +69,7 @@ const InHouseTraining = ({
         <h1 className="font-montserrat font-bold text-[48px]">
           Tentang Program
         </h1>
-        <p className="font-poppins text-[24px] max-w-[1007px]">
+        <p className="font-poppins text-[28px] max-w-[1300px]">
           Kami membantu mendesain konsep training, kurikulum, materi, dan jadwal
           yang dapat disesuaikan dengan kebutuhan perusahaan. Pelatihan dapat
           dilaksanakan di lokasi Anda maupun secara hybrid.

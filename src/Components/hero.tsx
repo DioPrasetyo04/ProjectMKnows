@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageUrl }) => {
       <div className="absolute inset-0 bg-gray-900 opacity-60"></div>
 
       {/* Konten Teks */}
-      <div className="relative z-10 p-6 max-w-4xl">
+      <div className="relative z-10 p-6 max-w-[1800px]">
         <h1 className="text-3xl lg:text-[5xl] font-extrabold text-white mb-4 leading-tight">
           {title}
         </h1>

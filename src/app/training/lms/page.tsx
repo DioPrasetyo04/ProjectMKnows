@@ -30,7 +30,7 @@ const LMSPage = () => {
               <img
                 src="/images/lms/lms.jpg" // Ganti dengan gambar tangan di laptop yang sesuai.
                 alt="Pengembangan LMS Kustom"
-                className="w-full h-full object-cover rounded-lg hidden" // Disembunyikan, menggunakan div di atas untuk simulasi desain
+                className="w-full h-full object-cover rounded-lg" // Disembunyikan, menggunakan div di atas untuk simulasi desain
               />
             </div>
 

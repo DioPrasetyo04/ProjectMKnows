@@ -132,8 +132,8 @@ export default function Home() {
 
         {/* Komitmen */}
         <section className="bg-white text-center w-full lg:top-[20px]">
-          <div className="bg-[#02353C] mx-auto text-center w-[70%] md:w-[40%] rounded-2xl py-9 px-7">
-            <p className="text-white text-[26px] font-montserrat text-lg md:text-xl font-semibold leading-relaxed">
+          <div className="bg-[#02353C] mx-auto text-center w-full md:w-[60%] rounded-2xl py-9 px-7">
+            <p className="text-white text-[90px] font-montserrat md:text-2xl font-semibold leading-relaxed">
               Kami berkomitmen memberikan layanan terbaik untuk mendukung
               pertumbuhan organisasi Anda.
             </p>

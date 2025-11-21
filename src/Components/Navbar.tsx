@@ -144,13 +144,13 @@ const Navbar = () => {
                                 Outbound & Event
                               </p>
                               <p
-                                onClick={() => navigateTo("/training/lms")}
+                                onClick={() => navigateTo("/lms-custom")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Learning Management System
                               </p>
                               <p
-                                onClick={() => navigateTo("/lms-custom")}
+                                onClick={() => navigateTo("/training/lms")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Pengembangan LMS Kustom
@@ -363,15 +363,13 @@ const Navbar = () => {
                                 Outbound & Event
                               </p>
                               <p
-                                onClick={() => navigateTo("/training/lms")}
+                                onClick={() => navigateTo("/lms-custom")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Learning Management System
                               </p>
                               <p
-                                onClick={() =>
-                                  navigateTo("/training/custom-lms")
-                                }
+                                onClick={() => navigateTo("/training/lms")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Pengembangan LMS Kustom
