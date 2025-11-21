@@ -28,7 +28,7 @@ const ContactSection = () => {
 
     const pesan = `Halo M-Knows 😇🙏 Consulting Team, Berikut data saya:\nNama Lengkap: ${formData.nama_lengkap}\nNama Perusahaan: ${formData.nama_perusahaan}\nJabatan: ${formData.jabatan}\nNomor WA: ${formData.nomor_wa}\nEmail: ${formData.email}\nKategori: ${formData.kategori}\nDeskripsi: ${formData.deskripsi}`;
 
-    const url = `https://wa.me/6281381876265?text=${encodeURIComponent(pesan)}`;
+    const url = `https://wa.me/6281210468281?text=${encodeURIComponent(pesan)}`;
     window.open(url, "_blank");
 
     setFormData({

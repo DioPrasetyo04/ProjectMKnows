@@ -37,7 +37,7 @@ const Section: React.FC<SectionProps> = ({
               <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent">
                 {title}
               </h2>
-              <div className="text-gray-700 space-y-4">{children}</div>
+              <div className="text-gray-700 space-y-4 text-xl">{children}</div>
             </div>
             {/* IMAGE (menggunakan <img>) */}
             <div
@@ -78,7 +78,7 @@ const Section: React.FC<SectionProps> = ({
         <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent">
           {title}
         </h2>
-        <div className="text-gray-700 space-y-4">{children}</div>
+        <div className="text-gray-700 space-y-4 text-xl">{children}</div>
       </div>
 
       {/* IMAGE (Tanpa kotak putih, tapi sudut bulat) */}
@@ -137,7 +137,7 @@ export default function HybridOfficerPage() {
           imageAlt="Hybrid Officer"
           imageRight={false}
         >
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-700 text-xl">
             Creating Competent Professionals In Sales, Credit & Collection
             (Pelatihan, Magang, Bekerja).
           </p>
@@ -243,11 +243,13 @@ export default function HybridOfficerPage() {
             Framework, dimana pemagang akan diarahkan untuk merancang solusi
             melalui lima proses iterative, yaitu:
           </p>
-          <li>Sprint Planning,</li>
-          <li>Daily SCRUM,</li>
-          <li>SPRINT Review,</li>
-          <li>SPRINT Restrospective, dan</li>
-          <li>Improvement.</li>
+          <ul className="list-disc pl-5">
+            <li>Sprint Planning,</li>
+            <li>Daily SCRUM,</li>
+            <li>SPRINT Review,</li>
+            <li>SPRINT Restrospective, dan</li>
+            <li>Improvement.</li>
+          </ul>
         </Section>
 
         {/* 6 — Proses Pelatihan (WHITE) */}
@@ -286,9 +288,11 @@ export default function HybridOfficerPage() {
           <p className="text-gray-700">
             Peserta program akan dimonitor kinerjanya meliputi:
           </p>
-          <li>Professional Working Attitude</li>
-          <li>Pantang Menyerah Terhadap Hasil</li>
-          <li>Penguasaan Kompetensi Teknis & Non Teknis</li>
+          <ul className="list-disc pl-5">
+            <li>Professional Working Attitude</li>
+            <li>Pantang Menyerah Terhadap Hasil</li>
+            <li>Penguasaan Kompetensi Teknis & Non Teknis</li>
+          </ul>
           <p>
             Selama melakukan magang keria, mahasiswa akan di monitoring dan
             evaluasi Progres kerjanya oleh Kampus Gratis. Laporan yang dibuat

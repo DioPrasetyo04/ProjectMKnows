@@ -37,10 +37,10 @@ export default function ATCPage() {
         {/* Kolom Teks - TAMBAHKAN PADDING DI SINI */}
         <div className="order-first md:order-last flex justify-center items-center p-8 md:p-16">
           <div className="max-w-md">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <h1 className="text-4xl md:text-4xl font-bold text-gray-800 mb-6">
               Assessment for Technical Competency (ATC)
             </h1>
-            <p className="text-lg leading-relaxed">
+            <p className="text-2xl leading-relaxed">
               Adalah mitra (salah satu solusi) dalam mengukur dan menilai
               potensi serta kompetensi dari sumber daya manusia. ATC menawarkan
               solusi integratif melalui metode terstandar dan sesuai dengan
@@ -55,10 +55,10 @@ export default function ATCPage() {
       <Section className="bg-[#D9D9D9]">
         <div className="flex justify-center items-center p-8 md:p-16">
           <div className="max-w-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">
               ATC menawarkan solusi integratif
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="text-2xl leading-relaxed">
               Untuk mengoptimasi pengembangan bakat melalui metode dan sarana
               yang valid dan terpercaya. Kami juga memberikan laporan yang unik
               dan dipersonalisasikan oleh para asesor dan penasihat kami untuk
@@ -94,10 +94,10 @@ export default function ATCPage() {
         {/* Kolom Teks - TAMBAHKAN PADDING DI SINI */}
         <div className="order-first md:order-last flex justify-center items-center p-8 md:p-16">
           <div className="max-w-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">
               Solusi-solusi yang ditawarkan oleh ATC
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="text-2xl leading-relaxed">
               Sesuai dengan setiap Individual Development Plan serta dapat
               menangkap potensi serta kompetensi dari para sumber daya manusia
               serta dapat memberikan gambaran yang jelas dari profil sumber daya

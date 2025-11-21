@@ -23,7 +23,7 @@ const BrandConsultingPage = () => {
             <h1 className="text-5xl font-bold mb-4 text-blue-500">
               Brand Consulting
             </h1>
-            <p className="text-xl mb-6 leading-relaxed">
+            <p className="text-2xl mb-6 leading-relaxed">
               Tingkatkan merek dan bisnis anda dengan Brand Consulting! Di era
               yang kompetitif ini, memiliki merek yang kuat dan berkesan sangat
               penting untuk kesuksesan bisnis. Brand consulting dapat membantu
@@ -40,7 +40,7 @@ const BrandConsultingPage = () => {
             </h2>
             <ul className="list-disc ml-5 space-y-2 text-black">
               {keyFeatures.map((feature, index) => (
-                <li key={index} className="text-xl">
+                <li key={index} className="text-2xl">
                   {feature}
                 </li>
               ))}

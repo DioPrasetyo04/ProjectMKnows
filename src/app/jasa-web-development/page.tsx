@@ -35,7 +35,7 @@ export default function WebDevelopmentPage() {
             Jasa Web Development
           </h1>
 
-          <div className="text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
+          <div className="text-gray-600 space-y-4 text-base md:text-xl leading-relaxed">
             <p>
               Buka dan Wujudkan ide web anda melalui pintu menuju dunia digital
               yang tak terbatas dengan solusi web development dengan tim ahli
@@ -59,7 +59,7 @@ export default function WebDevelopmentPage() {
             Key Features:
           </h3>
 
-          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-2 text-justify">
+          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-2 text-justify text-xl">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}

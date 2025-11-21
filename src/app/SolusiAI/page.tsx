@@ -28,7 +28,7 @@ export default function SolusiAIPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-[#3B8EC3] mb-6">
             Solusi AI
           </h1>
-          <div className="text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
+          <div className="text-gray-600 space-y-4 text-base md:text-xl leading-relaxed">
             <p>
               Tingkatkan Bisnis anda dengan AI Solution! AI Solution merupakan
               alat yang penting untuk membantu bisnis meningkatkan efisiensi,
@@ -49,7 +49,7 @@ export default function SolusiAIPage() {
           <h3 className="text-2xl font-semibold text-[#3F8642] mt-10 mb-4">
             Key Features:
           </h3>
-          <ul className="space-y-3 list-disc list-inside text-gray-700 pl-2">
+          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-2 text-xl">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}

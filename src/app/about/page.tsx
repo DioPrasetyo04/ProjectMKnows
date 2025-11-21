@@ -75,13 +75,13 @@ const page = () => {
                 <Image
                   src="/images/about/about2.png"
                   alt="Clipboard List"
-                  width={750}
-                  height={650}
+                  width={850}
+                  height={750}
                 />
               </div>
 
               {/* Kolom Teks (Hapus kelas card dari sini) */}
-              <div className="md:w-3/5">
+              <div className="md:w-4/5">
                 <h2 className="text-3xl font-bold mb-4">
                   Jenis konsultasi yang sering diambil klien meliputi:
                 </h2>
