@@ -5,14 +5,10 @@ const OpportunitySection = () => {
         <section className="w-full bg-[#e6e6e6] py-10 md:py-14 px-4 sm:px-6 lg:px-10">
             <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
                 {/* Judul */}
-                <h2 className="text-3xl md:text-4xl font-extrabold text-brand-blue leading-snug">
-                    M-Knows Consulting telah memperoleh
-                    <br />
-                    banyak kesempatan bekerja sama
-                </h2>
+                <h2 className="font-montserrat md:text-5xl font-extrabold text-brand-blue leading-snug">M-Knows Consulting telah memperoleh banyak kesempatan bekerja sama</h2>
 
                 {/* Deskripsi */}
-                <p className="mt-8 text-sm md:text-xl leading-relaxed text-slate-800 text-justify">
+                <p className="mt-8 text-sm font-montserrat text-[27px] leading-relaxed text-slate-800 text-justify">
                     Dengan lembaga-lembaga swasta dan pemerintah pada proyek-proyek perumusan kebijakan, studi banding, serta undangan untuk menjadi pembicara tamu dalam berbagai kesempatan dan
                     pertemuan atau seminar untuk berbagi dan memperkenalkan pandangan dan pengetahuan di bidang ekonomi, manajemen dan bisnis.
                 </p>

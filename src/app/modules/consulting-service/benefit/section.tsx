@@ -17,8 +17,8 @@ const BenefitseSection = () => {
 
                             <div>
                                 {/* semua judul warna biru */}
-                                <h3 className="text-2xl font-extrabold mb-2 text-brand-blue">{item.title}</h3>
-                                <p className="md:text-xl leading-relaxed text-slate-800 text-justify">{item.description}</p>
+                                <h3 className="text-4xl font-extrabold mb-2 text-brand-blue">{item.title}</h3>
+                                <p className="font-montserrat text-[27px] leading-relaxed text-black text-justify">{item.description}</p>
                             </div>
                         </div>
                     ))}
