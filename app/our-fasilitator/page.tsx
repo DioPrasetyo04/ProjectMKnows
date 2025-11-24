@@ -180,7 +180,7 @@ export default function OurFacilitator() {
 </div>
 
 {/* 3 card kecil di bawahnya */}
-<div className="px-6 sm:px-10 md:px-[60px] lg:px-[100px] pt-[100px] pb-[80px] bg-[#f5f5f5] flex flex-col items-center gap-16 w-full">
+<div className="px-6 sm:px-10 md:px-[60px] lg:px-[100px] pt-[30px] pb-[80px] bg-[#f5f5f5] flex flex-col items-center gap-16 w-full">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] justify-items-center w-full">
     {facilitators.slice(2).map((fasil, i) => (
       <div
