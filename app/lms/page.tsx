@@ -18,7 +18,7 @@ const LMSPage = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
             
             {/* Kolom Kiri: Visual/Gambar */}
-            <div className="lg:w-1/2 relative min-h-[600px]">
+            <div className="lg:w-1/2 relative min-h-[500px]">
               {/* Ini adalah placeholder untuk visual yang kompleks (tangan di laptop + overlay ikon) */}
               {/* Menggunakan div dengan latar belakang gelap dan overlay ikon placeholder untuk menyamai vibe desain */}
               <div className="absolute inset-0 bg-cover bg-center opacity-80 rounded-lg shadow-2xl" 
