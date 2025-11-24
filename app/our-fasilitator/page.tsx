@@ -4,7 +4,7 @@ export default function OurFacilitator() {
   const facilitators = [
     {
       name: "Bunaiya",
-      img: "/images/our-fasilitator/ibun.jpg",
+      img: "/images/our-fasilitator/bunaiyanew.jpg",
       desc: `Bunaiya adalBunaiya adalah ahli strategi penjualan dan pengembangan sumber daya manusia dari M-Knows Consulting. 
       Dia mengambil studi sarjana dan pascasarjana di Universitas Indonesia. Dia memiliki banyak pengalaman praktis 
       di perusahaan-perusahaan terkemuka, seperti Astra, GE Capital dan grup AIG (AIA Indonesia), sebagian besar di bidang 
@@ -52,17 +52,6 @@ export default function OurFacilitator() {
         youtube: "https://www.youtube.com"
       },
       {
-        name: "Tri Sulistyaningsih",
-        img: "/images/our-fasilitator/TR 1.jpg",
-        desc: `Tri Sulistyaningsih adalah Konsultan dan Manajer Senior di M- Knows Consulting. Berpengalaman lebih dari 10 tahun menangani 
-        konsultasi dan pelatihan untuk berbagai perusahaan nasional & multinasional, seperti Toyota Astra Finance, Dipo Star Finance, Bank of Tokyo, 
-        Mitsui Leasing  Capital Indonesia, AKS Indonesia, Toshiba, dll. berbagai  proyek Manajemen SDM Berbasis Kompetensi, Penyelarasan  & Pengukuran 
-        KPI, Penilaian Kinerja, PDCA, Sistem  Manajemen Pembelajaran, dan Kepemimpinan  Transformasional dengan kliennya. Tri memiliki latar belakang  
-        pendidikan dari Universitas Pembangunan Nasional Veteran Jakarta.`,
-        linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com"
-      },
-      {
         name: "Dwi Priyanto",
         img: "/images/our-fasilitator/priyanto.jpg",
         desc: `Dwi memiliki latar pendidikan S1-STIMIK Management Informatika telah berkarir sebagai profesional di beragam industri, termasuk Perhotelan, 
@@ -84,28 +73,7 @@ export default function OurFacilitator() {
         linkedin: "https://www.linkedin.com/in/bunaiya",
         youtube: "https://www.youtube.com"
       },
-      {
-        name: "Dedy Kusuma",
-        img: "/images/our-fasilitator/dedy.jpg",
-        desc: `Dedy Kusuma adalah Consultant dan Sales Team Group  Head di M-Knows Consulting. Beliau memiliki latar belakang pendidikan dari Universitas Trisakti. 
-        Sebelum bergabung sebagai konsultan, beliau pernah berkarir di industri telekomunikasi. Sebagai konsultan, beliau memiliki pengalaman lebih dari 12 tahun 
-        dan sering berkolaborasi dengan kliennya dalam konsultasi dan pelatihan di bidang  Sales & Marketing, Customer Services, Organizational  Culture, Relationship 
-        Building & Maintaining, Learning  Management System, dan Project Execution & Reporting.  Beberapa perusahaan dan instansi pemerintahan yang  terakhir 
-        ditanganinya antara lain Kementerian Agama,  Jasaraharja, Kementerian Perdagangan, BPOM, Lexus,  Astra Honda Motor, TMMIN, Astra International, Astra Credit  
-        Company, dll.`,
-        linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com"
-      },
-      {
-        name: "Dewi Puji Astuti",
-        img: "/images/our-fasilitator/dewi.jpg",
-        desc: `Dewi Puji Astuti adalah konsultan di M-Knows Consulting.  sudah bergabung lebih dari 8 tahun dan berpengalaman  dalam menghandle consultancy dan training 
-        untuk berbagai perusahaan level nasional dan multinasional, seperti Hino  Sales Motors Indonesia, Bank Indonesia, Chandra Sakti  Utama Leasing, Otoritas Jasa 
-        Keuangan, Bank Jateng,  Jasaraharja, Yamaha Indonesia, Astra Motor, dst. Dia terlibat  dalam berbagai jenis project seperti Competency Based HR  Management, KPI 
-        Alignment & Measurement, Performance  Appraisal, PDCA, Learning Management System, and  Transformational Leadership.`,
-        linkedin: "https://www.linkedin.com/in/bunaiya",
-        youtube: "https://www.youtube.com"
-      },
+      
       {
         name: "Ricky Dahlan, SE, Akt, MM",
         img: "/images/our-fasilitator/Ricky Dahlan 1.jpg",
