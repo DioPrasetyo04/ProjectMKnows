@@ -5,4 +5,6 @@ export type Materi = {
   title: string;
   slug: string;
   buttonSrc: string;
+  description?: string;
+  data?: string[];
 };

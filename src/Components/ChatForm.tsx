@@ -100,7 +100,7 @@ const ChatForm = ({ isOpen, onClose }: any) => {
 
   // whatsAPP
   const handleWhatsApp = () => {
-    const pesan = `Halo M-Knows 😇🙏 Consulting Team, Berikut data saya:\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo HP: ${formData.hp}\n\n😇Saya Mau Bertanya Tentang🙏:\n\nPesan: ${formData.message}`;
+    const pesan = `Halo M-Knows Consulting Team, Berikut data saya:\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo HP: ${formData.hp}\nPesan: ${formData.message}`;
     const url = `https://wa.me/6281210468281?text=${encodeURIComponent(pesan)}`;
     window.open(url, "_blank");
   };
@@ -150,10 +150,10 @@ const ChatForm = ({ isOpen, onClose }: any) => {
           <div className="flex-1 overflow-y-auto text-white px-2 py-3">
             {/* STEP 1: FORM */}
             {step === "open" && (
-              <div className="flex flex-col items-center text-start gap-y-2 w-[219px] h-full">
+              <div className="flex flex-col items-center text-start gap-y-2 w-[219px] h-full px-4 py-3">
                 <form
                   onSubmit={onHandleSubmit}
-                  className="flex flex-col gap-3 text-sm card border border-inside border-[#BFF932] bg-[#18393B] rounded-[9px] p-3"
+                  className="flex flex-col gap-3 text-sm card border border-inside border-[#BFF932] bg-[#18393B] rounded-[9px] p-4"
                 >
                   <p className="w-[197px] font-montserrat font-semibold text-[11px]">
                     Hey there, please leave your details so we can contact you

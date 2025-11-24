@@ -26,7 +26,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const pesan = `Halo M-Knows 😇🙏 Consulting Team, Berikut data saya:\nNama Lengkap: ${formData.nama_lengkap}\nNama Perusahaan: ${formData.nama_perusahaan}\nJabatan: ${formData.jabatan}\nNomor WA: ${formData.nomor_wa}\nEmail: ${formData.email}\nKategori: ${formData.kategori}\nDeskripsi: ${formData.deskripsi}`;
+    const pesan = `Halo M-Knows Consulting Team, Berikut data saya:\nNama Lengkap: ${formData.nama_lengkap}\nNama Perusahaan: ${formData.nama_perusahaan}\nJabatan: ${formData.jabatan}\nNomor WA: ${formData.nomor_wa}\nEmail: ${formData.email}\nKategori: ${formData.kategori}\nDeskripsi: ${formData.deskripsi}`;
 
     const url = `https://wa.me/6281210468281?text=${encodeURIComponent(pesan)}`;
     window.open(url, "_blank");
@@ -40,6 +40,12 @@ const ContactSection = () => {
       kategori: "",
       deskripsi: "",
     });
+
+    const link = document.createElement("a");
+    link.href = "/utility/Jadwal_Public_Training_M-Knows_Consulting_2026.xlsx";
+    link.download = "Jadwal_Public_Training_M-Knows_Consulting_2026.xlsx";
+    link.click();
+    link.remove();
   };
 
   return (

@@ -7,6 +7,7 @@ import searchMateri from "@/hooks/searchMateri";
 import CardMateri from "../CardMateri";
 import { fetchData } from "@/Services/api_service";
 import Footer from "../Footer";
+import Link from "next/link";
 
 const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
   const [keyword, setKeyword] = useState("");
@@ -24,14 +25,6 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
   }, [staticDataMateri]);
 
   const materi = searchMateri(keyword, data);
-
-  const onHandleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/utility/Jadwal_Public_Training_M-Knows_Consulting_2026.xlsx";
-    link.download = "Jadwal_Public_Training_M-Knows_Consulting_2026.xlsx";
-    link.click();
-    link.remove();
-  };
   return (
     <>
       <div className="flex flex-col justify-center items-center px-3 py-3">
@@ -64,17 +57,15 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
           )}
         </div>
         <div className="flex justify-center items-center pt-[50px] pb-[50px]">
-          <button
-            className="border bg-[#ffff] px-5 py-2 text-center rounded-[20px]"
-            onClick={onHandleDownload}
-          >
-            <p className="font-montserrat font-regular text-[16px] text-black">
-              Download Jadwal Public Training Tahun 2025
-            </p>
-          </button>
+          <Link href="/contact" className="no-underline">
+            <button className="border bg-[#ffff] px-5 py-2 text-center rounded-[20px] bg-green-600 hover:bg-green-700 hover:translate-y-[-20px]">
+              <p className="font-montserrat font-regular text-[16px] lg:text-[32px] text-white">
+                Download Jadwal Public Training Tahun 2025
+              </p>
+            </button>
+          </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

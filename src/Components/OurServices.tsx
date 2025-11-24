@@ -182,8 +182,8 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
       </p>
 
       {/* ===== Tabs ===== */}
-      <div className="tabs-wrapper flex justify-center px-0">
-        <div className="tabs-container bg-white border border-gray-300 rounded-2xl shadow-md flex w-full max-w-[600px]">
+      <div className="width-100% overflow-x-auto flex justify-center px-0">
+        <div className="tabs-container bg-white border border-gray-300 rounded-2xl shadow-md w-full max-w-[600px] flex gap-[12px] padding-[0px_0px] min-width-max-content ">
           {[
             {
               key: "training",
@@ -196,9 +196,9 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
             <button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`tab-item flex items-center justify-center gap-2 flex-1 px-4 py-4 text-[20px] md:text-[24px] font-montserrat font-semibold transition-all ${
+              className={`tab-item flex items-center justify-center gap-2 flex-1 px-4 py-4 text-[20px] md:text-[24px] font-montserrat font-semibold transition-all white-space: nowrap; flex-shrink: 0; ${
                 activeTab === key
-                  ? "bg-[#4697CE] text-white"
+                  ? "bg-[#4697CE] text-white rounded-xl"
                   : "text-[#7A7A7A] hover:bg-[#E3F2FD]"
               }`}
             >
@@ -348,7 +348,7 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
       {/* ===== RESPONSIVE CSS ===== */}
       <style>{`
         .tabs-wrapper { width: 100%; overflow-x: auto; }
-        .tabs-container { display: flex; gap: 12px; padding: 0 10px; min-width: max-content; }
+        .tabs-container { display: flex; gap: 12px; padding: 0 0; min-width: max-content;  }
         .tab-item { white-space: nowrap; flex-shrink: 0; }
         @media (max-width: 500px) {
           .tabs-container { gap: 6px; padding: 0 6px; }
