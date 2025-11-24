@@ -192,14 +192,14 @@ export default function NewTraining() {
               <div className="flex flex-col md:flex-row justify-between items-stretch">
                 {/* Title */}
                 <div className="flex-1 bg-[#02353C] text-white p-6 md:p-8 flex items-center justify-center rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none">
-                  <h2 className="text-xl md:text-[25px] font-montserrat font-semibold text-center leading-snug">
+                  <h2 className="text-xl md:text-[28px] font-montserrat font-semibold text-center leading-snug">
                     {item.title}
                   </h2>
                 </div>
 
                 {/* Dates */}
                 <div className="flex-1 bg-[#557B67] text-white p-6 md:p-8 flex items-center justify-center rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
-                  <p className="text-lg md:text-[25px] font-montserrat font-semibold text-center leading-snug">
+                  <p className="text-lg md:text-[28px] font-montserrat font-semibold text-center leading-snug">
                     {item.dates}
                   </p>
                 </div>
