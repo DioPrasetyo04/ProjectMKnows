@@ -8,8 +8,7 @@ export default function Footer() {
         <img
           src="/images/logos/M-Knows.png"
           alt="M-Knows Consulting Logo"
-          className="w-[200px] h-auto cursor-pointer"
-          onClick={() => window.open("https://m-knowsconsulting.com", "_blank")}
+          className="w-[200px] h-auto"
         />
       </div>
 
@@ -53,7 +52,7 @@ export default function Footer() {
                 alt="WhatsApp"
                 className="w-5 h-5 mr-2 cursor-pointer hover:scale-110 transition"
                 onClick={() =>
-                  window.open("https://wa.me/622138890052", "_blank")
+                  window.open("https://wa.me/6281210468281", "_blank")
                 }
               />
               <span className="text-[#989898] font-medium font-montserrat">
@@ -68,7 +67,7 @@ export default function Footer() {
                 alt="WhatsApp"
                 className="w-5 h-5 mr-2 cursor-pointer hover:scale-110 transition"
                 onClick={() =>
-                  window.open("https://wa.me/6281210428281", "_blank")
+                  window.open("https://wa.me/6281210468281", "_blank")
                 }
               />
               <span className="text-[#989898] font-medium font-montserrat">
@@ -195,13 +194,7 @@ export default function Footer() {
             <img
               src="/images/icons/maps.png"
               alt="location"
-              className="w-6 h-6 mr-2 cursor-pointer hover:scale-110 transition"
-              onClick={() =>
-                window.open(
-                  "https://maps.app.goo.gl/mkkhNE6ax1pZvUy8A",
-                  "_blank"
-                )
-              }
+              className="w-6 h-6 mr-2"
             />
             <h4 className="text-white font-semibold font-montserrat text-[20px]">
               Surabaya Branch Office
@@ -220,7 +213,7 @@ export default function Footer() {
                 alt="WhatsApp"
                 className="w-5 h-5 mr-2 cursor-pointer hover:scale-110 transition"
                 onClick={() =>
-                  window.open("https://wa.me/6281210428281", "_blank")
+                  window.open("https://wa.me/6281210468281", "_blank")
                 }
               />
               <span>Telp: 031-837-05277</span>
