@@ -51,7 +51,7 @@ export default function OutboundPage() {
     <>
       <HeroCarousel
         slides={slides}
-        interval={6000}
+        interval={2000}
         title="Outbound &amp; Gathering M-Knows Consulting"
         fullPage
         headerOffset={80}
