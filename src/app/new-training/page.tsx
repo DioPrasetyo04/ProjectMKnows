@@ -169,11 +169,11 @@ export default function NewTraining() {
           </span>
         </p>
 
-        <h1 className="text-[48px] font-montserrat font-bold mb-6">
+        <h1 className="font-montserrat font-bold text-[35px] md:text-[40px] lg:text-[48px] max-w-[1281px]">
           New Training 2026
         </h1>
 
-        <p className="text-2xl font-montserrat font-semibold text-[#02353C] mb-10 leading-snug max-w-5xl">
+        <p className="font-montserrat font-regular text-[18px] md:text-[20px] lg:text-[24px] max-w-[900px] lg:max-w-[1500px] text-justify pb-[15px]">
           Menjawab Dinamika Dunia Bisnis Dan Perkembangan Kebutuhan Kompetensi
           Yang Terus Berubah, Kami Menghadirkan Kategori New Topic – Kumpulan
           Program Pelatihan Terbaru Yang Dirancang Khusus Untuk Menjawab

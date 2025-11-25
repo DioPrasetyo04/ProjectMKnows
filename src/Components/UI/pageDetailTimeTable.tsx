@@ -7,7 +7,6 @@ import {
   TimeTableTraining,
 } from "@/Types/TimeTableTraining";
 import CardTimeTableTraining from "../CardTimeTableTraining";
-import Footer from "../Footer";
 import { useEffect, useState } from "react";
 import { fetchData } from "@/Services/api_service";
 import { IoIosCloseCircle } from "react-icons/io";

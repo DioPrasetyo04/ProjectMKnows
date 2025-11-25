@@ -26,7 +26,11 @@ const BreadCrumbTraining = ({
                   <Fragment key={index}>
                     <BreadcrumbItem>
                       <BreadcrumbLink asChild>
-                        <Link href={crumb.slug}>{crumb.name}</Link>
+                        <Link href={crumb.slug}>
+                          <span className="text-white font-semibold">
+                            {crumb.name}
+                          </span>
+                        </Link>
                       </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator>
@@ -39,7 +43,7 @@ const BreadCrumbTraining = ({
                   <Fragment key={index}>
                     <BreadcrumbItem>
                       <BreadcrumbLink asChild>
-                        <span className="text-[#10914c] font-semibold">
+                        <span className="text-[#06974a] font-semibold">
                           {crumb.name}
                         </span>
                       </BreadcrumbLink>

@@ -12,13 +12,9 @@ const CardTimeTableTraining = ({ data }: CardProps) => {
         >
           {/* Title Section */}
           <div className="bg-[#02353C] flex items-center px-5 py-5 w-full lg:w-1/2">
-            <p
-              className="font-montserrat font-semibold 
-            text-[18px] sm:text-[20px] lg:text-[24px] 
-            text-white leading-tight"
-            >
+            <h2 className="text-xl md:text-[28px] font-montserrat font-semibold text-center leading-snug text-white">
               {title}
-            </p>
+            </h2>
           </div>
 
           {/* Dates Section */}
@@ -28,29 +24,21 @@ const CardTimeTableTraining = ({ data }: CardProps) => {
               flex flex-wrap 
               items-center
               justify-center lg:justify-center
-              px-5 py-5 
+              px-3 py-5 
               w-full lg:w-1/2
-              gap-y-2 gap-x-4
+              gap-y-2
             "
           >
             {dates.map((value: string, index: number) => {
               const isLast = index === dates.length - 1;
 
               return (
-                <div
-                  key={index}
-                  className="flex justify-center items-center gap-x-2"
-                >
-                  <p
-                    className="font-montserrat font-semibold 
-                    text-[15px] sm:text-[17px] lg:text-[20px] 
-                    text-white whitespace-nowrap
-                  "
-                  >
+                <div key={index} className="flex justify-center items-center">
+                  <p className="text-lg md:text-[28px] font-montserrat font-semibold text-center leading-snug text-white">
                     {value}
                   </p>
                   {!isLast && (
-                    <RxDividerVertical className="text-white text-[16px] lg:text-[18px]" />
+                    <RxDividerVertical className="text-white text-[16px] lg:text-[28px]" />
                   )}
                 </div>
               );
