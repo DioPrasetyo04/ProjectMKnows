@@ -22,7 +22,7 @@ const page = () => {
 
   return (
     // Latar belakang abu-abu untuk halaman
-    <div className="bg-gray-100 pt-[150px] ">
+    <div className="bg-gray-100 pt-[150px]">
       <div className="container mx-auto px-4">
         {/* Bagian 1: M-Knows Consulting Intro (Sudah Benar) */}
         <section className="mb-16">
@@ -122,7 +122,7 @@ const page = () => {
 
               {/* Kolom Teks (Hapus kelas card dari sini) */}
               <div className="md:w-3/5">
-                <p className="text-gray-600 mb-8 text-3xl text-justify">
+                <p className="text-gray-600 mb-8 text-2xl text-justify">
                   Program pelatihan unggulan yang banyak di ambil klien M-Knows
                   antara lain meliputi topik: Marketing, Sales Distribution,
                   Service, Leadership, Managerial, Supervisory, Credit
@@ -132,7 +132,7 @@ const page = () => {
                   Negotiation Skills, Achievement Motivation & Soft Skills
                   lainnya.
                 </p>
-                <p className="text-gray-600 text-3xl text-justify">
+                <p className="text-gray-600 text-2xl text-justify">
                   Kami pastikan model pelatihan kontemporer, lebih baik
                   dibandingkan pendekatan yang klasik dan konservatif. We Are
                   Strong In “Activity Based Learning”.
