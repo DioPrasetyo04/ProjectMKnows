@@ -147,7 +147,7 @@ const ChatForm = ({ isOpen, onClose }: any) => {
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto text-white px-2 py-3">
+          <div className="flex-1 overflow-y-auto text-white px-6 py-3">
             {/* STEP 1: FORM */}
             {step === "open" && (
               <div className="flex flex-col items-center text-start gap-y-2 w-[219px] h-full px-4 py-3">

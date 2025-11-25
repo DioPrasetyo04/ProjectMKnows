@@ -16,7 +16,7 @@ export default function HistoryPage() {
             Sejarah M-Knows Consulting
           </h1>
 
-          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8">
+          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8 border-5 border-[#4697ce]">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex-shrink-0">
                 <Image
@@ -40,7 +40,7 @@ export default function HistoryPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8">
+          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8 border-5 border-[#4697ce]">
             <div className="flex flex-col md:flex-row-reverse items-center gap-6">
               <div className="flex-shrink-0">
                 <Image
@@ -62,7 +62,7 @@ export default function HistoryPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8">
+          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-8xl mx-auto mb-8 border-5 border-[#4697ce]">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex-shrink-0">
                 <Image

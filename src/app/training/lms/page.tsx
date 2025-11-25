@@ -9,37 +9,34 @@ const LMSPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-black pt-[120px]">
-      {/* Jika Navbar dan Footer sudah ada di layout.tsx, Anda bisa menghapusnya di sini */}
+    <div className="min-h-screen bg-white text-black pt-[80px] lg:pt-[120px]">
+      <main className="py-10">
+        <div className="container mx-auto px-4 md:px-8">
 
-      {/* Konten Utama - Layout Dua Kolom */}
-      <main className="flex-grow pt-16 pb-12">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
-            {/* Kolom Kiri: Visual/Gambar */}
-            <div className="lg:w-1/2 relative min-h-[600px]">
-              {/* Ini adalah placeholder untuk visual yang kompleks (tangan di laptop + overlay ikon) */}
-              {/* Menggunakan div dengan latar belakang gelap dan overlay ikon placeholder untuk menyamai vibe desain */}
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-80 rounded-lg shadow-2xl"
-                style={{
-                  backgroundImage: "url('/images/lms/lms.jpg')", // Ganti dengan path gambar Anda
-                  filter: "grayscale(10%) brightness(0.8)",
-                }}
-              ></div>
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+
+            {/* Kolom Kiri – Gambar */}
+            <div className="w-full lg:w-1/2 flex justify-center">
               <img
-                src="/images/lms/lms.jpg" // Ganti dengan gambar tangan di laptop yang sesuai.
+                src="/images/lms/lms.jpg"
                 alt="Pengembangan LMS Kustom"
-                className="w-full h-full object-cover rounded-lg" // Disembunyikan, menggunakan div di atas untuk simulasi desain
+                className="
+                  w-full
+                  max-w-sm
+                  rounded-lg 
+                  shadow-2xl 
+                  object-cover
+                "
               />
             </div>
 
-            {/* Kolom Kanan: Teks dan Fitur */}
-            <div className="lg:w-1/2">
-              <h1 className="text-4xl font-bold mb-4 text-blue-500">
+            {/* Kolom Kanan – Teks */}
+            <div className="w-full lg:w-1/2">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4 text-blue-500">
                 Pengembangan LMS Kustom
               </h1>
-              <p className="text-xl mb-6 leading-relaxed">
+
+              <p className="text-base md:text-xl mb-6 leading-relaxed text-justify">
                 Tingkatkan Pembelajaran Anda dengan Learning Management System!
                 Learning Management System (LMS) merupakan alat yang penting
                 untuk organisasi yang ingin meningkatkan efektivitas
@@ -48,18 +45,17 @@ const LMSPage = () => {
                 keterlibatan pelajar, dan meningkatkan hasil belajar.
               </p>
 
-              <h2 className="text-3xl font-semibold mb-4 text-green-600">
+              <h2 className="text-xl md:text-3xl font-semibold mb-4 text-green-600">
                 Key Features:
               </h2>
-              <ul
-                className="text-xl ml-4 space-y-2 text-black"
-                style={{ listStyleType: "disc" }}
-              >
+
+              <ul className="text-base md:text-xl ml-4 space-y-2 list-disc">
                 {keyFeatures.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
             </div>
+
           </div>
         </div>
       </main>
