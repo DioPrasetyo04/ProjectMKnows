@@ -3,6 +3,7 @@ export type TimeTableTraining = {
 };
 
 export type PageTimeTableTraining = {
+  pdf(pdf: any): void;
   children?: React.ReactNode;
   stylingParent?: CSSProperties;
   stylingTitle?: CSSProperties;

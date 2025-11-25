@@ -1525,7 +1525,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 6,
       "imageSrc": "/images/materi_training/office.png",
       "alt": "ofiice & adm series",
       "title": "Office & Adm Series",
@@ -1723,7 +1723,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "imageSrc": "/images/materi_training/leadership.png",
       "alt": "leadership series",
       "title": "Leadership Series",
@@ -2008,7 +2008,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 8,
       "imageSrc": "/images/materi_training/sales.png",
       "alt": "sales & marketing series",
       "title": "Sales & Marketing Series",
@@ -2311,7 +2311,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 9,
       "imageSrc": "/images/materi_training/credit.png",
       "alt": "credit collection series",
       "title": "Credit & Collection Series",
@@ -2701,7 +2701,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": 10,
       "imageSrc": "/images/materi_training/hc.png",
       "alt": "HC & Training Series",
       "title": "HC & Training Series",
@@ -3544,7 +3544,8 @@
             }
           ]
         }
-      ]
+      ],
+      "pdf": "/utility/pdf/Jurnal.pdf"
     }
   ],
 
@@ -3791,7 +3792,8 @@
             }
           ]
         }
-      ]
+      ],
+      "pdf": "/utility/pdf/Ukuran_data_part2.pdf"
     }
   ],
 

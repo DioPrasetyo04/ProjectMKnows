@@ -132,6 +132,7 @@ export default async function Page({
             Desc={data.description}
             link={data.link}
             data={data.data}
+            pdf={data.pdf}
             stylingTitle={appliedTitle}
             stylingDesc={appliedDesc}
           >

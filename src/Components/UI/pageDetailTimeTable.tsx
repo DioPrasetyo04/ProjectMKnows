@@ -10,6 +10,7 @@ import CardTimeTableTraining from "../CardTimeTableTraining";
 import Footer from "../Footer";
 import { useEffect, useState } from "react";
 import { fetchData } from "@/Services/api_service";
+import { IoIosCloseCircle } from "react-icons/io";
 
 const PageDetailTimeTable = ({
   children,
@@ -20,10 +21,33 @@ const PageDetailTimeTable = ({
   Desc,
   link,
   data,
+  pdf,
 }: PageTimeTableTraining) => {
   const [dataJson, setDataJson] = useState<PageTimeTableTraining[]>(
     data as any
   );
+
+  const [popup, setPopUp] = useState<boolean>(false);
+  const [selectedPdf, setSelectedPdf] = useState<string>("");
+  const [hoverCard, setHoverCard] = useState<number | null>(null);
+
+  const onHandlePopUp = (pdfFile: any) => {
+    setPopUp(true);
+    setSelectedPdf(pdfFile);
+  };
+
+  const handleDownload = async (pdfFile: string) => {
+    const response = await fetch(pdfFile);
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = pdfFile.split("/").pop() || "file.pdf";
+    link.click();
+
+    window.URL.revokeObjectURL(url);
+  };
 
   useEffect(() => {
     const getDataTimeTable = async () => {
@@ -92,10 +116,60 @@ const PageDetailTimeTable = ({
                   [keyName]: dates,
                 };
 
-                return <CardTimeTableTraining key={item.id} data={formatted} />;
+                return (
+                  <div
+                    key={item.id}
+                    className="w-full h-full flex flex-col gap-y-2"
+                    onMouseEnter={() => setHoverCard(item.id)}
+                    onMouseLeave={() => setHoverCard(null)}
+                  >
+                    <CardTimeTableTraining key={item.id} data={formatted} />
+                    {hoverCard === item.id && (
+                      <div className="w-full flex justify-center items-center">
+                        <button
+                          onClick={() => onHandlePopUp(pdf)}
+                          className="mt-4 bg-[#02353C] text-white px-6 py-2 rounded-full shadow-lg text-sm md:text-base hover:bg-[#03454d] transition"
+                        >
+                          Lihat Detail
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                );
               })
             : null}
         </div>
+
+        {popup === true && (
+          <div className="fixed inset-0 bg-gray-700 bg-transparent bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 pt-[130px]">
+            <div className="bg-white card rounded-xl shadow-xl w-full max-w-4xl overflow-y-auto p-6 relative">
+              <button
+                className="absolute top-4 right-7"
+                onClick={() => setPopUp(false)}
+              >
+                <IoIosCloseCircle className="text-red-600 text-[50px]"></IoIosCloseCircle>
+              </button>
+              <div className="flex gap-4 mb-4">
+                <button
+                  onClick={() => handleDownload(selectedPdf)}
+                  className="bg-[#02353C] text-white px-5 py-2 rounded-lg shadow-md hover:bg-[#03454d] transition"
+                >
+                  Download PDF
+                </button>
+
+                <button
+                  onClick={() => setPopUp(false)}
+                  className="bg-gray-400 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-500 transition"
+                >
+                  Kembali
+                </button>
+              </div>
+              <div className="mt-3 w-full h-[500px] border rounded-md overflow-hidden">
+                <iframe src={`${selectedPdf}`} className="w-full h-full" />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

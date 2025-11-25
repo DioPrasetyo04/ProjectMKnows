@@ -36,26 +36,39 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
             <SearchForm name="search" />
           </SearchContext.Provider>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center items-center gap-x-11 gap-y-[25px] mx-auto left-0 right-0 pt-[80px]">
-          {materi.length > 0 ? (
-            materi.map((item: Materi, index) => (
-              <div key={index}>
-                <CardMateri
-                  key={index}
-                  imageSrc={item.imageSrc}
-                  alt={item.alt}
-                  title={item.title}
-                  slug={item.slug}
-                  buttonSrc={item.buttonSrc}
-                />
-              </div>
-            ))
-          ) : (
-            <p className="col-span-3 text-center font-semibold text-gray-500 text-[50px]">
-              Data tidak ditemukan
-            </p>
-          )}
+
+        <div className="w-full flex justify-center pt-[80px]">
+          <div className="grid gap-x-11 gap-y-[25px] place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {materi.length > 0 ? (
+              materi.map((item, index) => {
+                const isLast = index === materi.length - 1;
+                const isDataCard = materi.length % 3 === 1;
+
+                return (
+                  <div
+                    key={index}
+                    className={`
+              ${isLast && isDataCard ? "lg:col-span-3 flex justify-center" : ""}
+            `}
+                  >
+                    <CardMateri
+                      imageSrc={item.imageSrc}
+                      alt={item.alt}
+                      title={item.title}
+                      slug={item.slug}
+                      buttonSrc={item.buttonSrc}
+                    />
+                  </div>
+                );
+              })
+            ) : (
+              <p className="col-span-3 text-center font-semibold text-gray-500 text-[50px]">
+                Data tidak ditemukan
+              </p>
+            )}
+          </div>
         </div>
+
         <div className="flex justify-center items-center pt-[50px] pb-[50px]">
           <Link href="/contact" className="no-underline">
             <button className="border bg-[#ffff] px-5 py-2 text-center rounded-[20px] bg-green-600 hover:bg-green-700 hover:translate-y-[-20px]">
