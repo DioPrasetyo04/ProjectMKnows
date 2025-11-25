@@ -59,7 +59,7 @@ export default function Modal({ open, onClose, title, subtitle, children }: Moda
 
         <div className="mt-6 flex items-center justify-end gap-3">
           <button onClick={onClose} className="btn btn-ghost h-11">Tutup</button>
-          <a href="https://wa.me/6281210428281" className="btn btn-primary h-11">
+          <a href="https://wa.me/6281210468281" className="btn btn-primary h-11">
             Daftar via WhatsApp
           </a>
         </div>
