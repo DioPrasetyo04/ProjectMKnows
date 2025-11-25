@@ -1,7 +1,9 @@
 import React from "react";
 
+// Perubahan di sini: Mengubah title dari 'string' menjadi 'React.ReactNode'
+// agar dapat menerima elemen JSX (seperti <br />)
 interface SectionProps {
-  title: string;
+  title: React.ReactNode;
   bgType: "white" | "green" | "dark";
   children: React.ReactNode;
   imageUrl: string;
@@ -37,7 +39,7 @@ const Section: React.FC<SectionProps> = ({
               <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent">
                 {title}
               </h2>
-              <div className="text-gray-700 space-y-4 text-xl">{children}</div>
+              <div className="text-gray-700 space-y-4">{children}</div>
             </div>
             {/* IMAGE (menggunakan <img>) */}
             <div
@@ -78,7 +80,7 @@ const Section: React.FC<SectionProps> = ({
         <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent">
           {title}
         </h2>
-        <div className="text-gray-700 space-y-4 text-xl">{children}</div>
+        <div className="text-gray-700 space-y-4">{children}</div>
       </div>
 
       {/* IMAGE (Tanpa kotak putih, tapi sudut bulat) */}
@@ -128,16 +130,22 @@ export default function HybridOfficerPage() {
       </div>
 
       {/* CONTENT */}
-      <main className="container mx-auto max-w-5xl py-16 space-y-5 px-4">
-        {/* 1 — Hybrid Officer Development */}
+      <main className="container mx-auto max-w-5xl py-16 space-y-5 px-15">
+        {/* 1 — Hybrid Officer Development (JUDUL DIPERBAIKI) */}
         <Section
-          title="Hybrid Officer Development Crash Program For Financial Industry"
+          title={
+            <>
+              Hybrid Officer Development
+              <br />
+              Cash Program For Financial Industry
+            </>
+          }
           bgType="green"
           imageUrl="/images/hybrid-officer-development/gambarhod2.png"
           imageAlt="Hybrid Officer"
           imageRight={false}
         >
-          <p className="text-gray-700 text-xl">
+          <p className="text-gray-700 text-lg">
             Creating Competent Professionals In Sales, Credit & Collection
             (Pelatihan, Magang, Bekerja).
           </p>
@@ -243,13 +251,11 @@ export default function HybridOfficerPage() {
             Framework, dimana pemagang akan diarahkan untuk merancang solusi
             melalui lima proses iterative, yaitu:
           </p>
-          <ul className="list-disc pl-5">
-            <li>Sprint Planning,</li>
-            <li>Daily SCRUM,</li>
-            <li>SPRINT Review,</li>
-            <li>SPRINT Restrospective, dan</li>
-            <li>Improvement.</li>
-          </ul>
+          <li>Sprint Planning,</li>
+          <li>Daily SCRUM,</li>
+          <li>SPRINT Review,</li>
+          <li>SPRINT Restrospective, dan</li>
+          <li>Improvement.</li>
         </Section>
 
         {/* 6 — Proses Pelatihan (WHITE) */}
@@ -288,11 +294,9 @@ export default function HybridOfficerPage() {
           <p className="text-gray-700">
             Peserta program akan dimonitor kinerjanya meliputi:
           </p>
-          <ul className="list-disc pl-5">
-            <li>Professional Working Attitude</li>
-            <li>Pantang Menyerah Terhadap Hasil</li>
-            <li>Penguasaan Kompetensi Teknis & Non Teknis</li>
-          </ul>
+          <li>Professional Working Attitude</li>
+          <li>Pantang Menyerah Terhadap Hasil</li>
+          <li>Penguasaan Kompetensi Teknis & Non Teknis</li>
           <p>
             Selama melakukan magang keria, mahasiswa akan di monitoring dan
             evaluasi Progres kerjanya oleh Kampus Gratis. Laporan yang dibuat
