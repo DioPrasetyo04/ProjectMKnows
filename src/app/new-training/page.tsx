@@ -3,6 +3,7 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import { useState } from "react";
+import { IoIosCloseCircle } from "react-icons/io";
 
 export default function NewTraining() {
   const trainings = [
@@ -222,18 +223,14 @@ export default function NewTraining() {
       </div>
       {/* MODAL */}
       {openPdf && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-xl w-full max-w-4xl pt-40 p-6 relative">
-            {/* Close modal */}
+        <div className="fixed inset-0 bg-gray-700 bg-transparent bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 pt-[130px]">
+          <div className="bg-white card rounded-xl shadow-xl w-full max-w-4xl overflow-y-auto p-6 relative">
             <button
-              className="absolute top-3 right-3 text-gray-700 hover:text-black text-2xl"
+              className="absolute top-4 right-7"
               onClick={() => setOpenPdf(false)}
             >
-              ✖
+              <IoIosCloseCircle className="text-red-600 text-[50px]"></IoIosCloseCircle>
             </button>
-
-            <h2 className="text-2xl font-semibold mb-4">Detail Training</h2>
-
             <div className="flex gap-4 mb-4">
               <button
                 onClick={() => handleDownload(selectedPdf)}
@@ -249,7 +246,6 @@ export default function NewTraining() {
                 Kembali
               </button>
             </div>
-
             <div className="mt-3 w-full h-[500px] border rounded-md overflow-hidden">
               <iframe
                 src={`${selectedPdf}#toolbar=0`}
