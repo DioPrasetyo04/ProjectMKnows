@@ -223,7 +223,10 @@ export default function NewTraining() {
       </div>
       {/* MODAL */}
       {openPdf && (
-        <div className="fixed inset-0 bg-gray-700 bg-transparent bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 pt-[130px]">
+        <div
+          className="fixed inset-0 bg-gray-700 bg-transparent bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 pt-[130px]"
+          onClick={() => setOpenPdf(false)}
+        >
           <div className="bg-white card rounded-xl shadow-xl w-full max-w-4xl overflow-y-auto p-6 relative">
             <button
               className="absolute top-4 right-7"
