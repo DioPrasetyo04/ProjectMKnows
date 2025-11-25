@@ -61,7 +61,7 @@ const page = () => {
         <a href="/search-training" className="w-full">
           <img
             src="/images/house-training/public-training.png"
-            className="w-full h-auto rounded-xl shadow-lg"
+            className="w-full h-auto rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"
           />
         </a>
 
@@ -69,17 +69,17 @@ const page = () => {
         <a href="/in-house-training" className="w-full">
           <img
             src="/images/house-training/in-house-training.png"
-            className="w-full h-auto rounded-xl shadow-lg"
+            className="w-full h-auto rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"
           />
         </a>
 
         {/* TEXT COLUMN */}
-        <div className="flex flex-col justify-center gap-4 md:col-span-2 lg:col-span-1 ">
-          <h1 className="font-montserrat font-bold text-[26px] md:text-[32px] lg:text-[35px] leading-tight">
+        <div className="flex flex-col justify-center gap-4 md:col-span-2 lg:col-span-1">
+          <h1 className="font-montserrat font-bold text-[26px] md:text-[32px] lg:text-[28px] w-[600px]">
             Pelatihan Fleksibel, Hasil Terukur
           </h1>
 
-          <p className="font-poppins text-[20px] md:text-[25px] lg:text-[28px] leading-relaxed text-justify">
+          <p className="font-poppins text-[20px] md:text-[25px] lg:text-[28px] leading-relaxed text-justify w-[450px]">
             Pilih kelas publik terjadwal untuk belajar cepat & networking, atau
             sesi in-house yang disesuaikan kebutuhan tim. Materi aplikatif,
             fasilitator praktisi, standar industri terkini.
@@ -88,7 +88,7 @@ const page = () => {
       </section>
 
       {/* ================= GREEN SECTION ================= */}
-      <section className="w-full bg-[#065346] py-14 px-6 md:px-12 lg:px-20 space-y-20">
+      <section className="w-full bg-[#065346] py-14 px-6 md:px-12 lg:px-20 space-y-20 flex flex-col justify-center items-center">
         {/* ROW 1 */}
         <div className="flex flex-col lg:flex-row items-center gap-10">
           <img
@@ -108,7 +108,7 @@ const page = () => {
         </div>
 
         {/* ROW 2 */}
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 pr-[40px]">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
           <div className="text-white max-w-[650px] space-y-4">
             <h2 className="font-bold text-[26px] md:text-[32px] lg:text-[40px] leading-tight">
               Built for Indonesian Enterprises

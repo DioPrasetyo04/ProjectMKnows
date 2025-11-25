@@ -13,7 +13,9 @@ function ClientCard({ title, logos }: ClientCategory) {
     return (
         <div className="relative rounded-2xl border border-neutral-200 bg-white shadow-sm">
             {/* pita judul kiri-atas */}
-            <div className="absolute left-0 top-0 w-full h-10 rounded-t-2xl bg-gradient-to-l from-emerald-500 to-brand-blue px-4 flex items-center text-white text-xl font-semibold">{title}</div>
+            <div className="absolute left-0 top-0 w-full h-10 rounded-t-2xl bg-gradient-to-l from-emerald-500 to-brand-blue px-4 flex items-center text-white font-montserrat text-2xl font-semibold">
+                {title}
+            </div>
 
             {/* konten logo */}
             <div className="p-6 pt-12">
@@ -52,7 +54,7 @@ export default function OurClientsSection() {
     return (
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
             {/* heading */}
-            <h2 className="text-center text-5xl font-extrabold">
+            <h2 className="text-center text-6xl font-montserrat font-extrabold">
                 <span className="bg-gradient-to-r from-emerald-500 to-brand-blue bg-clip-text text-transparent">Our Clients</span>
             </h2>
 

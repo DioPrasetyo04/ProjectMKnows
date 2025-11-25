@@ -56,7 +56,7 @@ const InHouseTraining = ({
             In-House Training
           </h1>
         </div>
-        <h3 className="text-[#ffff] font-poppins text-[24px] md:text-[24px] lg:text-[30px] w-[350px] md:w-[500px] lg:w-[1117px] text-justify md:text-justify lg:text-center">
+        <h3 className="text-[#ffff] font-poppins text-[26px] md:text-[24px] lg:text-[30px] w-[400px] md:w-[500px] lg:w-[1465px] text-justify md:text-justify lg:text-center px-2 py-2 lg:px-5 lg:py-3">
           In House Training merupakan program pelatihan yang diselenggarakan
           oleh M-KNOWS CONSULTING bekerjasama dengan Perusahaan atau Instansi
           pemerintah untuk meningkatkan skill karyawan sehingga meningkatkan
