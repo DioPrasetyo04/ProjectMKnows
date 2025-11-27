@@ -345,7 +345,7 @@ const Navbar = () => {
                           {menu === "Training" && (
                             <>
                               <p
-                                onClick={() => navigateTo("/training/in-house-training")}
+                                onClick={() => navigateTo("/training/public-in-house-training")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Public In House Training
@@ -363,13 +363,13 @@ const Navbar = () => {
                                 Outbound & Event
                               </p>
                               <p
-                                onClick={() => navigateTo("/ltraining/ms-custom")}
+                                onClick={() => navigateTo("/training/lms")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Learning Management System
                               </p>
                               <p
-                                onClick={() => navigateTo("/training/lms")}
+                                onClick={() => navigateTo("/training/lms-pengembangan")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Pengembangan LMS Kustom

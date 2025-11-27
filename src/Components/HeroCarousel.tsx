@@ -37,7 +37,10 @@ export default function HeroCarousel({
 
   const total = slides.length;
   const next = useCallback(() => setIdx((i) => (i + 1) % total), [total]);
-  const prev = useCallback(() => setIdx((i) => (i - 1 + total) % total), [total]);
+  const prev = useCallback(
+    () => setIdx((i) => (i - 1 + total) % total),
+    [total]
+  );
 
   useEffect(() => {
     if (total <= 1) return;
@@ -45,7 +48,9 @@ export default function HeroCarousel({
     if (!hovering.current) {
       timer.current = setInterval(next, Math.max(2500, interval));
     }
-    return () => timer.current && clearInterval(timer.current);
+    return () => {
+      if (timer.current) clearInterval(timer.current);
+    };
   }, [interval, next, total, idx]);
 
   const style = useMemo(() => {
@@ -83,7 +88,14 @@ export default function HeroCarousel({
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <Image src={active.image} alt="" fill priority className="object-cover" sizes="100vw" />
+        <Image
+          src={active.image}
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw 1"
+        />
         <div className="absolute inset-0 bg-black/45" />
       </div>
 
@@ -123,7 +135,11 @@ export default function HeroCarousel({
             onClick={prev}
             className="group absolute left-4 md:left-6 top-1/2 -translate-y-1/2 grid h-12 w-12 place-items-center rounded-full bg-white/85 hover:bg-white shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
           >
-            <svg viewBox="0 0 24 24" className="h-6 w-6 text-slate-900 group-active:translate-x-[-1px]" fill="currentColor">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-6 w-6 text-slate-900 group-active:translate-x-[-1px]"
+              fill="currentColor"
+            >
               <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
             </svg>
           </button>
@@ -133,7 +149,11 @@ export default function HeroCarousel({
             onClick={next}
             className="group absolute right-4 md:right-6 top-1/2 -translate-y-1/2 grid h-12 w-12 place-items-center rounded-full bg-white/85 hover:bg-white shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
           >
-            <svg viewBox="0 0 24 24" className="h-6 w-6 text-slate-900 group-active:translate-x-[1px]" fill="currentColor">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-6 w-6 text-slate-900 group-active:translate-x-[1px]"
+              fill="currentColor"
+            >
               <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
             </svg>
           </button>
@@ -150,7 +170,9 @@ export default function HeroCarousel({
               aria-current={i === idx}
               onClick={() => setIdx(i)}
               className={`h-2.5 rounded-full transition-all ${
-                i === idx ? "w-8 bg-white" : "w-2.5 bg-white/60 hover:bg-white/80"
+                i === idx
+                  ? "w-8 bg-white"
+                  : "w-2.5 bg-white/60 hover:bg-white/80"
               }`}
             />
           ))}

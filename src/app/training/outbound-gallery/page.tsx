@@ -48,7 +48,7 @@ export default function OutboundPage() {
   const vGathering = "/videos/gathering.mp4";
 
   return (
-    <>
+    <div className="pt-[120px] md:pt-[100px] lg:pt-[110px]">
       <HeroCarousel
         slides={slides}
         interval={2000}
@@ -186,6 +186,6 @@ export default function OutboundPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

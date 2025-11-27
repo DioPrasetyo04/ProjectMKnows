@@ -174,19 +174,19 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
   );
 
   return (
-    <section className="bg-white text-center main-content">
+    <section className="bg-white text-center">
       {/* ===== Judul ===== */}
-      <h2 className="text-6xl font-montserrat font-bold mb-6 text-[#065346]">
+      <h2 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 text-[#065346]">
         <span className="text-[#B9F443]">Our</span>{" "}
         <span className="text-[#4697CE]">Services</span>
       </h2>
-      <p className="text-[#02353C] mb-12 text-[26px] font-montserrat">
+      <p className="text-[#02353C] mb-12 text-[20px] lg:text-[30px] md:text-[23px] font-montserrat">
         Solusi kami untuk transformasi dan pengembangan organisasi Anda
       </p>
 
       {/* ===== Tabs ===== */}
-      <div className="w-100% overflow-x-auto flex justify-center">
-        <div className="tabs-container bg-white border border-gray-300 rounded-2xl shadow-md w-[400px] lg:w-[800px] flex gap-[12px]">
+      <div className="w-full overflow-x-auto whitespace-nowrap mb-8">
+        <div className="bg-white border border-gray-300 rounded-2xl shadow-md flex flex-nowrap justify-center items-center gap-2 overflow-x-auto w-max mx-auto">
           {[
             {
               key: "training",
@@ -199,11 +199,12 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
             <button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`tab-item flex items-center justify-center gap-2 flex-1 px-4 py-4 text-[13px] lg:text-[20px] md:text-[24px] font-montserrat font-semibold transition-all white-space-nowrap shrink-0; ${
-                activeTab === key
-                  ? "bg-[#4697CE] text-white rounded-xl"
-                  : "text-[#7A7A7A] hover:bg-[#E3F2FD]"
-              }`}
+              className={`overflow-x-auto flex justify-center items-center gap-2 px-2 py-2 md:px-5 md:py-4 lg:px-5 lg:py-3 text-[12px] md:text-[18px] lg:text-[30px] font-montserrat font-semibold transition-all
+          ${
+            activeTab === key
+              ? "bg-[#4697CE] text-white rounded-xl"
+              : "text-[#7A7A7A] hover:bg-[#E3F2FD]"
+          }`}
             >
               {icon}
               {label}
@@ -348,16 +349,6 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
         )}
       </div>
 
-      {/* ===== RESPONSIVE CSS ===== */}
-      <style>{`
-        .tabs-wrapper { width: 100%; overflow-x: auto; }
-        .tabs-container { display: flex; gap: 12px; padding: 0 0; min-width: max-content;  }
-        .tab-item { white-space: nowrap; flex-shrink: 0; }
-        @media (max-width: 500px) {
-          .tabs-container { gap: 6px; padding: 0 6px; }
-        }
-      `}</style>
-
       {/* ===== RENDER POPUP ===== */}
       <PopupModal
         data={openPopup ? popupContent[openPopup] : null}
@@ -492,7 +483,7 @@ function PopupModal({
 
           <ul className="text-[22px] leading-relaxed font-montserrat">
             {data.features.map((f, i) => (
-              <ul className="list-disc">
+              <ul key={i} className="list-disc">
                 <li key={i} className="mb-2 text-outside">
                   {f}
                 </li>

@@ -221,43 +221,51 @@ export default function NewTraining() {
           ))}
         </div>
       </div>
-      {/* MODAL */}
-      {openPdf && (
-        <div
-          className="fixed inset-0 bg-gray-700 bg-transparent bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 pt-[130px]"
-          onClick={() => setOpenPdf(false)}
-        >
-          <div className="bg-white card rounded-xl shadow-xl w-full max-w-4xl overflow-y-auto p-6 relative">
-            <button
-              className="absolute top-4 right-7"
-              onClick={() => setOpenPdf(false)}
-            >
-              <IoIosCloseCircle className="text-red-600 text-[50px]"></IoIosCloseCircle>
-            </button>
-            <div className="flex gap-4 mb-4">
-              <button
-                onClick={() => handleDownload(selectedPdf)}
-                className="bg-[#02353C] text-white px-5 py-2 rounded-lg shadow-md hover:bg-[#03454d] transition"
-              >
-                Download PDF
-              </button>
+{/* MODAL */}
+{openPdf && (
+  <div
+    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 overflow-y-auto flex justify-center items-start pt-40 pb-10"
+    onClick={() => setOpenPdf(false)}
+  >
+    <div
+      className="bg-white rounded-xl shadow-xl w-full max-w-[90%] md:max-w-[700px] lg:max-w-[800px] p-6 relative max-h-[90vh] overflow-y-auto"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* CLOSE BUTTON */}
+      <button
+        className="absolute top-3 right-4"
+        onClick={() => setOpenPdf(false)}
+      >
+        <IoIosCloseCircle className="text-red-600 text-[40px]" />
+      </button>
 
-              <button
-                onClick={() => setOpenPdf(false)}
-                className="bg-gray-400 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-500 transition"
-              >
-                Kembali
-              </button>
-            </div>
-            <div className="mt-3 w-full h-[500px] border rounded-md overflow-hidden">
-              <iframe
-                src={`${selectedPdf}#toolbar=0`}
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      {/* BUTTONS */}
+      <div className="flex flex-wrap gap-3 mb-4 mt-10">
+        <button
+          onClick={() => handleDownload(selectedPdf)}
+          className="bg-[#02353C] text-white px-5 py-2 rounded-lg shadow-md hover:bg-[#03454d] transition"
+        >
+          Download PDF
+        </button>
+
+        <button
+          onClick={() => setOpenPdf(false)}
+          className="bg-gray-400 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-500 transition"
+        >
+          Kembali
+        </button>
+      </div>
+
+      {/* IFRAME */}
+      <div className="mt-3 w-full h-[50vh] md:h-[60vh] border rounded-md overflow-hidden">
+        <iframe
+          src={`${selectedPdf}#toolbar=0`}
+          className="w-full h-full"
+        />
+      </div>
+    </div>
+  </div>
+)}
     </div>
   );
 }

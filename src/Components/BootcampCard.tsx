@@ -18,27 +18,20 @@ export default function BootcampCard({
   return (
     <article
       className="
-        card group h-full min-h-[640px] flex flex-col rounded-2xl
+        card group h-full min-h-[640px] flex flex-col
         transition duration-300 ease-out cursor-default
         hover:bg-linear-to-br hover:from-brand-blue/10 hover:to-brand-teal/10
         hover:ring-1 hover:ring-brand-teal/30 hover:shadow-lg
       "
     >
       {/* FIXED: Container rapi, gambar tidak kepotong */}
-      <div
-        className="
-          relative w-full aspect-[11/9]
-          overflow-hidden rounded-t-2xl bg-white border-b border-slate-200/60
-        "
-      >
+      <div className="relative w-full aspect-[5/4] md:aspect-[11/9] lg:aspect-[10/8] overflow-hidden bg-white border-b border-slate-200/60">
         <Image
           src={image}
           alt={subtitle || title || "Bootcamp"}
           fill
-          priority={true}
-          className="object-cover object-center" // <-- FIX: jangan object-bottom
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          quality={95}
+          priority
+          className="object-cover object-center"
         />
       </div>
 

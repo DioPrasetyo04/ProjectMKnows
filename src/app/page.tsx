@@ -29,7 +29,7 @@ export default function Home() {
   }, [images.length]);
 
   return (
-    <div className="font-poppins text-[#02353C] min-w-screen w-full overflow-hidden pt-[60px] sm:pt-[60px] md:pt-[40px] lg:pt-[20px]">
+    <div className="font-poppins text-[#02353C] min-w-screen overflow-x-hidden w-full pt-[60px] sm:pt-[60px] md:pt-[40px] lg:pt-[20px]">
       {/* Hero */}
       <section
         className="relative bg-cover bg-center lg:h-[700px] h-[500px] flex items-center justify-center"
@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* About Us */}
-      <section className="py-20 bg-white overflow-hidden mx-auto">
+      <section className="py-20 bg-white mx-auto">
         <div className="container mx-auto px-6">
           <div className="flex justify-center items-center lg:justify-start lg:items-start">
             <h2 className="text-6xl font-montserrat font-bold text-left mb-10 text-[#065346]">
@@ -60,7 +60,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="flex flex-col lg:flex-row md:flex-col md:items-center gap-12">
+          <div className="flex flex-col items-center justify-center lg:flex-row md:flex-col md:items-center gap-12">
             {/* Deskripsi */}
             <div className="md:w-2/3 lg:w-full w-full space-y-6 font-montserrat text-[27px] text-black">
               <p className="text-justify text-2xl md:text-3xl lg:text-3xl">
@@ -77,7 +77,7 @@ export default function Home() {
             </div>
 
             {/* Carousel Gambar */}
-            <div className="relative w-[300px] h-[200px] md:w-[450px] md:h-[350px] lg:w-[650px] lg:h-[350px] rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[350px] lg:w-[650px] lg:h-[350px] rounded-2xl overflow-hidden shadow-lg">
               {images.map((src, index) => (
                 <img
                   key={index}
@@ -97,11 +97,11 @@ export default function Home() {
       <div className="pb-[80px] flex flex-col md:flex-col sm:flex-col justify-center items-center gap-y-[40px]">
         <section className="bg-white text-center">
           <div className="mx-auto text-center w-full md:w-[80%] lg:w-full">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6">
               <span className="text-[#B9F443]">Our</span>{" "}
               <span className="text-[#4697CE]">Statistics</span>
             </h2>
-            <p className="text-[#02353C] mb-10 text-xl md:text-3xl lg:text-3xl font-montserrat">
+            <p className="text-[#02353C] mb-10 text-[20px] md:text-3xl lg:text-3xl font-montserrat">
               Pencapaian dan dedikasi kami dalam memberikan layanan terbaik
             </p>
           </div>
@@ -135,9 +135,9 @@ export default function Home() {
         </section>
 
         {/* Komitmen */}
-        <section className="bg-white text-center w-full lg:top-[20px] p-3">
-          <div className="bg-[#02353C] mx-auto text-center w-full md:w-[60%] rounded-2xl p-3">
-            <p className="text-white font-montserrat text-[20px] lg:text-2xl md:text-2xl font-semibold leading-relaxed">
+        <section className="bg-white text-center w-[310px] lg:w-[800px] md:w-[410px] p-3">
+          <div className="bg-[#02353C] mx-auto text-center w-full rounded-2xl p-3">
+            <p className="text-white font-montserrat text-[15px] lg:text-2xl md:text-2xl font-semibold leading-relaxed">
               Kami berkomitmen memberikan layanan terbaik untuk mendukung
               pertumbuhan organisasi Anda.
             </p>
