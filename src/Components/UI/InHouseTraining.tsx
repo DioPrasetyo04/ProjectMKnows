@@ -123,7 +123,7 @@ const InHouseTraining = ({
       <div className="flex justify-center items-center left-0 right-0 mx-auto pb-[50px] pt-[20px]">
         <button className="px-3 py-3 bg-[#6DEA6A] rounded-[10px] w-[215px] border border-[#424242]">
           <div className="flex justify-center items-center gap-x-[5px]">
-            <a href="/about">
+            <a href="/clients-page">
               <p className="font-manrope font-bold text-[14px]">View More</p>
             </a>
             <FaArrowAltCircleRight className="text-[20px]" />

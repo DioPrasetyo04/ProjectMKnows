@@ -154,7 +154,7 @@ export default function Page() {
 
   return (
     <>
-      <main className="pb-[80px] pt-[120px]">
+      <main className="relative pt-[120px]">
         {/* ===== HERO (zoom-out background + kalem) ===== */}
         <section className="relative isolate">
           <div className="relative h-[420px] md:h-[520px] w-full overflow-hidden">
@@ -416,7 +416,10 @@ export default function Page() {
         </section>
 
         {/* ===== CTA All Videos — buka MODAL (tanpa page baru) ===== */}
-        <section className="relative bg-brand-navy pt-16 md:pt-24 p-12 text-white overflow-hidden">
+        <section
+          className="relative bg-brand-navy pt-16 md:pt-24 p-12 text-white overflow-hidden border-5 border-white rounded-2xl"
+          onClick={() => openModal(0)}
+        >
           <div className="pointer-events-none absolute -left-24 top-10 h-48 w-48 rounded-full bg-white/5 blur-2xl" />
           <div className="pointer-events-none absolute -right-24 bottom-10 h-40 w-40 rounded-full bg-white/5 blur-2xl" />
           <div className="px-4 sm:px-6 lg:px-8 text-center">
@@ -435,13 +438,6 @@ export default function Page() {
                   <path d="M8 5v14l11-7z" fill="currentColor" />
                 </svg>
               </div>
-              <button
-                type="button"
-                onClick={() => openModal(0)} // buka modal dari video pertama
-                className="inline-flex items-center rounded-full border border-white/50 px-6 py-3 text-sm font-medium hover:bg-white/10"
-              >
-                ALL VIDEOS +
-              </button>
             </div>
           </div>
         </section>

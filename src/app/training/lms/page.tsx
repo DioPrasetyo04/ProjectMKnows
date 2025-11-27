@@ -12,9 +12,7 @@ const LMSPage = () => {
     <div className="min-h-screen bg-white text-black pt-[80px] lg:pt-[120px]">
       <main className="py-10">
         <div className="container mx-auto px-4 md:px-8">
-
           <div className="flex flex-col lg:flex-row items-center gap-10">
-
             {/* Kolom Kiri – Gambar */}
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
@@ -32,7 +30,7 @@ const LMSPage = () => {
 
             {/* Kolom Kanan – Teks */}
             <div className="w-full lg:w-1/2">
-              <h1 className="text-2xl md:text-4xl font-bold mb-4 text-blue-500">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4 text-[#4697ce]">
                 Pengembangan LMS Kustom
               </h1>
 
@@ -55,7 +53,6 @@ const LMSPage = () => {
                 ))}
               </ul>
             </div>
-
           </div>
         </div>
       </main>

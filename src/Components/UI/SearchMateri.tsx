@@ -41,14 +41,16 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
           <div className="grid gap-x-11 gap-y-[25px] place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {materi.length > 0 ? (
               materi.map((item, index) => {
-                const isLast = index === materi.length - 1;
-                const isDataCard = materi.length % 3 === 1;
+                const isLastData = index === materi.length - 1;
+                const isData1 = materi.length % 3 === 1;
 
                 return (
                   <div
                     key={index}
                     className={`
-              ${isLast && isDataCard ? "lg:col-span-3 flex justify-center" : ""}
+              ${
+                isLastData && isData1 ? "lg:col-span-3 flex justify-center" : "flex items-center justify-center"
+              }
             `}
                   >
                     <CardMateri
@@ -73,7 +75,7 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
           <Link href="/contact" className="no-underline">
             <button className="border bg-[#ffff] px-5 py-2 text-center rounded-[20px] bg-green-600 hover:bg-green-700 hover:translate-y-[-20px]">
               <p className="font-montserrat font-regular text-[16px] lg:text-[32px] text-white">
-                Download Jadwal Public Training Tahun 2025
+                Download Jadwal Public Training Tahun 2026
               </p>
             </button>
           </Link>

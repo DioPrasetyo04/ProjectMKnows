@@ -249,7 +249,7 @@ const ChatForm = ({ isOpen, onClose }: any) => {
                   <button
                     onClick={handleChatbotStart}
                     className="bg-white text-[#02353C] opacity-80 rounded font-semibold w-full"
-                    disabled
+                    // disabled
                   >
                     chat AI (coming soon)
                   </button>

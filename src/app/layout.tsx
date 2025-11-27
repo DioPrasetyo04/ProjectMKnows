@@ -5,8 +5,6 @@ import { Metadata } from "next";
 import Footer from "@/Components/Footer";
 import ChatButton from "@/Components/ChatButton";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Bootcamp Program — M-Knows Consulting",
   description:
@@ -32,7 +30,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </head>
-      <body className={`min-h-screen ${inter.className} overflow-x-hidden`}>
+      <body className={`min-h-screen overflow-x-hidden`}>
         <Navbar />
         {children}
         <ChatButton />

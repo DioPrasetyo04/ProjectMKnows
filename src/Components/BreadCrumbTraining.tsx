@@ -7,7 +7,7 @@ import {
   BreadcrumbSeparator,
 } from "./UI/breadcrumb";
 import Link from "next/link";
-import { SlashIcon } from "lucide-react";
+import { RxSlash } from "react-icons/rx";
 import { Fragment } from "react/jsx-runtime";
 
 const BreadCrumbTraining = ({
@@ -17,42 +17,40 @@ const BreadCrumbTraining = ({
 }: BreadCrumbsProps) => {
   return (
     <Breadcrumb>
-      <BreadcrumbList>
-        {items
-          ? items.map((crumb, index) => {
-              const lastItem = index === items.length - 1;
-              if (!lastItem) {
-                return (
-                  <Fragment key={index}>
-                    <BreadcrumbItem>
-                      <BreadcrumbLink asChild>
-                        <Link href={crumb.slug}>
-                          <span className="text-white text-xl md:text-2xl font-montserrat font-semibold mb-2">
-                            {crumb.name}
-                          </span>
-                        </Link>
-                      </BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator>
-                      <SlashIcon className="text-white text-5xl" />
-                    </BreadcrumbSeparator>
-                  </Fragment>
-                );
-              } else {
-                return (
-                  <Fragment key={index}>
-                    <BreadcrumbItem>
-                      <BreadcrumbLink asChild>
-                        <span className="text-[#06974a] text-xl md:text-2xl font-montserrat font-semibold mb-2">
-                          {crumb.name}
-                        </span>
-                      </BreadcrumbLink>
-                    </BreadcrumbItem>
-                  </Fragment>
-                );
-              }
-            })
-          : []}
+      <BreadcrumbList className="flex items-center gap-2">
+        {items?.map((crumb, index) => {
+          const last = index === items.length - 1;
+
+          return (
+            <Fragment key={index}>
+              <BreadcrumbItem className="flex items-center">
+                {!last ? (
+                  <BreadcrumbLink asChild>
+                    <Link href={crumb.slug}>
+                      <span className="text-white text-xl md:text-2xl font-montserrat font-semibold hover:underline">
+                        {crumb.name}
+                      </span>
+                    </Link>
+                  </BreadcrumbLink>
+                ) : (
+                  <span className="text-[#06974a] text-xl md:text-2xl font-montserrat font-semibold">
+                    {crumb.name}
+                  </span>
+                )}
+              </BreadcrumbItem>
+
+              {!last && (
+                <BreadcrumbSeparator className="flex items-center">
+                  <RxSlash
+                    size={30}
+                    className="text-white"
+                    style={{ width: "25px", height: "25px" }}
+                  />
+                </BreadcrumbSeparator>
+              )}
+            </Fragment>
+          );
+        })}
       </BreadcrumbList>
     </Breadcrumb>
   );

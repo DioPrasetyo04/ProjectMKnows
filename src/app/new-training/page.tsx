@@ -156,25 +156,25 @@ export default function NewTraining() {
   };
 
   return (
-    <div className="font-montserrat bg-[#DEE5E7] min-h-screen text-[#02353C] relative overflow-hidden">
+    <div className="font-montserrat min-h-screen text-[#02353C] relative overflow-hidden bg-[#102635]">
       {/* Background */}
-      <div className="absolute top-[140px] lg:top-[140px] left-3 w-[200px] h-[200px] lg:w-[358px] lg:h-[344px] bg-[#AEC9B6] rounded-full z-0" />
+      {/* <div className="absolute top-[140px] lg:top-[140px] left-3 w-[200px] h-[200px] lg:w-[358px] lg:h-[344px] bg-[#AEC9B6] rounded-full z-0" />
       <div className="absolute top-[300px] lg:top-[381px] right-[10px] md:right-[358px] lg:right-[358px] w-[200px] h-[200px] lg:w-[313px] lg:h-[273px] bg-[#AEC9B6] rounded-full z-0" />
       <div className="hidden lg:block md:block absolute top-[400px] md:top-[133px] lg:top-[133px] right-[58px] w-45 md:w-56 lg:w-56 h-45 md:h-56 lg:h-[218px] bg-[#6F967B]/64 rounded-full z-0" />
-      <div className="block lg:hidden md:hidden absolute top-[450px] md:top-[133px] lg:top-[133px] left-[20px] w-45 md:w-56 lg:w-56 h-45 md:h-56 lg:h-[218px] bg-[#6F967B]/64 rounded-full z-0" />
+      <div className="block lg:hidden md:hidden absolute top-[450px] md:top-[133px] lg:top-[133px] left-[20px] w-45 md:w-56 lg:w-56 h-45 md:h-56 lg:h-[218px] bg-[#6F967B]/64 rounded-full z-0" /> */}
       <div className="relative z-10 px-6 md:px-20 pt-40 py-16">
-        <p className="text-[#6E7E80] text-xl md:text-2xl font-montserrat font-semibold mb-2">
-          Public Training{" "}
-          <span className="text-[#02353C] font-montserrat">
+        <p className="text-white text-xl md:text-2xl font-montserrat font-semibold mb-2">
+          <a href="/search-training">Public Training </a>
+          <span className="text-[#06974a] font-montserrat">
             New Training 2026
           </span>
         </p>
 
-        <h1 className="font-montserrat font-bold text-[35px] md:text-[40px] lg:text-[48px] max-w-[1281px]">
+        <h1 className="font-montserrat font-bold text-[35px] md:text-[40px] lg:text-[48px] max-w-[1281px] text-white">
           New Training 2026
         </h1>
 
-        <p className="font-montserrat font-regular text-[18px] md:text-[20px] lg:text-[24px] max-w-[900px] lg:max-w-[1500px] text-justify pb-[15px]">
+        <p className="font-montserrat font-regular text-[18px] md:text-[20px] lg:text-[24px] max-w-[900px] lg:max-w-[1500px] text-justify pb-[15px] text-white mt-4 mb-10">
           Menjawab Dinamika Dunia Bisnis Dan Perkembangan Kebutuhan Kompetensi
           Yang Terus Berubah, Kami Menghadirkan Kategori New Topic – Kumpulan
           Program Pelatihan Terbaru Yang Dirancang Khusus Untuk Menjawab

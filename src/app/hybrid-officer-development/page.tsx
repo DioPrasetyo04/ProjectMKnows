@@ -145,7 +145,7 @@ export default function HybridOfficerPage() {
           imageAlt="Hybrid Officer"
           imageRight={false}
         >
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-700 text-2xl">
             Creating Competent Professionals In Sales, Credit & Collection
             (Pelatihan, Magang, Bekerja).
           </p>
@@ -159,18 +159,18 @@ export default function HybridOfficerPage() {
           imageAlt="Deskripsi Program"
           imageRight={true}
         >
-          <p>
+          <p className="text-2xl">
             Officer Development Crash Program adalah program pelatihan & magang
             yang merupakan penciptaan kompetensi di bidang Sales, Credit &
             Collection, guna menghasilkan SDM yang produktif dan berkinerja
             tinggi.
           </p>
-          <p>
+          <p className="text-2xl">
             Penguatan kompetensi dilakukan berupa pelatihan selama 1 bulan di
             M-Knows, fokus pada role play dan drill, ditutup dengan uji
             kompetensi.
           </p>
-          <p>
+          <p className="text-2xl">
             Mereka yang lulus uji kompetensi, disalurkan untuk 1 bulan magang di
             perusahaan (Bank, Multi Finance, Fintech dan Asuransi). Bagi yang
             berkinerja tinggi akan ditawarkan untuk bekerja di perusahaan yang
@@ -186,7 +186,7 @@ export default function HybridOfficerPage() {
           imageAlt="Lingkup Project"
           imageRight={false}
         >
-          <ol className="list-decimal ml-5 space-y-2 text-gray-700">
+          <ol className="list-decimal ml-5 space-y-2 text-gray-700 text-2xl">
             <li>Recruitment & Seleksi</li>
             <li>Kontrak kerja & Orientasi</li>
             <li>Pelatihan berbasis kompetensi</li>
@@ -212,7 +212,7 @@ export default function HybridOfficerPage() {
           imageAlt="Recruitment"
           imageRight={true}
         >
-          <ol className="list-decimal ml-5 text-gray-700 space-y-2">
+          <ol className="list-decimal ml-5 text-gray-700 space-y-2 text-2xl">
             <li>Recruitment 300 mahasiswa dilakukan</li>
             <li>
               Persyaratan seleksi mahasiswa tingkat skripsi (tugas akhir), atau
@@ -236,26 +236,28 @@ export default function HybridOfficerPage() {
           imageAlt="Kerangka Program"
           imageRight={false}
         >
-          <p>
+          <p className="text-2xl">
             Aktivitas magang yang kami rancang adalah untuk mahasiswa dapat
             diterima bekerja di perusahaan keuangan, yang bernama Officer
             Development Crash Program (ODCP).
           </p>
-          <p>
+          <p className="text-2xl">
             ODCP memiliki keunggulan, karena mahasiswa diberikan kemampuan atau
             keahlian yang spesifik, seperti Sales, Credit dan Collection sesuai
             kebutuhan dari perusahaan keuangan yang akan menerimanya.
           </p>
-          <p>
+          <p className="text-2xl">
             Pendekatan kerja dan magang akan menggunakan pendekatan SCRUM
             Framework, dimana pemagang akan diarahkan untuk merancang solusi
             melalui lima proses iterative, yaitu:
           </p>
-          <li>Sprint Planning,</li>
-          <li>Daily SCRUM,</li>
-          <li>SPRINT Review,</li>
-          <li>SPRINT Restrospective, dan</li>
-          <li>Improvement.</li>
+          <ul className="pl-[20px] list-disc">
+            <li className="text-2xl">Sprint Planning,</li>
+            <li className="text-2xl">Daily SCRUM,</li>
+            <li className="text-2xl">SPRINT Review,</li>
+            <li className="text-2xl">SPRINT Restrospective, dan</li>
+            <li className="text-2xl">Improvement.</li>
+          </ul>
         </Section>
 
         {/* 6 — Proses Pelatihan (WHITE) */}
@@ -266,21 +268,23 @@ export default function HybridOfficerPage() {
           imageAlt="Pelatihan"
           imageRight={true}
         >
-          <p>
-            Pemberian materi diberikan baik secara synchronous (melalui online
-            meeting), dan asynchronous (dengan disediakannya video ajar dan
-            white paper di aplikasi kampusgratis.id).{" "}
-          </p>
-          <p>
-            Sesi tatap muka atau zoom dibutuhkan untuk pada penugasan dan
-            mentoring yang membutuhkan untuk dilakukan secara langsung.
-          </p>
-          <p>
-            Setiap materi pembelajaran akan dilengkapi dengan kuis dan latihan,
-            penugasan, ujian akhir dan uji kompetensi berupa studi kasus, role
-            play dan drill, sebagai evaluasi apakah peserta sudah mencapai
-            minimum standar kompetensi.
-          </p>
+          <div className="text-2xl">
+            <p>
+              Pemberian materi diberikan baik secara synchronous (melalui online
+              meeting), dan asynchronous (dengan disediakannya video ajar dan
+              white paper di aplikasi kampusgratis.id).{" "}
+            </p>
+            <p>
+              Sesi tatap muka atau zoom dibutuhkan untuk pada penugasan dan
+              mentoring yang membutuhkan untuk dilakukan secara langsung.
+            </p>
+            <p>
+              Setiap materi pembelajaran akan dilengkapi dengan kuis dan
+              latihan, penugasan, ujian akhir dan uji kompetensi berupa studi
+              kasus, role play dan drill, sebagai evaluasi apakah peserta sudah
+              mencapai minimum standar kompetensi.
+            </p>
+          </div>
         </Section>
 
         {/* 7 — Monitoring (DARK) */}
@@ -291,18 +295,22 @@ export default function HybridOfficerPage() {
           imageAlt="Monitoring"
           imageRight={false}
         >
-          <p className="text-gray-700">
-            Peserta program akan dimonitor kinerjanya meliputi:
-          </p>
-          <li>Professional Working Attitude</li>
-          <li>Pantang Menyerah Terhadap Hasil</li>
-          <li>Penguasaan Kompetensi Teknis & Non Teknis</li>
-          <p>
-            Selama melakukan magang keria, mahasiswa akan di monitoring dan
-            evaluasi Progres kerjanya oleh Kampus Gratis. Laporan yang dibuat
-            akan di berikan akses kepapada mahasiswa dan pihak perusahaan,
-            sesuai kebutuhan dan kepentingannya.
-          </p>
+          <div className="text-2xl">
+            <p className="text-gray-700">
+              Peserta program akan dimonitor kinerjanya meliputi:
+            </p>
+            <ul className="list-disc pl-[20px]">
+              <li>Professional Working Attitude</li>
+              <li>Pantang Menyerah Terhadap Hasil</li>
+              <li>Penguasaan Kompetensi Teknis & Non Teknis</li>
+            </ul>
+            <p>
+              Selama melakukan magang keria, mahasiswa akan di monitoring dan
+              evaluasi Progres kerjanya oleh Kampus Gratis. Laporan yang dibuat
+              akan di berikan akses kepapada mahasiswa dan pihak perusahaan,
+              sesuai kebutuhan dan kepentingannya.
+            </p>
+          </div>
         </Section>
       </main>
     </div>

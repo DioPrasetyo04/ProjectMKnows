@@ -4,14 +4,14 @@ import { RxDividerVertical } from "react-icons/rx";
 
 const CardTimeTableTraining = ({ data }: CardProps) => {
   return (
-    <div className="flex flex-col justify-center gap-y-6 w-full p-3">
+    <div className="flex flex-col justify-center items-center text-center gap-y-6 w-full p-3">
       {Object.entries(data).map(([title, dates]) => (
         <div
           key={title}
-          className="flex flex-col lg:flex-row w-full rounded-[20px] overflow-hidden"
+          className="flex flex-col lg:flex-row w-full rounded-[20px] overflow-hidden text-center"
         >
           {/* Title Section */}
-          <div className="bg-[#02353C] flex items-center px-5 py-5 w-full lg:w-1/2">
+          <div className="bg-[#02353C] flex items-center px-5 py-5 w-full lg:w-1/2 justify-center">
             <h2 className="text-xl md:text-[28px] font-montserrat font-semibold text-center leading-snug text-white">
               {title}
             </h2>

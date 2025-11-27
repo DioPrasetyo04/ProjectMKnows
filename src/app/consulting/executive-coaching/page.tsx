@@ -25,7 +25,7 @@ const ExecutiveCoachingPage = () => {
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
             <span className="text-green-400">Tujuan</span>{" "}
-            <span className="text-blue-500">Coaching</span>
+            <span className="text-[#4697ce]">Coaching</span>
           </h2>
           <p className="text-2xl leading-relaxed max-w-7xl mx-auto text-center text-black">
             Mengatasi semua kesulitan yang dihadapi bawahan dalam mengerjakan

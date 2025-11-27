@@ -13,13 +13,16 @@ export default async function Page({
 
   // Background style for each slug
   const pageStyle: Record<string, string> = {
-    "new-training-2026": "bg-[#DEE5E7] relative",
-    "tech-series":
-      "relative bg-gradient-to-b from-[#02353C]/100 via-[#35DAF1]/88 to-[#28AEC1]/91",
+    "new-training-2026": "bg-[#102635] relative",
+    "tech-series": "relative bg-[#102635]",
     "bnsp-series": "relative bg-[#102635]",
     "esg-series": "relative bg-[#102635]",
     "finance-series": "relative bg-[#102635]",
     "office-adm-series": "relative bg-[#102635]",
+    "credit-collection-series": "relative bg-[#102635]",
+    "leadership-series": "relative bg-[#102635]",
+    "sales-marketing-series": "relative bg-[#102635]",
+    "hc-training-series": "relative bg-[#102635]",
   };
 
   // Title styling per slug
@@ -58,7 +61,7 @@ export default async function Page({
     <>
       <div className={`relative min-h-screen overflow-hidden ${appliedStyle}`}>
         {/* Background decoration per slug */}
-        {slug === "new-training-2026" && (
+        {/* {slug === "new-training-2026" && (
           <>
             {" "}
             <div className="absolute top-[140px] lg:top-[140px] left-3 w-[200px] h-[200px] lg:w-[358px] lg:h-[344px] bg-[#AEC9B6] rounded-full z-0" />{" "}
@@ -124,7 +127,7 @@ export default async function Page({
               className="w-[1500px] h-[250px] lg:h-full md:h-[250px]"
             />{" "}
           </div>
-        )}
+        )} */}
         {/* Content */}
         <div className="relative z-10">
           <PageDetailTimeTable

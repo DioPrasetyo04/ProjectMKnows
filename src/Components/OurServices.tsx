@@ -171,7 +171,7 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
   };
 
   return (
-    <section className="py-5 bg-white text-center main-content">
+    <section className="bg-white text-center main-content">
       {/* ===== Judul ===== */}
       <h2 className="text-6xl font-montserrat font-bold mb-6 text-[#065346]">
         <span className="text-[#B9F443]">Our</span>{" "}
@@ -182,8 +182,8 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
       </p>
 
       {/* ===== Tabs ===== */}
-      <div className="width-100% overflow-x-auto flex justify-center px-0">
-        <div className="tabs-container bg-white border border-gray-300 rounded-2xl shadow-md w-full max-w-[600px] flex gap-[12px] padding-[0px_0px] min-width-max-content ">
+      <div className="w-100% overflow-x-auto flex justify-center">
+        <div className="tabs-container bg-white border border-gray-300 rounded-2xl shadow-md w-[400px] lg:w-[800px] flex gap-[12px]">
           {[
             {
               key: "training",
@@ -196,7 +196,7 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
             <button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`tab-item flex items-center justify-center gap-2 flex-1 px-4 py-4 text-[20px] md:text-[24px] font-montserrat font-semibold transition-all white-space: nowrap; flex-shrink: 0; ${
+              className={`tab-item flex items-center justify-center gap-2 flex-1 px-4 py-4 text-[13px] lg:text-[20px] md:text-[24px] font-montserrat font-semibold transition-all white-space-nowrap shrink-0; ${
                 activeTab === key
                   ? "bg-[#4697CE] text-white rounded-xl"
                   : "text-[#7A7A7A] hover:bg-[#E3F2FD]"

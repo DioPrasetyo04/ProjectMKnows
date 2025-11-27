@@ -20,7 +20,7 @@ const BrandConsultingPage = () => {
 
           {/* Kolom Kanan: Teks dan Fitur */}
           <div className="lg:w-1/2">
-            <h1 className="text-5xl font-bold mb-4 text-blue-500">
+            <h1 className="text-5xl font-bold mb-4 text-[#4697ce]">
               Brand Consulting
             </h1>
             <p className="text-2xl mb-6 leading-relaxed">
