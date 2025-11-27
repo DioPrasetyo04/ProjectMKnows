@@ -132,25 +132,25 @@ const Navbar = () => {
                                 Public In House Training
                               </p>
                               <p
-                                onClick={() => navigateTo("/bootcamp")}
+                                onClick={() => navigateTo("/training/bootcamp")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Bootcamp Program
                               </p>
                               <p
-                                onClick={() => navigateTo("/outbound-gallery")}
+                                onClick={() => navigateTo("/training/outbound-gallery")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Outbound & Event
                               </p>
                               <p
-                                onClick={() => navigateTo("/lms-custom")}
+                                onClick={() => navigateTo("/training/lms")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Learning Management System
                               </p>
                               <p
-                                onClick={() => navigateTo("/training/lms")}
+                                onClick={() => navigateTo("/training/lms-pengembangan")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Pengembangan LMS Kustom
@@ -178,7 +178,7 @@ const Navbar = () => {
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/hybrid-officer-development")
+                                  navigateTo("/consulting/hybrid-officer-development")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
@@ -186,7 +186,7 @@ const Navbar = () => {
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/assessment-technical-competency")
+                                  navigateTo("/consulting/assessment-technical-competency")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
@@ -198,47 +198,47 @@ const Navbar = () => {
                           {menu === "Digitalisasi" && (
                             <>
                               <p
-                                onClick={() => navigateTo("/SolusiAI")}
+                                onClick={() => navigateTo("/digitalisasi/SolusiAI")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Solusi AI
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/jasa-web-development")
+                                  navigateTo("/digitalisasi/jasa-web-development")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Web Development
                               </p>
                               <p
-                                onClick={() => navigateTo("/apps-development")}
+                                onClick={() => navigateTo("/digitalisasi/apps-development")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Apps Development
                               </p>
                               <p
-                                onClick={() => navigateTo("/games-development")}
+                                onClick={() => navigateTo("/digitalisasi/games-development")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Game Development
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/digitals-marketing")
+                                  navigateTo("/digitalisasi/digitals-marketing")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Digital Marketing
                               </p>
                               <p
-                                onClick={() => navigateTo("/content-creator")}
+                                onClick={() => navigateTo("/digitalisasi/content-creator")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Content Creator
                               </p>
                               <p
-                                onClick={() => navigateTo("/virtual-reality")}
+                                onClick={() => navigateTo("/digitalisasi/virtual-reality")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Virtual Reality
@@ -345,25 +345,25 @@ const Navbar = () => {
                           {menu === "Training" && (
                             <>
                               <p
-                                onClick={() => navigateTo("/in-house-training")}
+                                onClick={() => navigateTo("/training/in-house-training")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Public In House Training
                               </p>
                               <p
-                                onClick={() => navigateTo("/bootcamp")}
+                                onClick={() => navigateTo("/training/bootcamp")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Bootcamp Program
                               </p>
                               <p
-                                onClick={() => navigateTo("/outbound-gallery")}
+                                onClick={() => navigateTo("/training/outbound-gallery")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Outbound & Event
                               </p>
                               <p
-                                onClick={() => navigateTo("/lms-custom")}
+                                onClick={() => navigateTo("/ltraining/ms-custom")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Learning Management System
@@ -397,7 +397,7 @@ const Navbar = () => {
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/hybrid-officer-development")
+                                  navigateTo("/consulting/hybrid-officer-development")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
@@ -405,7 +405,7 @@ const Navbar = () => {
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/assessment-technical-competency")
+                                  navigateTo("/consulting/assessment-technical-competency")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
@@ -417,47 +417,47 @@ const Navbar = () => {
                           {menu === "Digitalisasi" && (
                             <>
                               <p
-                                onClick={() => navigateTo("/SolusiAI")}
+                                onClick={() => navigateTo("/digitalisasi/SolusiAI")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Solusi AI
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/jasa-web-development")
+                                  navigateTo("/digitalisasi/jasa-web-development")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Web Development
                               </p>
                               <p
-                                onClick={() => navigateTo("/apps-development")}
+                                onClick={() => navigateTo("/digitalisasi/apps-development")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Apps Development
                               </p>
                               <p
-                                onClick={() => navigateTo("/games-development")}
+                                onClick={() => navigateTo("/digitalisasi/games-development")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Game Development
                               </p>
                               <p
                                 onClick={() =>
-                                  navigateTo("/digitals-marketing")
+                                  navigateTo("/digitalisasi/digitals-marketing")
                                 }
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Digital Marketing
                               </p>
                               <p
-                                onClick={() => navigateTo("/content-creator")}
+                                onClick={() => navigateTo("/digitalisasi/content-creator")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Content Creator
                               </p>
                               <p
-                                onClick={() => navigateTo("/virtual-reality")}
+                                onClick={() => navigateTo("/digitalisasi/virtual-reality")}
                                 className="cursor-pointer hover:text-[#B9F443]"
                               >
                                 Virtual Reality

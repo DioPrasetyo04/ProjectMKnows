@@ -28,7 +28,7 @@ export default function VirtualRealityPage() {
 
         {/* Kolom Teks */}
         <div className="lg:w-1/2">
-          <h1 className="text-4xl font-bold text-blue-600 mb-2">
+          <h1 className="text-4xl font-bold text-[#4697ce] mb-2">
             Virtual Reality
           </h1>
           <p className="text-gray-700 mb-4 leading-relaxed text-2xl text-justify">

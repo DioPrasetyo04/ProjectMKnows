@@ -17,7 +17,7 @@ type Program = {
 const programs: Program[] = [
   {
     id: "game-dev",
-    image: "/images/FRONT-END.jpg",
+    image: "/images/bootcamp-program/FRONT-END.jpg",
     subtitle: "BOOTCAMP FRONT END DEVELOPER : ADVANCE LEVEL",
     title: "",
     description:
@@ -30,7 +30,7 @@ const programs: Program[] = [
   },
   {
     id: "iot",
-    image: "/images/BACK-END.jpg",
+    image: "/images/bootcamp-program/BACK-END.jpg",
     subtitle: "BOOTCAMP BACK-END DEVELOPMENT : ADVANCE LEVEL",
     title: "",
     description:
@@ -43,7 +43,7 @@ const programs: Program[] = [
   },
   {
     id: "web-sec",
-    image: "/images/FLUTTER.jpg",
+    image: "/images/bootcamp-program/FLUTTER.jpg",
     subtitle: "FLUTTER MULTI-PLATFORM APP DEVELOPMENT",
     title: "",
     description:
@@ -56,7 +56,7 @@ const programs: Program[] = [
   },
   {
     id: "finance",
-    image: "/images/DATA-SIENCE.jpg",
+    image: "/images/bootcamp-program/DATA-SIENCE.jpg",
     subtitle: "DATA SIENCE & DATA ANALYTICS",
     title: "",
     description:
@@ -65,7 +65,7 @@ const programs: Program[] = [
   },
   {
     id: "vr",
-    image: "/images/ANIMATOR.jpg",
+    image: "/images/bootcamp-program/ANIMATOR.jpg",
     subtitle: "PROFESSIONAL VIDEO GRAFER & SINEATOGRAFER",
     title: "",
     description:
@@ -74,7 +74,7 @@ const programs: Program[] = [
   },
   {
     id: "ai-sales",
-    image: "/images/SINEMATOGRAFER.jpg",
+    image: "/images/bootcamp-program/SINEMATOGRAFER.jpg",
     subtitle:
       "MENJADI VIDEO EDITOR, CONTENT, CREATOR & ANIMATOR, PROFESIONAL",
     title: "",
@@ -84,7 +84,7 @@ const programs: Program[] = [
   },
   {
     id: "qa",
-    image: "/images/3D.jpg",
+    image: "/images/bootcamp-program/3D.jpg",
     subtitle: "COMPREHENSIVE 3D DESIGN WITH BLENDER",
     title: "",
     description:
@@ -93,7 +93,7 @@ const programs: Program[] = [
   },
   {
     id: "ai-banking",
-    image: "/images/FOTOGRAFER.jpg",
+    image: "/images/bootcamp-program/FOTOGRAFER.jpg",
     subtitle: "MENJADI PROFESIONAL DI BIDANG FOTOGRAFI",
     title: "",
     description:
@@ -106,7 +106,7 @@ const programs: Program[] = [
   },
   {
     id: "dm-event",
-    image: "/images/UI.jpg",
+    image: "/images/bootcamp-program/UI.jpg",
     subtitle: "UI & UX FOR WEB & APP PROJECT",
     title: "",
     description:
@@ -115,7 +115,7 @@ const programs: Program[] = [
   },
   {
     id: "sponsorship",
-    image: "/images/MULTIFINANCE.jpg",
+    image: "/images/bootcamp-program/MULTIFINANCE.jpg",
     subtitle:
       "APLIKASI TERAPAN AI UNTUK INDUSTRI PERBANKAN, MULTIFINANCE, ASURANSI, DAN FINTECH",
     title: "",
@@ -125,7 +125,7 @@ const programs: Program[] = [
   },
   {
     id: "blender",
-    image: "/images/DIGITAL.jpg",
+    image: "/images/bootcamp-program/DIGITAL.jpg",
     subtitle: "BOOTCAMP DIGITAL MARKETING DAN EVENT MANAGEMENT",
     title: "",
     description:
@@ -134,7 +134,7 @@ const programs: Program[] = [
   },
   {
     id: "photo",
-    image: "/images/SPONSORSHIP.jpg",
+    image: "/images/bootcamp-program/SPONSORSHIP.jpg",
     subtitle: "strategy STRATEGY SPONSORSHIP",
     title: "",
     description:
@@ -143,7 +143,7 @@ const programs: Program[] = [
   },
   {
     id: "uiux",
-    image: "/images/TRANSFORMASI.jpg",
+    image: "/images/bootcamp-program/TRANSFORMASI.jpg",
     subtitle: "TEKNOLOGI VIRTUAL REALITY UNTUK TRANSFORMASI BISNIS",
     title: "",
     description:
@@ -152,7 +152,7 @@ const programs: Program[] = [
   },
   {
     id: "ds-banking",
-    image: "/images/SALES.jpg",
+    image: "/images/bootcamp-program/SALES.jpg",
     subtitle: "AI SALES TOOLS UNTUK MENINGKATKAN PENJUALAN",
     title: "",
     description:
@@ -161,7 +161,7 @@ const programs: Program[] = [
   },
   {
     id: "video-editor",
-    image: "/images/QA.jpg",
+    image: "/images/bootcamp-program/QA.jpg",
     subtitle: "IT QA ENGINEER : MENJADI QA PROFESIONAL",
     title: "",
     description:
@@ -170,7 +170,7 @@ const programs: Program[] = [
   },
   {
     id: "cinema",
-    image: "/images/PLANNING.jpg",
+    image: "/images/bootcamp-program/PLANNING.jpg",
     subtitle:
       "FINANCIAL PLANNING, FINANCIAL MODELLING, BUSINESS SIMULATION, FINANCIAL SCENARIO TESTING, AND ANALYTICS DASBOARDING",
     title: "",
@@ -180,7 +180,7 @@ const programs: Program[] = [
   },
   {
     id: "fe-adv",
-    image: "/images/IOT.jpg",
+    image: "/images/bootcamp-program/IOT.jpg",
     subtitle:
       "PENGUASAAN IOT : IDE, SOlUSI, PERANGAKAIAN, MANAJEMEN PROYEK DAN KOMERSIALISASI",
     title: "",
@@ -190,7 +190,7 @@ const programs: Program[] = [
   },
   {
     id: "be-adv",
-    image: "/images/CS.jpg",
+    image: "/images/bootcamp-program/CS.jpg",
     subtitle: "CYBER SECURITY : WEB EXPLOITATION ADN DEFENSE",
     title: "",
     description:
@@ -199,7 +199,7 @@ const programs: Program[] = [
   },
   {
     id: "flutter",
-    image: "/images/GAME.jpg",
+    image: "/images/bootcamp-program/GAME.jpg",
     subtitle: "GAME DEVELOPMENT",
     title: "",
     description:

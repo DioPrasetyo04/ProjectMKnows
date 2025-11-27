@@ -30,35 +30,35 @@
   ],
   "Mores": [
     {
-      "href": "/about",
+      "href": "/more/about",
       "label": "About Us"
     },
     {
-      "href": "/history",
+      "href": "/more/history",
       "label": "History"
     },
     {
-      "href": "/visi-misi",
+      "href": "/more/visi-misi",
       "label": "Vision & Mission"
     },
     {
-      "href": "/our-fasilitator",
+      "href": "/more/our-fasilitator",
       "label": "Our Facilitators"
     },
     {
-      "href": "/carrers",
+      "href": "/more/carrers",
       "label": "Carrers"
     },
     {
-      "href": "/consulting-service",
+      "href": "/more/consulting-service",
       "label": "Consulting Services"
     },
     {
-      "href": "/clients-page",
+      "href": "/more/clients-page",
       "label": "Our Clients"
     },
     {
-      "href": "/contact",
+      "href": "/more/contact",
       "label": "Contact Us"
     }
   ],

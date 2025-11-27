@@ -54,7 +54,7 @@ const Page = () => {
         </div>
         <div className="relative w-full h-[450px] overflow-hidden">
           <img
-            src="images/careers/karir-header.jpg"
+            src="/images/careers/karir-header.jpg"
             alt="Hero Image"
             className="w-full h-full object-cover"
           />
@@ -65,7 +65,7 @@ const Page = () => {
         <div className="w-[900px] rounded-2xl shadow-2xl bg-gradient-to-b from-[#27548A] to-[#02353C] p-5 overflow-hidden">
           <div className="rounded-xl overflow-hidden">
             <img
-              src="images/careers/konten.jpg"
+              src="/images/careers/konten.jpg"
               alt="Content Image"
               className="w-full h-full object-cover"
             />

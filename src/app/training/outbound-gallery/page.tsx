@@ -20,23 +20,23 @@ import VideoThumb from "@/components/VideoThumb";
 export default function OutboundPage() {
   const slides = [
     {
-      image: "/images/outbound-1.jpg",
+      image: "/images/outbound-and-event/outbound-1.jpg",
       subtitle: "Fun in Nature, Growth in Action!",
     },
     {
-      image: "/images/Outbound(1).jpeg",
+      image: "/images/outbound-and-event/Outbound(1).jpeg",
       subtitle: "Fun in Nature, Growth in Action!",
     },
     {
-      image: "/images/Outbound(2).jpeg",
+      image: "/images/outbound-and-event/Outbound(2).jpeg",
       subtitle: "Fun in Nature, Growth in Action!",
     },
     {
-      image: "/images/Outbound(3).jpeg",
+      image: "/images/outbound-and-event/Outbound(3).jpeg",
       subtitle: "Fun in Nature, Growth in Action!",
     },
     {
-      image: "/images/Outbound(4).jpeg",
+      image: "/images/outbound-and-event/Outbound(4).jpeg",
       subtitle: "Fun in Nature, Growth in Action!",
     },
   ];
@@ -64,7 +64,7 @@ export default function OutboundPage() {
             <div className="lg:col-span-6">
               <VideoThumb
                 title="Management Training Program"
-                image="/images/Daleman(1).jpeg"
+                image="/images/outbound-and-event/Daleman(1).jpeg"
                 videoSrc={vManagement}
                 fit="fill"
                 className="h-full"
@@ -103,7 +103,7 @@ export default function OutboundPage() {
             <div className="lg:col-span-6 order-1 lg:order-2">
               <VideoThumb
                 title="Drone Video"
-                image="/images/Daleman(2).jpeg"
+                image="/images/outbound-and-event/Daleman(2).jpeg"
                 videoSrc={vDrone}
                 fit="fill"
                 className="h-full"
@@ -116,7 +116,7 @@ export default function OutboundPage() {
             <div className="lg:col-span-6">
               <VideoThumb
                 title="Fun Offroad"
-                image="/images/Daleman(3).jpeg"
+                image="/images/outbound-and-event/Daleman(3).jpeg"
                 videoSrc={vOffroad}
                 fit="fill"
                 className="h-full"
@@ -152,7 +152,7 @@ export default function OutboundPage() {
             <div className="lg:col-span-6 order-1 lg:order-2">
               <VideoThumb
                 title="Motivasi Outbound"
-                image="/images/Daleman(4).jpeg"
+                image="/images/outbound-and-event/Daleman(4).jpeg"
                 videoSrc={vMotivasi}
                 fit="fill"
                 className="h-full"
@@ -165,7 +165,7 @@ export default function OutboundPage() {
             <div className="lg:col-span-6">
               <VideoThumb
                 title="Family & Employee Gathering"
-                image="/images/Daleman(5).jpeg"
+                image="/images/outbound-and-event/Daleman(5).jpeg"
                 videoSrc={vGathering}
                 fit="fill"
                 className="h-full"

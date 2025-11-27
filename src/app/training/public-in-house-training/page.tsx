@@ -58,7 +58,7 @@ const page = () => {
       {/* ================= TRAINING GRID ================= */}
       <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 md:px-12 lg:px-20 pb-10 pt-[80px] pb-[80px]">
         {/* PUBLIC TRAINING CARD */}
-        <a href="/search-training" className="w-full">
+        <a href="/training/search-training" className="w-full">
           <img
             src="/images/house-training/public-training.png"
             className="w-full h-auto rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"
@@ -66,7 +66,7 @@ const page = () => {
         </a>
 
         {/* INHOUSE TRAINING CARD */}
-        <a href="/in-house-training" className="w-full">
+        <a href="/training/public-in-house-training/in-house-training" className="w-full">
           <img
             src="/images/house-training/in-house-training.png"
             className="w-full h-auto rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"

@@ -10,43 +10,6 @@ const Page = () => {
       {/* 2. Ini adalah OVERLAY HITAM 54% */}
       {/* Ini akan duduk di atas gambar, tapi di bawah konten */}
       <div className="absolute inset-0 bg-black/[.54]" aria-hidden="true"></div>
-      {/* 3. NAVBAR Anda biarkan di sini. */}
-      {/* Karena sudah 'fixed' dan 'z-[1000]', dia akan selalu di atas. */}
-      <header className="w-full h-[100px] px-[60px] py-3 flex items-center justify-between bg-[#083b44] text-white fixed top-0 left-0 right-0 z-[1000] shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
-        <div className="logo">
-          <img
-            src="logos/M-Knows.png"
-            alt="M-Knows Consulting"
-            className="h-[50px] object-contain"
-          />
-        </div>
-        <nav className="flex gap-[2cm]">
-          <a
-            href="#"
-            className="text-white text-[20px] font-normal hover:text-[#d1e7e0] transition-colors duration-300"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-white text-[20px] font-normal hover:text-[#d1e7e0] transition-colors duration-300"
-          >
-            New Training
-          </a>
-          <a
-            href="#"
-            className="text-white text-[20px] font-normal hover:text-[#d1e7e0] transition-colors duration-300"
-          >
-            Our Services
-          </a>
-          <a
-            href="#"
-            className="text-white text-[20px] font-normal hover:text-[#d1e7e0] transition-colors duration-300"
-          >
-            More
-          </a>
-        </nav>
-      </header>
       {/* 4. INI WRAPPER KONTEN ANDA */}
       {/* SEMUA sisa konten halaman (hero, main, footer) masuk ke sini */}
       <div className="relative">
@@ -112,22 +75,22 @@ const Page = () => {
             <div className="value-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[40px] justify-items-center items-start">
               {[
                 {
-                  img: "images/visi_misi/trust.png",
+                  img: "/images/visi_misi/trust.png",
                   title: "Trustworthy & Loyalty",
                   desc: "Dapat dipercaya dan memiliki loyalitas",
                 },
                 {
-                  img: "images/visi_misi/work.png",
+                  img: "/images/visi_misi/work.png",
                   title: "Working Together",
                   desc: "Bekerja Bersama",
                 },
                 {
-                  img: "images/visi_misi/learn.png",
+                  img: "/images/visi_misi/learn.png",
                   title: "Learning Environment",
                   desc: "Lingkungan Pembelajaran",
                 },
                 {
-                  img: "images/visi_misi/customers.png",
+                  img: "/images/visi_misi/customers.png",
                   title: "Customer Intimacy",
                   desc: "Kedekatan hubungan dengan pelanggan",
                 },

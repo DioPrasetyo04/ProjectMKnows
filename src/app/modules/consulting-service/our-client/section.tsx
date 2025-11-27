@@ -34,7 +34,7 @@ function ClientCard({ title, logos }: ClientCategory) {
 function MoreCard() {
     return (
         <Link
-            href="/clients-page" // <- pindah ke halaman full (partners)
+            href="/more/clients-page" // <- pindah ke halaman full (partners)
             className="relative block rounded-2xl border border-neutral-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
             aria-label="View all partners"
         >

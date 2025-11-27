@@ -25,11 +25,10 @@ import {
 
 export default function OurServices() {
   const [activeTab, setActiveTab] = useState("training");
-  const [openPopup, setOpenPopup] = useState(null);
 
   /* ===== DATA POPUP ===== */
   const popupContent = {
-    "Solusi AI": {
+    Solusi_AI: {
       image: "/images/popup-ourservices/SolusiAI.png",
       title: "Solusi AI",
       description: `
@@ -44,7 +43,7 @@ Tingkatkan Bisnis anda dengan AI Solution! AI Solution merupakan alat yang penti
       ],
     },
 
-    "Brand Consulting": {
+    Brand_Consulting: {
       image: "/images/popup-ourservices/Consulting.png",
       title: "Brand Consulting",
       description: `
@@ -57,7 +56,7 @@ Tingkatkan merek dan bisnis anda dengan Brand Consulting! Di era yang kompetitif
       ],
     },
 
-    "Web Development": {
+    Web_Development: {
       image: "/images/popup-ourservices/JasaWeb.png",
       title: "Jasa Web Development",
       description: `
@@ -76,7 +75,7 @@ Buka dan Wujudkan ide web anda melalui pintu menuju dunia digital yang tak terba
       ],
     },
 
-    "Apps Development": {
+    Apps_Development: {
       image: "/images/popup-ourservices/JasaApps.png",
       title: "Jasa App (Mobile) Development",
       description: `
@@ -92,7 +91,7 @@ Temukan solusi pengembangan aplikasi berkualitas tinggi anda dengan biaya terjan
       ],
     },
 
-    "Pengembangan LMS Kustom": {
+    Pengembangan_LMS_Kustom: {
       image: "/images/popup-ourservices/LMS.png",
       title: "Pengembangan LMS Kustom",
       description: `
@@ -106,7 +105,7 @@ Tingkatkan Pembelajaran Anda dengan Learning Management System! LMS merupakan al
       ],
     },
 
-    "Virtual Reality & XR": {
+    "Virtual_Reality_&_XR": {
       image: "/images/popup-ourservices/vr.png",
       title: "Virtual Reality & XR",
       description: `
@@ -121,7 +120,7 @@ Temukan Masa Depan Pembelajaran dengan Virtual Learning! Virtual Learning menawa
       ],
     },
 
-    "Pengembangan Game": {
+    Pengembangan_Game: {
       image: "/images/popup-ourservices/Game.png",
       title: "Pengembangan Game",
       description: `
@@ -138,7 +137,7 @@ Temukan dunia game 2D dan 3D yang sempurna untuk anda! Kami memiliki pengalaman 
       ],
     },
 
-    "Digital Marketing": {
+    Digital_Marketing: {
       image: "/images/popup-ourservices/Marketing.png",
       title: "Digital Marketing",
       description: `
@@ -152,7 +151,7 @@ Tingkatkan Bisnis anda dengan Digital Consulting! Kami membantu meningkatkan vis
       ],
     },
 
-    "Content Creator": {
+    Content_Creator: {
       image: "/images/popup-ourservices/Content.png",
       title: "Content Creator",
       description: `
@@ -169,6 +168,10 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
       ],
     },
   };
+
+  const [openPopup, setOpenPopup] = useState<keyof typeof popupContent | null>(
+    null
+  );
 
   return (
     <section className="bg-white text-center main-content">
@@ -224,13 +227,13 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
                 text="Pelatihan khusus bagi perusahaan dengan materi yang disesuaikan."
               />
               <ServiceCard
-                href="/bootcamp"
+                href="/training/bootcamp"
                 icon={<FaRocket className="text-green-500 text-4xl mb-3" />}
                 title="Bootcamp Program"
                 text="Pelatihan intensif dengan metodologi accelerated learning."
               />
               <ServiceCard
-                href="/outbound-gallery"
+                href="/training/outbound-gallery"
                 icon={<FaMountain className="text-green-500 text-4xl mb-3" />}
                 title="Outbound & Event"
                 text="Team building dan adventure learning."
@@ -239,7 +242,7 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
 
             <div className="flex gap-8 justify-center flex-wrap">
               <ServiceCard
-                href="/lms-custom"
+                href="/training/lms"
                 icon={
                   <FaGraduationCap className="text-green-500 text-4xl mb-3" />
                 }
@@ -247,7 +250,7 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
                 text="Platform pembelajaran digital."
               />
               <ServiceCard
-                href="/training/lms"
+                href="/training/lms-pengembangan"
                 icon={<FaCogs className="text-green-500 text-4xl mb-3" />}
                 title="Pengembangan LMS Kustom"
                 text="Pembuatan LMS sesuai kebutuhan organisasi."
@@ -272,13 +275,13 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
               text="Program pengembangan personal bagi eksekutif."
             />
             <ServiceCard
-              href="/hybrid-officer-development"
+              href="/consulting/hybrid-officer-development"
               icon={<FaUsersCog className="text-green-500 text-4xl mb-3" />}
               title="Hybrid Officer Development"
               text="Seleksi, pelatihan, coaching & counseling."
             />
             <ServiceCard
-              href="/assessment-technical-competency"
+              href="/consulting/assessment-technical-competency"
               icon={<FaAward className="text-green-500 text-4xl mb-3" />}
               title="Assessment Competency"
               text="Pembuatan kamus & assessment kompetensi teknis."
@@ -294,19 +297,19 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
                 icon={<FaRobot className="text-green-500 text-4xl mb-3" />}
                 title="Solusi AI"
                 text="RPA & AI Agent untuk automasi kerja."
-                onClick={() => setOpenPopup("Solusi AI")}
+                onClick={() => setOpenPopup("Solusi_AI")}
               />
               <ServiceCardModal
                 icon={<FaCode className="text-green-500 text-4xl mb-3" />}
                 title="Web Development"
                 text="Pembuatan website profesional bisnis."
-                onClick={() => setOpenPopup("Web Development")}
+                onClick={() => setOpenPopup("Web_Development")}
               />
               <ServiceCardModal
                 icon={<FaMobileAlt className="text-green-500 text-4xl mb-3" />}
                 title="Apps Development"
                 text="Pengembangan aplikasi mobile inovatif."
-                onClick={() => setOpenPopup("Apps Development")}
+                onClick={() => setOpenPopup("Apps_Development")}
               />
             </div>
 
@@ -315,19 +318,19 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
                 icon={<FaGamepad className="text-green-500 text-4xl mb-3" />}
                 title="Pengembangan Game"
                 text="Game 2D, 3D, VR, XR."
-                onClick={() => setOpenPopup("Pengembangan Game")}
+                onClick={() => setOpenPopup("Pengembangan_Game")}
               />
               <ServiceCardModal
                 icon={<FaBullhorn className="text-green-500 text-4xl mb-3" />}
                 title="Digital Marketing"
                 text="Strategi pemasaran digital efektif."
-                onClick={() => setOpenPopup("Digital Marketing")}
+                onClick={() => setOpenPopup("Digital_Marketing")}
               />
               <ServiceCardModal
                 icon={<FaVideo className="text-green-500 text-4xl mb-3" />}
                 title="Content Creator"
                 text="Produksi konten kreatif digital."
-                onClick={() => setOpenPopup("Content Creator")}
+                onClick={() => setOpenPopup("Content_Creator")}
               />
             </div>
 
@@ -338,7 +341,7 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
                 }
                 title="Virtual Reality & XR"
                 text="Solusi simulasi interaktif imersif."
-                onClick={() => setOpenPopup("Virtual Reality & XR")}
+                onClick={() => setOpenPopup("Virtual_Reality_&_XR")}
               />
             </div>
           </div>
@@ -367,7 +370,17 @@ Tingkatkan bisnis anda dengan Content Creation berkualitas tinggi! Konten yang b
 /* ============================================================
    COMPONENT: CARD default (LINK)
 ============================================================ */
-function ServiceCard({ href, icon, title, text }) {
+function ServiceCard({
+  href,
+  icon,
+  title,
+  text,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+}) {
   return (
     <Link href={href} className="flex justify-center">
       <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition border border-gray-200 hover:border-[#4697CE] cursor-pointer flex flex-col items-center text-center w-[260px] h-[250px] md:w-[300px]">
@@ -384,7 +397,17 @@ function ServiceCard({ href, icon, title, text }) {
 /* ============================================================
    COMPONENT: CARD POPUP (TIDAK PINDAH HALAMAN)
 ============================================================ */
-function ServiceCardModal({ icon, title, text, onClick }) {
+function ServiceCardModal({
+  icon,
+  title,
+  text,
+  onClick,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+  onClick: () => void;
+}) {
   return (
     <div
       onClick={onClick}
@@ -401,10 +424,21 @@ function ServiceCardModal({ icon, title, text, onClick }) {
 /* ============================================================
    COMPONENT: POPUP / MODAL (FADE + SCALE + CLOSE BY OVERLAY)
 ============================================================ */
-function PopupModal({ data, onClose }) {
+function PopupModal({
+  data,
+  onClose,
+}: {
+  data: {
+    image: string;
+    title: string;
+    description: string;
+    features: string[];
+  } | null;
+  onClose: () => void;
+}) {
   if (!data) return null;
 
-  const handleBackgroundClick = (e) => {
+  const handleBackgroundClick = (e: any) => {
     // Klik area gelap → tutup popup
     if (e.target.id === "popup-overlay") onClose();
   };

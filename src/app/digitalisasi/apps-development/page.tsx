@@ -1,4 +1,4 @@
-import Digitalisasi from "../../Components/Digitalisasi";
+import Digitalisasi from "@/Components/Digitalisasi";
 
 const page = () => {
   return (
