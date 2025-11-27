@@ -1,7 +1,6 @@
 "use client";
 
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
+
 import { useState } from "react";
 import { IoIosCloseCircle } from "react-icons/io";
 

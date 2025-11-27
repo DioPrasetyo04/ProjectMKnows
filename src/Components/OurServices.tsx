@@ -429,20 +429,22 @@ function PopupModal({
 }) {
   if (!data) return null;
 
-  const handleBackgroundClick = (e: any) => {
-    // Klik area gelap → tutup popup
-    if (e.target.id === "popup-overlay") onClose();
+  const handleOverlay = (e: any) => {
+    if (e.target.id === "overlay") onClose();
   };
 
   return (
     <div
-      id="popup-overlay"
-      onClick={handleBackgroundClick}
-      className="fixed inset-0 bg-black/50 flex justify-center items-center z-[9999] animate-fadeIn"
+      id="overlay"
+      onClick={handleOverlay}
+      className="fixed inset-0 bg-black/40 flex items-start justify-center z-[9999] 
+                 overflow-y-auto pt-32 px-4 animate-fadeIn"
     >
       <div
-        className="bg-white rounded-xl shadow-xl flex overflow-hidden relative animate-popupScale"
-        style={{ width: "1013px", height: "542px" }}
+        className="relative bg-white rounded-2xl shadow-2xl 
+                   w-full w-full max-w-2xl md:max-w-3xl lg:max-w-4xl
+                   overflow-hidden animate-scaleIn
+                   flex flex-col md:flex-row"
       >
         {/* Close Button */}
         <button
@@ -452,8 +454,8 @@ function PopupModal({
           ×
         </button>
 
-        {/* Left Image */}
-        <div className="w-1/2 h-full">
+        {/* LEFT IMAGE */}
+        <div className="w-full md:w-1/2 h-[250px] md:h-auto">
           <img
             src={data.image}
             className="w-full h-full object-cover"
@@ -461,68 +463,35 @@ function PopupModal({
           />
         </div>
 
-        {/* Right Content */}
-        <div className="w-1/2 p-10 text-left overflow-y-auto">
+        {/* RIGHT CONTENT */}
+        <div className="w-full md:w-1/2 p-8 md:p-10 text-left overflow-y-auto">
           <h2
-            className="text-[44px] font-montserrat font-bold mb-4"
+            className="text-[32px] md:text-[44px] font-montserrat font-bold mb-4"
             style={{ color: "#3B8EC3" }}
           >
             {data.title}
           </h2>
-          {/* DESCRIPTION */}
-          <p className="text-[22px] font-montserrat text-black/80 leading-relaxed mb-6">
+
+          <p className="text-[18px] md:text-[22px] font-montserrat text-black/80 leading-relaxed mb-6">
             {data.description}
           </p>
 
           <h3
-            className="text-[22px] font-montserrat font-bold mb-3"
+            className="text-[20px] md:text-[22px] font-montserrat font-bold mb-3"
             style={{ color: "#3F8642" }}
           >
             Key Features:
           </h3>
 
-          <ul className="text-[22px] leading-relaxed font-montserrat">
+          <ul className="text-[18px] md:text-[20px] leading-relaxed font-montserrat list-disc pl-5">
             {data.features.map((f, i) => (
-              <ul key={i} className="list-disc">
-                <li key={i} className="mb-2 text-outside">
-                  {f}
-                </li>
-              </ul>
+              <li key={i} className="mb-2">
+                {f}
+              </li>
             ))}
           </ul>
         </div>
       </div>
-
-      {/* ANIMASI CSS */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes popupScale {
-          0% {
-            opacity: 0;
-            transform: scale(0.85);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-
-        .animate-fadeIn {
-          animation: fadeIn 0.25s ease-out;
-        }
-
-        .animate-popupScale {
-          animation: popupScale 0.25s ease-out;
-        }
-      `}</style>
     </div>
   );
 }
