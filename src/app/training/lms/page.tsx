@@ -248,7 +248,7 @@ export default function Page() {
         <section className="py-10 md:py-14">
           <div className="px-4 sm:px-6 lg:px-8">
             <div className="w-full rounded-none bg-white ring-4 ring-brand-green shadow-lg p-6 md:p-10">
-              <h2 className="text-5xl md:text-6xl font-extrabold text-brand-green text-center">
+              <h2 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-brand-green text-center">
                 Digital Learning Content
               </h2>
 
@@ -268,7 +268,7 @@ export default function Page() {
                 {/* Teks */}
                 <div className="h-full space-y-6 text-slate-700 text-[24px] sm:text-[26px] md:text-[28px] lg:text-[30px] leading-[1.65]">
                   <div>
-                    <h3 className="text-5xl md:text-[48px] font-bold text-brand-green">
+                    <h3 className="text-3xl md:text-6xl lg:text-7xl font-bold text-brand-green">
                       Modul Interaktif
                     </h3>
                     <p className="mt-2 text-justify">
@@ -280,7 +280,7 @@ export default function Page() {
                   </div>
 
                   <div>
-                    <h3 className="text-5xl md:text-[48px] font-bold text-brand-green">
+                    <h3 className="text-3xl md:text-6xl lg:text-7xl font-bold text-brand-green">
                       Penggunaan Grafis
                     </h3>
                     <p className="mt-2 text-justify">
@@ -293,7 +293,7 @@ export default function Page() {
 
                   <div className="grid gap-5">
                     <div>
-                      <h4 className="text-4xl md:text-[40px] font-semibold text-brand-green">
+                      <h4 className="text-3xl md:text-6xl lg:text-7xl font-semibold text-brand-green">
                         Interaktivitas Level 1
                       </h4>
                       <p className="mt-2 text-justify">
@@ -305,7 +305,7 @@ export default function Page() {
                     </div>
 
                     <div>
-                      <h4 className="text-4xl md:text-[40px] font-semibold text-brand-green">
+                      <h4 className="text-3xl md:text-6xl lg:text-7xl font-semibold text-brand-green">
                         Interaktivitas Level 2
                       </h4>
                       <p className="mt-2 text-justify">
@@ -317,7 +317,7 @@ export default function Page() {
                     </div>
 
                     <div>
-                      <h4 className="text-4xl md:text-[40px] font-semibold text-brand-green">
+                      <h4 className="text-3xl md:text-6xl lg:text-7xl font-semibold text-brand-green">
                         Interaktivitas Level 3
                       </h4>
                       <p className="mt-2 text-justify">
@@ -338,7 +338,7 @@ export default function Page() {
         <section className="py-10 md:py-14">
           <div className="px-4 sm:px-6 lg:px-8">
             <div className="w-full rounded-none bg-white ring-4 ring-brand-green shadow-lg p-6 md:p-10">
-              <h2 className="text-5xl md:text-6xl font-extrabold text-brand-green text-center">
+              <h2 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-brand-green text-center">
                 Instructional Video
               </h2>
 
@@ -354,7 +354,7 @@ export default function Page() {
                   </p>
 
                   <div>
-                    <h3 className="text-5xl md:text-[48px] font-bold text-brand-green">
+                    <h3 className="text-3xl md:text-6xl lg:text-7xl font-bold text-brand-green">
                       Animasi 2D
                     </h3>
                     <p className="mt-2 text-justify">
@@ -366,7 +366,7 @@ export default function Page() {
                   </div>
 
                   <div>
-                    <h3 className="text-5xl md:text-[48px] font-bold text-brand-green">
+                    <h3 className="text-3xl md:text-6xl lg:text-7xl font-bold text-brand-green">
                       3D Animation
                     </h3>
                     <p className="mt-2 text-justify">
@@ -377,7 +377,7 @@ export default function Page() {
                   </div>
 
                   <div>
-                    <h3 className="text-5xl md:text-[48px] font-bold text-brand-green">
+                    <h3 className="text-3xl md:text-6xl lg:text-7xl font-bold text-brand-green">
                       Live Action
                     </h3>
                     <p className="mt-2 text-justify">
@@ -388,7 +388,7 @@ export default function Page() {
                   </div>
 
                   <div>
-                    <h3 className="text-5xl md:text-[48px] font-bold text-brand-green">
+                    <h3 className="text-3xl md:text-6xl lg:text-7xl font-bold text-brand-green">
                       Video Penjelasan
                     </h3>
                     <p className="mt-2 text-justify">

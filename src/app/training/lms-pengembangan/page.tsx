@@ -9,7 +9,7 @@ const LMSPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black pt-[80px] lg:pt-[120px]">
+    <div className="min-h-screen bg-white text-black pt-[100px] md:pt-[110px] lg:pt-[120px]">
       <main className="py-10">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-10">

@@ -14,7 +14,7 @@ const page = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-3 absolute lg:top-[50%] md:top-[55%] top-[55%] -translate-y-1/2 p-5 max-w-[800px] lg:max-w-[1200px] md:max-w-[900px] justify-center text-justify mx-auto inset-0 lg:flex lg:justify-center lg:mx-auto lg:inset-0 lg:text-center md:flex md:justify-center md:mx-auto md:right-0 md:left-0 md:text-center">
+        <div className="flex flex-col gap-3 absolute lg:top-[50%] md:top-[55%] top-[55%] -translate-y-1/2 p-5 max-w-[800px] lg:max-w-[1200px] md:max-w-[900px] justify-center items-center text-justify mx-auto inset-0 lg:flex lg:justify-center lg:mx-auto lg:inset-0 lg:text-center md:justify-center md:items-center md:mx-auto md:text-center">
           <h1 className="text-[30px] md:text-[50px] lg:text-[60px] pt-[50px] leading-tight font-bold font-montserrat">
             <span className="text-[#B9F443]">In-House Training</span>
             <span className="text-white"> & </span>
@@ -35,7 +35,7 @@ const page = () => {
         <a href="/training/search-training" className="w-full">
           <img
             src="/images/house-training/public-training.png"
-            className="w-full h-auto rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"
+            className="w-full rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"
           />
         </a>
 
@@ -46,7 +46,7 @@ const page = () => {
         >
           <img
             src="/images/house-training/in-house-training.png"
-            className="w-full h-auto rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"
+            className="w-full rounded-xl shadow-lg hover:translate-y-[-20px] transition-all duration-300"
           />
         </a>
 

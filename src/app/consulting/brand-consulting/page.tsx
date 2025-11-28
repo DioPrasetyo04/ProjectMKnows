@@ -10,17 +10,17 @@ const BrandConsultingPage = () => {
       <div className="container mx-auto px-6 lg:px-12 py-16">
         <div className="flex flex-col lg:flex-row items-start gap-10">
           {/* Kolom Kiri: Visual/Gambar */}
-          <div className="lg:w-1/2 relative">
+          <div className="w-[300px] md:w-[500px] lg:w-[500px] relative">
             <img
               src="/images/brand-consulting/brand.jpg" // Ganti dengan gambar yang sesuai di folder public
               alt="Brand Consulting"
-              className="w-full h-auto object-cover rounded-lg shadow-xl"
+              className="h-auto object-cover rounded-lg shadow-xl mx-auto"
             />
           </div>
 
           {/* Kolom Kanan: Teks dan Fitur */}
           <div className="lg:w-1/2">
-            <h1 className="text-5xl font-bold mb-4 text-[#4697ce]">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#4697ce]">
               Brand Consulting
             </h1>
             <p className="text-2xl mb-6 leading-relaxed">
