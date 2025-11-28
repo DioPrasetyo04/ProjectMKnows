@@ -32,7 +32,7 @@ const Digitalisasi = ({
         />
       </div>
       <div className="flex flex-col py-2 px-2">
-        <h1 className="lg:text-[46px] text-[25px] sm:text-[25px] md:text-[36px] font-bold font-montserrat font-light-blue leading-[156.8%] text-center lg:text-left">
+        <h1 className="lg:text-[46px] text-[25px] sm:text-[25px] md:text-[40px] font-bold font-montserrat font-light-blue leading-[156.8%] text-left sm:text-center lg:text-left">
           {title}
         </h1>
         <div className="flex flex-col gap-y-[20px]">
@@ -44,7 +44,7 @@ const Digitalisasi = ({
               <p className="font-dark-green font-bold lg:text-[27px] text-[20px] leading-[156.8%] font-poppins">
                 Key Features:
               </p>
-              <ul className="list-disc max-w-[841px] text-justify pl-[35px] text-[20px] sm:text-[20px] lg:text-[27px]">
+              <ul className="list-disc max-w-[841px] text-justify pl-5 text-[20px] sm:text-[20px] lg:text-[27px]">
                 {featureList.map((feature, index) => (
                   <li
                     key={index}

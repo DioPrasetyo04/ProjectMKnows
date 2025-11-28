@@ -12,7 +12,7 @@ export default function HistoryPage() {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative container mx-auto px-4">
-          <h1 className="text-5xl font-bold text-center text-white mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-12">
             Sejarah M-Knows Consulting
           </h1>
 
@@ -27,7 +27,7 @@ export default function HistoryPage() {
                 />
               </div>
               <div>
-                <p className="text-gray-700 leading-relaxed text-3xl text-justify">
+                <p className="text-gray-700 leading-relaxed text-2xl md:text-3xl lg:text-3xl text-justify">
                   M-Knows Consulting didirikan pertama kali pada bulan Juni 2003
                   dan berlokasi di Petogogan Jakarta, dan pada tahun 2005 pindah
                   ke Jl. Radio 4 No. 8B Kebayoran Baru Jakarta Selatan. Tahun
@@ -52,7 +52,7 @@ export default function HistoryPage() {
               </div>
 
               <div>
-                <p className="text-gray-700 leading-relaxed text-3xl text-justify">
+                <p className="text-gray-700 leading-relaxed text-2xl md:text-3xl lg:text-3xl text-justify">
                   Sejak berdiri, M-Knows Consulting telah sukses bekerjasama
                   dengan beragam perusahaan nasional dan multinasional, dengan
                   kualitas kerja yang memuaskan, dibuktikan dengan tingginya
@@ -73,7 +73,7 @@ export default function HistoryPage() {
                 />
               </div>
               <div>
-                <p className="text-gray-700 leading-relaxed text-3xl text-justify">
+                <p className="text-gray-700 leading-relaxed text-2xl md:text-3xl lg:text-3xl text-justify">
                   Di awal berdirinya, jasa yang diberikan, kebanyakan berupa
                   education & learning services, yang dibungkus dalam bentuk
                   solusi Consulting Services, Public Training, In-house

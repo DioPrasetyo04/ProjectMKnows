@@ -49,7 +49,7 @@ export default function SolusiAIPage() {
           <h3 className="text-2xl font-semibold text-[#3F8642] mt-10 mb-4">
             Key Features:
           </h3>
-          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-2 text-xl">
+          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-5 text-xl">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}

@@ -12,8 +12,8 @@ export default function ContentCreatorPage() {
   ];
 
   return (
-    <div className="mx-auto pt-[150px] p-6 text-xl">
-      <div className="flex flex-col lg:flex-row gap-8 items-start">
+    <div className="mx-auto pt-[150px] p-6 text-xl items-center flex justify-center">
+      <div className="flex flex-col lg:flex-row gap-8 items-center pb-[50px]">
         {/* Kolom Gambar */}
         <div className="lg:w-2/5 flex justify-center items-center mx-auto">
           <div className="relative w-full max-h-[600px] rounded-lg shadow-lg overflow-hidden">
@@ -28,7 +28,7 @@ export default function ContentCreatorPage() {
         </div>
 
         <div className="lg:w-5/5">
-          <h1 className="text-3xl font-bold text-[#4697ce] mb-2">
+          <h1 className="text-3xl text-left md:text-center lg:text-left font-bold text-[#4697ce] mb-2">
             Content Creator
           </h1>
           <p className="text-gray-700 mb-6 leading-relaxed text-2xl text-justify">

@@ -14,7 +14,7 @@ const Page = () => {
       {/* SEMUA sisa konten halaman (hero, main, footer) masuk ke sini */}
       <div className="relative">
         <section className="hero text-center pt-[20px] pb-[20px] px-[20px] mt-[100px] text-white font-montserrat">
-          <h2 className="text-[64px] font-bold mt-[80px] max-md:text-[48px]">
+          <h2 className="font-bold mt-[80px] text-[35px] md:text-[40px] lg:text-[48px]">
             Vision & Mission
           </h2>
           <p className="text-[48px] font-bold mt-[10px] max-md:text-[32px]">
@@ -48,7 +48,7 @@ const Page = () => {
               <h3 className="text-center text-[40px] font-bold mb-[20px] text-black max-md:text-[28px]">
                 MISI
               </h3>
-              <ul className="list-disc ml-[25px] leading-relaxed text-[28px] max-md:text-[20px] space-y-[12px] font-poppins">
+              <ul className="list-disc ml-[25px] leading-relaxed text-[28px] max-md:text-[20px] space-y-[12px] font-poppins text-justify md:text-left lg:text-left">
                 <li>
                   Memberikan pelayanan terbaik dalam penyelenggaraan jasa
                   layanan, sesuai dengan kompetensi M-Knows.

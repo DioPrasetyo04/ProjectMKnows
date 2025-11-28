@@ -1,7 +1,5 @@
 import React from "react";
 
-// Perubahan di sini: Mengubah title dari 'string' menjadi 'React.ReactNode'
-// agar dapat menerima elemen JSX (seperti <br />)
 interface SectionProps {
   title: React.ReactNode;
   bgType: "white" | "green" | "dark";
@@ -19,31 +17,28 @@ const Section: React.FC<SectionProps> = ({
   imageAlt,
   imageRight = false,
 }) => {
-  // UNTUK SECTION PUTIH: Gunakan struktur asli (kotak putih di dalam)
-  // Ini agar Section 2, 3, 4, 6 tetap terlihat benar.
+  // SECTION WHITE (dengan kotak putih tengah)
   if (bgType === "white") {
     return (
       <section
         className="rounded-3xl p-[3px] shadow-xl"
         style={{ background: "#FFFFFF" }}
       >
-        {/* INNER CONTENT BOX (SELALU PUTIH) */}
         <div className="bg-white rounded-2xl overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
-            {/* TEXT */}
             <div
-              className={`p-8 md:p-10 ${
+              className={`p-6 sm:p-8 md:p-10 ${
                 imageRight ? "order-1 md:order-2" : "order-1"
               }`}
             >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent leading-tight">
                 {title}
               </h2>
               <div className="text-gray-700 space-y-4">{children}</div>
             </div>
-            {/* IMAGE (menggunakan <img>) */}
+
             <div
-              className={`relative h-64 md:h-auto ${
+              className={`relative h-48 sm:h-64 md:h-auto ${
                 imageRight ? "order-2 md:order-1" : "order-2"
               }`}
             >
@@ -59,11 +54,10 @@ const Section: React.FC<SectionProps> = ({
     );
   }
 
-  // UNTUK SECTION HIJAU/GELAP: Gunakan struktur baru dari Gambar 1 (Target)
-  // Ini akan berlaku untuk Section 1, 5, 7
+  // SECTION GREEN / DARK (layout baru)
   return (
     <section
-      className="rounded-3xl shadow-xl grid grid-cols-1 md:grid-cols-2 gap-6 p-6"
+      className="rounded-3xl shadow-xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 p-6"
       style={{
         background:
           bgType === "green"
@@ -71,21 +65,19 @@ const Section: React.FC<SectionProps> = ({
             : "#02353C",
       }}
     >
-      {/* TEXT (Sekarang punya kotak putih sendiri) */}
       <div
-        className={`bg-white rounded-2xl p-8 md:p-10 ${
+        className={`bg-white rounded-2xl p-6 sm:p-8 md:p-10 ${
           imageRight ? "order-1 md:order-2" : "order-1"
         }`}
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#3B8EC3] to-[#1C445D] bg-clip-text text-transparent leading-tight">
           {title}
         </h2>
         <div className="text-gray-700 space-y-4">{children}</div>
       </div>
 
-      {/* IMAGE (Tanpa kotak putih, tapi sudut bulat) */}
       <div
-        className={`relative h-64 md:h-auto rounded-2xl overflow-hidden ${
+        className={`relative h-48 sm:h-64 md:h-auto rounded-2xl overflow-hidden ${
           imageRight ? "order-2 md:order-1" : "order-2"
         }`}
       >
@@ -107,31 +99,27 @@ export default function HybridOfficerPage() {
         background: "linear-gradient(to bottom, #EEEEEE, #02353C)",
       }}
     >
-      {/* HERO SECTION (Sesuai kode Anda di chat terakhir) */}
-      <div className="relative w-full h-[480px]">
+      {/* HERO SECTION */}
+      <div className="relative w-full h-[360px] sm:h-[420px] md:h-[480px]">
         <img
           src="/images/hybrid-officer-development/gambarhod1.png"
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
-
         <div className="absolute inset-0 bg-black opacity-60"></div>
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white p-4">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
-              Hybrid Officer Development
-            </h1>
-            <p className="text-xl md:text-3xl text-[#BFF932] font-semibold mt-2">
-              Crash Program for Financial Industry
-            </p>
-          </div>
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+            Hybrid Officer Development
+          </h1>
+          <p className="text-lg sm:text-xl md:text-3xl text-[#BFF932] font-semibold mt-2">
+            Crash Program for Financial Industry
+          </p>
         </div>
       </div>
 
       {/* CONTENT */}
-      <main className="container mx-auto max-w-5xl py-16 space-y-5 px-15">
-        {/* 1 — Hybrid Officer Development (JUDUL DIPERBAIKI) */}
+      <main className="container mx-auto max-w-5xl py-10 space-y-8 px-4 sm:px-6">
         <Section
           title={
             <>
@@ -145,13 +133,12 @@ export default function HybridOfficerPage() {
           imageAlt="Hybrid Officer"
           imageRight={false}
         >
-          <p className="text-gray-700 text-2xl">
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl">
             Creating Competent Professionals In Sales, Credit & Collection
             (Pelatihan, Magang, Bekerja).
           </p>
         </Section>
 
-        {/* 2 — Deskripsi Program (WHITE) */}
         <Section
           title="Deskripsi Program ODCP"
           bgType="white"
@@ -159,26 +146,25 @@ export default function HybridOfficerPage() {
           imageAlt="Deskripsi Program"
           imageRight={true}
         >
-          <p className="text-2xl">
+          <p className="text-base sm:text-lg md:text-xl">
             Officer Development Crash Program adalah program pelatihan & magang
             yang merupakan penciptaan kompetensi di bidang Sales, Credit &
             Collection, guna menghasilkan SDM yang produktif dan berkinerja
             tinggi.
           </p>
-          <p className="text-2xl">
+          <p className="text-base sm:text-lg md:text-xl">
             Penguatan kompetensi dilakukan berupa pelatihan selama 1 bulan di
             M-Knows, fokus pada role play dan drill, ditutup dengan uji
             kompetensi.
           </p>
-          <p className="text-2xl">
+          <p className="text-base sm:text-lg md:text-xl">
             Mereka yang lulus uji kompetensi, disalurkan untuk 1 bulan magang di
             perusahaan (Bank, Multi Finance, Fintech dan Asuransi). Bagi yang
             berkinerja tinggi akan ditawarkan untuk bekerja di perusahaan yang
-            berpartisipasi, bekerja di Industri Keuangan.
+            berpartisipasi.
           </p>
         </Section>
 
-        {/* 3 — Lingkup Project (WHITE) */}
         <Section
           title="Lingkup Project Hybrid Officer Development Crash Program"
           bgType="white"
@@ -186,7 +172,7 @@ export default function HybridOfficerPage() {
           imageAlt="Lingkup Project"
           imageRight={false}
         >
-          <ol className="list-decimal ml-5 space-y-2 text-gray-700 text-2xl">
+          <ol className="list-decimal ml-5 space-y-2 text-base sm:text-lg md:text-xl text-gray-700">
             <li>Recruitment & Seleksi</li>
             <li>Kontrak kerja & Orientasi</li>
             <li>Pelatihan berbasis kompetensi</li>
@@ -194,17 +180,11 @@ export default function HybridOfficerPage() {
             <li>Magang di perusahaan</li>
             <li>Coaching & Mentoring</li>
             <li>Evaluasi & kelulusan</li>
-            <li>
-              Pembuatan laporan individual (Tingkat kompetensi ybs, kelemahan,
-              kekuatan dan rekomendasi atas jenis atasan yang cocok, bentuk
-              penempatan kerja, dan bentuk pengembangan ke depannya bagi peserta
-              magang)
-            </li>
+            <li>Pembuatan laporan individual</li>
             <li>Penawaran untuk bekerja di perusahaan yang berpartisipasi.</li>
           </ol>
         </Section>
 
-        {/* 4 — Proses Recruitment (GREEN) */}
         <Section
           title="Proces Recruitment & On Boarding"
           bgType="green"
@@ -212,23 +192,14 @@ export default function HybridOfficerPage() {
           imageAlt="Recruitment"
           imageRight={true}
         >
-          <ol className="list-decimal ml-5 text-gray-700 space-y-2 text-2xl">
+          <ol className="list-decimal ml-5 space-y-2 text-base sm:text-lg md:text-xl text-gray-700">
             <li>Recruitment 300 mahasiswa dilakukan</li>
-            <li>
-              Persyaratan seleksi mahasiswa tingkat skripsi (tugas akhir), atau
-              yang sudah lulus atau maksimal selama Covid, (2 tahun terakhir)
-              belum mendapatkan pekerjaan.
-            </li>
-            <li>
-              Pembuatan Kontrak kerja dan MOU dengan universitas (pusat karir).
-            </li>
-            <li>
-              Mahasiswa melakukan onboarding dan mulai mengikuti pelatihan.
-            </li>
+            <li>Persyaratan seleksi mahasiswa tingkat skripsi</li>
+            <li>Pembuatan Kontrak kerja dan MOU dengan universitas</li>
+            <li>Mahasiswa melakukan onboarding dan mengikuti pelatihan</li>
           </ol>
         </Section>
 
-        {/* 5 — Kerangka Program (WHITE) */}
         <Section
           title="Kerangka Program (Project Framework)"
           bgType="white"
@@ -236,31 +207,22 @@ export default function HybridOfficerPage() {
           imageAlt="Kerangka Program"
           imageRight={false}
         >
-          <p className="text-2xl">
-            Aktivitas magang yang kami rancang adalah untuk mahasiswa dapat
-            diterima bekerja di perusahaan keuangan, yang bernama Officer
-            Development Crash Program (ODCP).
+          <p className="text-base sm:text-lg md:text-xl">
+            Aktivitas magang dirancang agar mahasiswa diterima bekerja di
+            perusahaan keuangan.
           </p>
-          <p className="text-2xl">
-            ODCP memiliki keunggulan, karena mahasiswa diberikan kemampuan atau
-            keahlian yang spesifik, seperti Sales, Credit dan Collection sesuai
-            kebutuhan dari perusahaan keuangan yang akan menerimanya.
+          <p className="text-base sm:text-lg md:text-xl">
+            Pendekatan kerja menggunakan SCRUM Framework
           </p>
-          <p className="text-2xl">
-            Pendekatan kerja dan magang akan menggunakan pendekatan SCRUM
-            Framework, dimana pemagang akan diarahkan untuk merancang solusi
-            melalui lima proses iterative, yaitu:
-          </p>
-          <ul className="pl-[20px] list-disc">
-            <li className="text-2xl">Sprint Planning,</li>
-            <li className="text-2xl">Daily SCRUM,</li>
-            <li className="text-2xl">SPRINT Review,</li>
-            <li className="text-2xl">SPRINT Restrospective, dan</li>
-            <li className="text-2xl">Improvement.</li>
+          <ul className="list-disc pl-[20px] text-base sm:text-lg md:text-xl">
+            <li>Sprint Planning</li>
+            <li>Daily SCRUM</li>
+            <li>SPRINT Review</li>
+            <li>SPRINT Retrospective</li>
+            <li>Improvement</li>
           </ul>
         </Section>
 
-        {/* 6 — Proses Pelatihan (WHITE) */}
         <Section
           title="Proses Pelatihan di Kampus Gratis"
           bgType="white"
@@ -268,26 +230,17 @@ export default function HybridOfficerPage() {
           imageAlt="Pelatihan"
           imageRight={true}
         >
-          <div className="text-2xl">
-            <p>
-              Pemberian materi diberikan baik secara synchronous (melalui online
-              meeting), dan asynchronous (dengan disediakannya video ajar dan
-              white paper di aplikasi kampusgratis.id).{" "}
-            </p>
-            <p>
-              Sesi tatap muka atau zoom dibutuhkan untuk pada penugasan dan
-              mentoring yang membutuhkan untuk dilakukan secara langsung.
-            </p>
-            <p>
-              Setiap materi pembelajaran akan dilengkapi dengan kuis dan
-              latihan, penugasan, ujian akhir dan uji kompetensi berupa studi
-              kasus, role play dan drill, sebagai evaluasi apakah peserta sudah
-              mencapai minimum standar kompetensi.
-            </p>
-          </div>
+          <p className="text-base sm:text-lg md:text-xl">
+            Materi diberikan secara synchronous & asynchronous
+          </p>
+          <p className="text-base sm:text-lg md:text-xl">
+            Zoom untuk mentoring & tugas
+          </p>
+          <p className="text-base sm:text-lg md:text-xl">
+            Evaluasi berupa role play, drill, studi kasus dan uji kompetensi
+          </p>
         </Section>
 
-        {/* 7 — Monitoring (DARK) */}
         <Section
           title="Monitoring & Evaluasi"
           bgType="dark"
@@ -295,24 +248,19 @@ export default function HybridOfficerPage() {
           imageAlt="Monitoring"
           imageRight={false}
         >
-          <div className="text-2xl">
-            <p className="text-gray-700">
-              Peserta program akan dimonitor kinerjanya meliputi:
-            </p>
-            <ul className="list-disc pl-[20px]">
-              <li>Professional Working Attitude</li>
-              <li>Pantang Menyerah Terhadap Hasil</li>
-              <li>Penguasaan Kompetensi Teknis & Non Teknis</li>
-            </ul>
-            <p>
-              Selama melakukan magang keria, mahasiswa akan di monitoring dan
-              evaluasi Progres kerjanya oleh Kampus Gratis. Laporan yang dibuat
-              akan di berikan akses kepapada mahasiswa dan pihak perusahaan,
-              sesuai kebutuhan dan kepentingannya.
-            </p>
-          </div>
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl">
+            Peserta dimonitor berdasarkan:
+          </p>
+          <ul className="list-disc pl-[20px] text-base sm:text-lg md:text-xl">
+            <li>Professional Working Attitude</li>
+            <li>Pantang Menyerah</li>
+            <li>Penguasaan kompetensi</li>
+          </ul>
         </Section>
       </main>
+
+      {/* BUFFER untuk tombol chat */}
+      <div className="pb-24 sm:pb-0"></div>
     </div>
   );
 }

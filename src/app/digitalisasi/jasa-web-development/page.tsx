@@ -31,7 +31,7 @@ export default function WebDevelopmentPage() {
         {/* Kolom Teks */}
         <div>
           {/* Judul dengan warna biru */}
-          <h1 className="text-3xl md:text-4xl font-bold text-[#3B8EC3] mb-6">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#3B8EC3] mb-6">
             Jasa Web Development
           </h1>
 
@@ -59,7 +59,7 @@ export default function WebDevelopmentPage() {
             Key Features:
           </h3>
 
-          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-2 text-justify text-xl">
+          <ul className="space-y-3 list-disc list-outside text-gray-700 pl-5 text-justify text-xl">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
