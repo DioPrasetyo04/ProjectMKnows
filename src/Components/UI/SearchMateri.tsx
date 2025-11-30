@@ -49,7 +49,9 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
                     key={index}
                     className={`
               ${
-                isLastData && isData1 ? "lg:col-span-3 flex justify-center" : "flex items-center justify-center"
+                isLastData && isData1
+                  ? "lg:col-span-3 flex justify-center"
+                  : "flex items-center justify-center"
               }
             `}
                   >
@@ -72,7 +74,7 @@ const SearchMateri = ({ staticDataMateri }: { staticDataMateri: Materi[] }) => {
         </div>
 
         <div className="flex justify-center items-center pt-[50px] pb-[50px]">
-          <Link href="/more/contact" className="no-underline">
+          <Link href="/training/contact" className="no-underline">
             <button className="border bg-[#ffff] px-5 py-2 text-center rounded-[20px] bg-green-600 hover:bg-green-700 hover:translate-y-[-20px]">
               <p className="font-montserrat font-regular text-[16px] lg:text-[32px] text-white">
                 Download Jadwal Public Training Tahun 2026

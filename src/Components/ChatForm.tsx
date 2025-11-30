@@ -2,12 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaWhatsapp, FaRobot } from "react-icons/fa";
 import { ChatFormProps } from "@/Types/ChatProps";
 import { IoIosCloseCircle } from "react-icons/io";
+import { formatDateLabel, formatTime } from "@/Utils/merge";
+import { fetchAPIGemini } from "@/Services/api_service";
 
 const ChatForm = ({ isOpen, onClose }: any) => {
   const [step, setStep] = useState<"open" | "option" | "chatbot">("open");
   const [chat, setChat] = useState<ChatFormProps[]>([]);
   const [message, setMessage] = useState("");
-
   const chatBottomRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -47,6 +48,76 @@ const ChatForm = ({ isOpen, onClose }: any) => {
     window.open(url, "_blank");
   };
 
+  const sendMessageToGemini = async (msg: string) => {
+    try {
+      const model = process.env.NEXT_PUBLIC_MODELS_API_GEMINI;
+      const chatGemini = await fetchAPIGemini.post(
+        // Path sudah benar, dimulai setelah v1/ atau v1beta/
+        `/models/${model}:generateContent?key=${process.env.NEXT_PUBLIC_API_KEY_GEMINI}`,
+        {
+          contents: [{ parts: [{ text: msg }] }],
+        }
+      );
+
+      const reply =
+        chatGemini.data.candidates?.[0]?.content?.parts?.[0]?.text ||
+        "Maaf, saya tidak mengerti pertanyaan Anda.";
+
+      setChat((prevChat) => [
+        ...prevChat,
+        { sender: "Bot Gemini", text: reply, timestamp: new Date() },
+      ]);
+    } catch (error) {
+      console.log(error);
+      setChat((prevChat) => [
+        ...prevChat,
+        {
+          sender: "Bot Gemini",
+          text: "Terjadi kesalahan konfigurasi server.",
+          timestamp: new Date(),
+        },
+      ]);
+    }
+  };
+
+  const handleChatbotStart = async () => {
+    setStep("chatbot");
+
+    // Tambahkan pesan pertama user dari form
+    setChat([
+      {
+        sender: "You",
+        text: formData.message,
+        timestamp: new Date(),
+      },
+    ]);
+
+    // Bot menyapa dan menanggapi
+    setTimeout(async () => {
+      setChat((prev) => [
+        ...prev,
+        {
+          sender: "Bot Gemini",
+          text: `Halo ${formData.name}! Senang bertemu denganmu 😊`,
+          timestamp: new Date(),
+        },
+      ]);
+      await sendMessageToGemini(formData.message);
+    }, 500);
+  };
+
+  const handleSendMessage = async (e: any) => {
+    e.preventDefault();
+    if (!message.trim()) return false;
+
+    setChat((prev) => [
+      ...prev,
+      { sender: "You", text: message, timestamp: new Date() },
+    ]);
+    setMessage("");
+    await sendMessageToGemini(message);
+  };
+
   return (
     <>
       {isOpen && (
@@ -54,7 +125,6 @@ const ChatForm = ({ isOpen, onClose }: any) => {
           className="w-[276px] max-h-[80vh] md:max-h-[85vh] rounded-[15px] bg-[#02353C] backdrop-blur-sm flex flex-col overflow-hidden shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* HEADER */}
           <div className="sticky top-0 bg-[#083F45] w-full h-[56px] rounded-t-[15px] flex items-center px-3 justify-between z-888 p-3">
             <div className="flex items-center gap-3">
               <div className="lime-green-2 flex items-center justify-center w-[34px] h-[34px] bg-[#A9DFBF] rounded-full">
@@ -75,7 +145,6 @@ const ChatForm = ({ isOpen, onClose }: any) => {
           </div>
 
           <div className="flex-1 overflow-y-auto text-white px-4 py-3 touch-pan-y overscroll-y-contain">
-            {/* STEP 1 FORM */}
             {step === "open" && (
               <form
                 onSubmit={onHandleSubmit}
@@ -147,14 +216,73 @@ const ChatForm = ({ isOpen, onClose }: any) => {
                   Chat via WhatsApp
                 </button>
 
-                <button className="flex justify-center items-center gap-x-2 bg-white text-[#02353C] opacity-80 py-2 rounded">
+                <button
+                  className="flex justify-center items-center gap-x-2 bg-white text-[#02353C] opacity-80 py-2 rounded"
+                  onClick={handleChatbotStart}
+                >
                   <FaRobot className="text-[25px]" />
                   Chat AI (Coming Soon)
                 </button>
               </div>
             )}
 
-            <div ref={chatBottomRef}></div>
+            {step === "chatbot" && (
+              <div className="flex flex-col justify-between h-full w-full">
+                {/* CHAT LIST */}
+                <div className="flex-1 overflow-y-auto space-y-2 p-5">
+                  {(() => {
+                    let lastDate = "";
+                    return chat.map((c, index) => {
+                      const currentDateLabel = formatDateLabel(c.timestamp);
+                      const showDateLabel = currentDateLabel !== lastDate;
+                      lastDate = currentDateLabel;
+
+                      return (
+                        <div key={index}>
+                          {showDateLabel && (
+                            <div className="text-center text-gray-400 border-gray-600 rounded-full p-2 text-xs my-2">
+                              {currentDateLabel}
+                            </div>
+                          )}
+                          <div
+                            className={`max-w-[80%] p-2 rounded-lg my-1 ${
+                              c.sender === "You"
+                                ? "bg-green-500 self-end ml-auto text-right text-black"
+                                : "bg-white text-left text-black"
+                            }`}
+                          >
+                            <p className="text-sm font-poppins">{c.text}</p>
+                            <span className="block text-[10px] text-gray-500 mt-1 font-poppins">
+                              {formatTime(c.timestamp)}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    });
+                  })()}
+                </div>
+
+                <form
+                  onSubmit={handleSendMessage}
+                  className="flex bg-[#05272A] mt-2 mb-3 bottom-0 left-0 right-0 w-full"
+                >
+                  <input
+                    type="text"
+                    name="msg"
+                    placeholder="Type a message..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="flex-1 p-2 rounded-l bg-[#084C54] text-white placeholder-gray-300 text-sm"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#A9DFBF] text-[#02353C] px-3 rounded-r font-bold"
+                  >
+                    ➤
+                  </button>
+                </form>
+              </div>
+            )}
           </div>
         </div>
       )}
